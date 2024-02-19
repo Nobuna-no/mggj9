@@ -1,0 +1,3 @@
+[submodule "Unity/Packages/com.nobunatelier.core"]
+	path = Unity/Packages/com.nobunatelier.core
+	url = https://github.com/Nobuna-no/com.nobunatelier.core.git

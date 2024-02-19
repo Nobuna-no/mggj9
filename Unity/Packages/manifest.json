@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.nobunatelier.ai": "file:C:/ENIGMA/1.Projects/com.nobunatelier.ai",
     "com.nobunatelier.core": "file:C:/ENIGMA/1.Projects/com.nobunatelier.core",
     "com.unity.ai.navigation": "2.0.0",
     "com.unity.cinemachine": "3.0.1",
