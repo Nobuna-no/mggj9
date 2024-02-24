@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &187448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 487448}
+  - component: {fileID: 11487448}
+  m_Layer: 0
+  m_Name: TubeAgent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &487448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187448}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -97.219604, y: 0, z: -117.15551}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11487448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf0f2cb0bb112c44b1d4d94fe4ebdda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TubeAgents:
+  - {fileID: 0}
+  - {fileID: 0}
+  Description: "A Tube Agent is a path following generator that can be used to chain
+    gameobjects. Simply create Prefabs with a connector, to stitch the modules together.\n\nPress
+    Tab in Scene View to generate a Tube Agent at mouse position. \n\nIMPORTANT:
+    Always use Modules with mantled GameObjects inside that fit to the current connector
+    name of the Tube Agent. Convert selected assets in scene by pressing tab with
+    the COVERT TO context menu option."
+  ModuleList:
+  - {fileID: 100002, guid: e0bdd6966d2635e4fb00bf0c1ca8f18f, type: 3}
+  - {fileID: 100002, guid: e0bdd6966d2635e4fb00bf0c1ca8f18f, type: 3}
+  - {fileID: 100002, guid: 30e82c80d1891b447b4c47a6182c3aff, type: 3}
+  - {fileID: 100000, guid: 6de6cf74cf50c0441b157a70663de99f, type: 3}
+  - {fileID: 100000, guid: 3145497eb5ac23642b3d83e0827403a3, type: 3}
+  - {fileID: 100004, guid: e9a2f3dfa95e0504d817b7c443e8a7aa, type: 3}
+  - {fileID: 100000, guid: 785493d6c6312df43a97e6aa52b9280c, type: 3}
+  - {fileID: 100000, guid: 785493d6c6312df43a97e6aa52b9280c, type: 3}
+  AgentName: FirstAgent
+  ConnectorName: Tube_Connector
+  AgentPosition: {x: -97.219604, y: 0, z: -117.15551}
+  RandomRotation: 1
+  RotationStep: 0
+  IndexNumber: 2
+  TubeAgentSeed: -1911896346
+  KeepSeed: 0
+  PiecesPerTick: 120
+  V3InitPosition: {x: -97.219604, y: 0, z: -117.15551}

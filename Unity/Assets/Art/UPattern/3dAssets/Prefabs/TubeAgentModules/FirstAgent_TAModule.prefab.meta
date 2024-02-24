@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: df69b877a2b366641b5cf2e252e50526
+timeCreated: 1464821944
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Prefabs/TubeAgentModules/FirstAgent_TAModule.prefab
+  uploadId: 149945

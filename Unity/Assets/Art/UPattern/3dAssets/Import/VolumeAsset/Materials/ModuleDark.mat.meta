@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d6f4aa48013416746a25ac60d4f091ca
+timeCreated: 1464611387
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/VolumeAsset/Materials/ModuleDark.mat
+  uploadId: 149945

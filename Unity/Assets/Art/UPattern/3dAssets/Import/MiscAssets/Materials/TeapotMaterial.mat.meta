@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 82aba28e64b381b42b67a2a6af5b6e73
+timeCreated: 1463763055
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/MiscAssets/Materials/TeapotMaterial.mat
+  uploadId: 149945

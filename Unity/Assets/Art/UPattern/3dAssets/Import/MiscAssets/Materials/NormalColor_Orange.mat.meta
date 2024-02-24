@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: be18fd3b0811f144ab71c6039a0a5ceb
+timeCreated: 1463762604
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/MiscAssets/Materials/NormalColor_Orange.mat
+  uploadId: 149945

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fc2bda0601ac16644af0c6b1081a178b
+timeCreated: 1479463193
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/MoveAgentAssets/Materials/Move_RingMidVRayCompleteMap.mat
+  uploadId: 149945

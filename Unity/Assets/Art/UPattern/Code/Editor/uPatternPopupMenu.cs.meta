@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9d255fb0c1b143c45a50e1bb281c12ae
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/Code/Editor/uPatternPopupMenu.cs
+  uploadId: 149945

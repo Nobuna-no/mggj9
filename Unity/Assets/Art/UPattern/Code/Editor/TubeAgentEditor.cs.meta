@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1c7b85da9d0b91347b8d2a4d20529917
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/Code/Editor/TubeAgentEditor.cs
+  uploadId: 149945

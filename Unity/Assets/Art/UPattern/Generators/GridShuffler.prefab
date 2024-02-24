@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &174062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 474062}
+  - component: {fileID: 11499050}
+  m_Layer: 0
+  m_Name: GridShuffler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &474062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174062}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.153259, y: 9.854538, z: 0.92949677}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11499050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536792f660db17743b8f1318df9bd09b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GoMaze: []
+  Description: "This is a shuffler. Use the Shuffler to arrange multiple Assets in
+    your scene. \n\nPress Tab in Scene View to generate a Grid Shuffler at mouse
+    position."
+  ModuleList:
+  - GoModule: {fileID: 100000, guid: 4e731fe8eaf08d84ca1823d8d67741a6, type: 3}
+  - GoModule: {fileID: 100000, guid: 412a8fad9c891684bba5cc556b78fc8e, type: 3}
+  - GoModule: {fileID: 100000, guid: e3aa1fa60d4ce1541992264887633d09, type: 3}
+  - GoModule: {fileID: 187534, guid: b18fe5b382e67e745acd7c6a2f20327e, type: 3}
+  - GoModule: {fileID: 187534, guid: b18fe5b382e67e745acd7c6a2f20327e, type: 3}
+  - GoModule: {fileID: 187534, guid: b18fe5b382e67e745acd7c6a2f20327e, type: 3}
+  - GoModule: {fileID: 187534, guid: b18fe5b382e67e745acd7c6a2f20327e, type: 3}
+  GeneratorMode: 2
+  RandomizeRotation: 1
+  ModuleOffset: 0
+  RandomizeScale: 0
+  Scale: 0
+  MazeName: Random Items
+  MazePosition: {x: -4.49, y: 0, z: -2.56}
+  IndexNumber: 0
+  MazeWidth: 9
+  MazeHeight: 6
+  ModuleNumber: 54
+  Seed: 8787805
+  KeepSeed: 0
+  Pivot: 0
+  PivotPoint: {x: 4.5, y: 3}

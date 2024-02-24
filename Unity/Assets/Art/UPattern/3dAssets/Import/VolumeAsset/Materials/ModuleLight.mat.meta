@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5842f194c7da25e448984a9e8f7b143d
+timeCreated: 1464611386
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/VolumeAsset/Materials/ModuleLight.mat
+  uploadId: 149945

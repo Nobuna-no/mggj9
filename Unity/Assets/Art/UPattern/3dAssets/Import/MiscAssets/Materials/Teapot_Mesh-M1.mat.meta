@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e87081aeeeaa66a49a6721a2700b577a
+timeCreated: 1464609778
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/MiscAssets/Materials/Teapot_Mesh-M1.mat
+  uploadId: 149945

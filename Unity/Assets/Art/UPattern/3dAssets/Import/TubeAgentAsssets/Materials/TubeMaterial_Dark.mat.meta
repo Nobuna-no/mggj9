@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ab84d6bf9ea474a43bbec6375cec0fab
+timeCreated: 1463763416
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/TubeAgentAsssets/Materials/TubeMaterial_Dark.mat
+  uploadId: 149945

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a3a58514aaa6c6e42acf4f79962fd8e5
+timeCreated: 1479463190
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/GridShufflerAssets/Materials/HealthPotionVRayCompleteMap.mat
+  uploadId: 149945

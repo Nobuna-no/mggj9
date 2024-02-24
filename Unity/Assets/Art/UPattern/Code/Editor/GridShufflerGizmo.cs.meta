@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d05d0a93b34e2924caa75972d4e93ec9
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/Code/GridShufflerGizmo.cs
+  uploadId: 149945

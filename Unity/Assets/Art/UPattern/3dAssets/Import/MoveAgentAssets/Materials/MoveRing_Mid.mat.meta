@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b115456e5b78e474f98b9473cc0ecc1d
+timeCreated: 1464610822
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/MoveAgentAssets/Materials/MoveRing_Mid.mat
+  uploadId: 149945

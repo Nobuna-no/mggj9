@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cd1790118bfe652419dd0063be42688f
+timeCreated: 1479463183
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/VolumeAsset/Materials/M1.mat
+  uploadId: 149945

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ec50f9c3c7abec44d92aae511fd2d8b8
+timeCreated: 1464894136
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/MoveAgentAssets/Materials/MoveRing_side.mat
+  uploadId: 149945

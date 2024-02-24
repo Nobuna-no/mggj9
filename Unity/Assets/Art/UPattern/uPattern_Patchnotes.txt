@@ -1,0 +1,10 @@
+Unity Pattern 1.2.3 Changes
+
+
+Unity 5.4 related changes
+
+
+- Resource.Load() got removed in Unity 5.3. uPattern uses AssetDatabase.LoadAssetAtPath() now.
+- Random.Seed got removed in Unity 5.4. uPattern uses states instead
+- Minor performance improvements.
+- Added inverse texture feature for the move agent.

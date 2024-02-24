@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 11f1118368e119045a1f4528ff476421
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/Code/MoveAgent.cs
+  uploadId: 149945

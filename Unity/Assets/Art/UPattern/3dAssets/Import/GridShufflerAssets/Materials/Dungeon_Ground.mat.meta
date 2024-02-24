@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e51bcfd42bbc42546b4bdf0f20d5baf8
+timeCreated: 1464610471
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/GridShufflerAssets/Materials/Dungeon_Ground.mat
+  uploadId: 149945

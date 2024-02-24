@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cbc3dc484c2e27547b8be678772d7f8c
+timeCreated: 1479463188
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/GridShufflerAssets/Materials/FassVRayCompleteMap.mat
+  uploadId: 149945

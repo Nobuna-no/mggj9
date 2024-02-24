@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 495853d2c33f71046b57bae4c7392a40
+timeCreated: 1464610878
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 63139
+  packageName: uPattern Tools Free
+  packageVersion: 1.2.3
+  assetPath: Assets/UPattern/3dAssets/Import/SimpleMazeAssets/Materials/SimpleDark.mat
+  uploadId: 149945
