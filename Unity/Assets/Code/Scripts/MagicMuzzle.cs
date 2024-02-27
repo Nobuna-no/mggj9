@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class RevisedGun : MonoBehaviour
+public class MagicMuzzle : MonoBehaviour
 {
     [Tooltip("Prefab to shoot")]
-    [SerializeField] private RevisedProjectile projectilePrefab;
+    [SerializeField] private MagicBullet projectilePrefab;
     [Tooltip("Projectile force")]
     [SerializeField] private float muzzleVelocity = 700f;
     [Tooltip("End point of gun where shots appear")]
@@ -16,7 +16,7 @@ public class RevisedGun : MonoBehaviour
     [SerializeField] float spreadAngle = 5f; // Adjust this value to control the spread
 
     // stack-based ObjectPool available with Unity 2021 and above
-    private IObjectPool<RevisedProjectile> objectPool;
+    private IObjectPool<MagicBullet> objectPool;
 
     // throw an exception if we try to return an existing item, already in the pool
     [SerializeField] private bool collectionCheck = true;
@@ -29,33 +29,33 @@ public class RevisedGun : MonoBehaviour
 
     private void Awake()
     {
-        objectPool = new ObjectPool<RevisedProjectile>(CreateProjectile,
+        objectPool = new ObjectPool<MagicBullet>(CreateProjectile,
             OnGetFromPool, OnReleaseToPool, OnDestroyPooledObject,
             collectionCheck, defaultCapacity, maxSize);
     }
 
     // invoked when creating an item to populate the object pool
-    private RevisedProjectile CreateProjectile()
+    private MagicBullet CreateProjectile()
     {
-        RevisedProjectile projectileInstance = Instantiate(projectilePrefab);
+        MagicBullet projectileInstance = Instantiate(projectilePrefab);
         projectileInstance.ObjectPool = objectPool;
         return projectileInstance;
     }
 
     // invoked when returning an item to the object pool
-    private void OnReleaseToPool(RevisedProjectile pooledObject)
+    private void OnReleaseToPool(MagicBullet pooledObject)
     {
         pooledObject.gameObject.SetActive(false);
     }
 
     // invoked when retrieving the next item from the object pool
-    private void OnGetFromPool(RevisedProjectile pooledObject)
+    private void OnGetFromPool(MagicBullet pooledObject)
     {
         pooledObject.gameObject.SetActive(true);
     }
 
     // invoked when we exceed the maximum number of pooled items (i.e. destroy the pooled object)
-    private void OnDestroyPooledObject(RevisedProjectile pooledObject)
+    private void OnDestroyPooledObject(MagicBullet pooledObject)
     {
         Destroy(pooledObject.gameObject);
     }
@@ -68,7 +68,7 @@ public class RevisedGun : MonoBehaviour
             foreach (var muzzlePosition in muzzlesPosition)
             {
                 // get a pooled object instead of instantiating
-                RevisedProjectile bulletObject = objectPool.Get();
+                MagicBullet bulletObject = objectPool.Get();
 
                 if (bulletObject == null)
                     continue;

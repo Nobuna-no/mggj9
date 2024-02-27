@@ -11,15 +11,22 @@ using UnityEngine.Pool;
  * 6. Environmental Hazards: Introduce environmental hazards that interact with projectiles, such as explosive barrels or destructible elements that can be used strategically against enemies.
 */
 
-public class RevisedProjectile : MonoBehaviour
+public class MagicBullet : MonoBehaviour
 {
     // deactivate after delay
     [SerializeField] private float timeoutDelay = 3f;
+    [SerializeField] private Rigidbody m_targetRigidbody;
 
-    private IObjectPool<RevisedProjectile> objectPool;
+    private IObjectPool<MagicBullet> objectPool;
 
     // public property to give the projectile a reference to its ObjectPool
-    public IObjectPool<RevisedProjectile> ObjectPool { set => objectPool = value; }
+    public IObjectPool<MagicBullet> ObjectPool { set => objectPool = value; }
+    public Rigidbody TargetRigidbody => m_targetRigidbody;
+
+    private void Awake()
+    {
+        m_targetRigidbody = GetComponentInChildren<Rigidbody>();
+    }
 
     public void Deactivate()
     {
@@ -31,9 +38,8 @@ public class RevisedProjectile : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         // reset the moving Rigidbody
-        Rigidbody rBody = GetComponent<Rigidbody>();
-        rBody.velocity = new Vector3(0f, 0f, 0f);
-        rBody.angularVelocity = new Vector3(0f, 0f, 0f);
+        m_targetRigidbody.velocity = new Vector3(0f, 0f, 0f);
+        m_targetRigidbody.angularVelocity = new Vector3(0f, 0f, 0f);
 
         // release the projectile back to the pool
         objectPool.Release(this);
