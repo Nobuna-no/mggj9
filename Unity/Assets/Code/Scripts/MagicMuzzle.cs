@@ -67,6 +67,11 @@ public class MagicMuzzle : MonoBehaviour
         {
             foreach (var muzzlePosition in muzzlesPosition)
             {
+                if (!muzzlePosition.gameObject.activeInHierarchy)
+                {
+                    continue;
+                }
+
                 // get a pooled object instead of instantiating
                 MagicBullet bulletObject = objectPool.Get();
 

@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5970862837192173391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
+  m_Name: 'Arsenal: Magic Homing'
+  m_EditorClassIdentifier: 
+  m_displayName: Magic Homing
+  m_description: Homing projectiles
+  m_duration: 10
+  m_availableTiers:
+  - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  m_icon: {fileID: 0}
+--- !u!114 &-5099356032752877091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
+  m_Name: 'Arsenal: Magic Shotgun'
+  m_EditorClassIdentifier: 
+  m_displayName: Magic Shotgun
+  m_description: High spread
+  m_duration: 10
+  m_availableTiers:
+  - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  m_icon: {fileID: 0}
+--- !u!114 &-4629241041628979029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
+  m_Name: 'Arsenal: Magic Bullet'
+  m_EditorClassIdentifier: 
+  m_displayName: Magic Bullet
+  m_description: Fast but small bullets
+  m_duration: 15
+  m_availableTiers:
+  - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  m_icon: {fileID: 0}
+--- !u!114 &-4386351680670305786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
+  m_Name: 'Stats: Fire Rate'
+  m_EditorClassIdentifier: 
+  m_displayName: Fire Rate
+  m_description: Increase fire rate.
+  m_duration: 15
+  m_availableTiers:
+  - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  m_icon: {fileID: 0}
+--- !u!114 &-635140617022527070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
+  m_Name: 'Arsenal: Magic Bolt'
+  m_EditorClassIdentifier: 
+  m_displayName: Magic Bolt
+  m_description: Big but slow projectile
+  m_duration: 10
+  m_availableTiers:
+  - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  m_icon: {fileID: 0}
+--- !u!114 &-532288725352972895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
+  m_Name: 'States: Move Speed'
+  m_EditorClassIdentifier: 
+  m_displayName: Velocity
+  m_description: Increase movement speed.
+  m_duration: 20
+  m_availableTiers:
+  - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  m_icon: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5346f70f2138da24390473376ed06139, type: 3}
+  m_Name: '[Augment]'
+  m_EditorClassIdentifier: 
+  m_dataDefinitions:
+  - {fileID: -532288725352972895}
+  - {fileID: -4386351680670305786}
+  - {fileID: -4629241041628979029}
+  - {fileID: -635140617022527070}
+  - {fileID: -5099356032752877091}
+  - {fileID: -5970862837192173391}
