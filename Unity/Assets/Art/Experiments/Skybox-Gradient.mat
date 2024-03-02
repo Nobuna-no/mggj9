@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Skybox-Gradient
-  m_Shader: {fileID: 4800000, guid: 0b169769b13a44a47aa9064d6a772a1a, type: 3}
+  m_Shader: {fileID: 4800000, guid: ea6ce85f34947504e9cd0417f1514a2a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -26,8 +26,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _Screenspace: 0
-    - _mult: 3
-    - _pwer: 0.5
+    - _mult: 1
+    - _offset: 0.56
+    - _pwer: 1.89
     m_Colors:
     - _Bottom: {r: 1, g: 1, b: 1, a: 0}
     - _Top: {r: 0, g: 0, b: 0, a: 0}

@@ -6,6 +6,7 @@ Shader "Skybox Gradient"
 	{
 		_Top("Top", Color) = (1,1,1,0)
 		_Bottom("Bottom", Color) = (0,0,0,0)
+		_offset("offset", Float) = 0
 		_mult("mult", Float) = 1
 		_pwer("pwer", Float) = 1
 		[Toggle(_SCREENSPACE_ON)] _Screenspace("Screen space", Float) = 0
@@ -72,6 +73,7 @@ Shader "Skybox Gradient"
 
 			uniform float4 _Bottom;
 			uniform float4 _Top;
+			uniform float _offset;
 			uniform float _mult;
 			uniform float _pwer;
 
@@ -118,9 +120,9 @@ Shader "Skybox Gradient"
 				float4 ase_screenPosNorm = screenPos / screenPos.w;
 				ase_screenPosNorm.z = ( UNITY_NEAR_CLIP_VALUE >= 0 ) ? ase_screenPosNorm.z : ase_screenPosNorm.z * 0.5 + 0.5;
 				#ifdef _SCREENSPACE_ON
-				float staticSwitch13 = ase_screenPosNorm.y;
+				float staticSwitch13 = ase_screenPosNorm.y + _offset;
 				#else
-				float staticSwitch13 = i.ase_texcoord1.xyz.y;
+				float staticSwitch13 = i.ase_texcoord1.xyz.y + _offset;
 				#endif
 				float4 lerpResult3 = lerp( _Bottom , _Top , pow( saturate( ( staticSwitch13 * _mult ) ) , _pwer ));
 				
