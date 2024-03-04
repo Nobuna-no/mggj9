@@ -57,7 +57,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -109,7 +109,19 @@ MonoBehaviour:
       m_Calls: []
   OnHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7665263781291023039}
+        m_TargetAssemblyTypeName: MagicBullet, Assembly-CSharp
+        m_MethodName: ManualDeactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8349245460026685317
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +133,6 @@ GameObject:
   - component: {fileID: 1532107114494989067}
   - component: {fileID: 2114686631629225656}
   - component: {fileID: 2113312536350751972}
-  - component: {fileID: 5661038578181163203}
   - component: {fileID: 7665263781291023039}
   - component: {fileID: -6205046079494832223}
   m_Layer: 0
@@ -199,27 +210,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5661038578181163203
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8349245460026685317}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7665263781291023039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +223,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeoutDelay: 3
+  m_targetRigidbody: {fileID: 0}
+  m_onSpawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4925645521872704188}
+        m_TargetAssemblyTypeName: NobunAtelier.Gameplay.HitboxBehaviour, NobunAtelier.Core
+        m_MethodName: HitBegin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onDespawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4925645521872704188}
+        m_TargetAssemblyTypeName: NobunAtelier.Gameplay.HitboxBehaviour, NobunAtelier.Core
+        m_MethodName: HitEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &-6205046079494832223
 Rigidbody:
   m_ObjectHideFlags: 0

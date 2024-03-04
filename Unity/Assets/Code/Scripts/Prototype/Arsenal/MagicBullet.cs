@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Pool;
 
 /* Some ideas to make shooting more interesting"
@@ -16,7 +17,8 @@ public class MagicBullet : MonoBehaviour
     // deactivate after delay
     [SerializeField] private float timeoutDelay = 3f;
     [SerializeField] private Rigidbody m_targetRigidbody;
-
+    [SerializeField] private UnityEvent m_onSpawn;
+    [SerializeField] private UnityEvent m_onDespawn;
     private IObjectPool<MagicBullet> objectPool;
 
     // public property to give the projectile a reference to its ObjectPool
@@ -30,7 +32,19 @@ public class MagicBullet : MonoBehaviour
 
     public void Deactivate()
     {
+        m_onSpawn?.Invoke();
         StartCoroutine(DeactivateRoutine(timeoutDelay));
+    }
+
+    public void ManualDeactivate()
+    {
+        // reset the moving Rigidbody
+        m_targetRigidbody.velocity = new Vector3(0f, 0f, 0f);
+        m_targetRigidbody.angularVelocity = new Vector3(0f, 0f, 0f);
+
+        // release the projectile back to the pool
+        m_onDespawn?.Invoke();
+        objectPool.Release(this);
     }
 
     IEnumerator DeactivateRoutine(float delay)
@@ -42,6 +56,7 @@ public class MagicBullet : MonoBehaviour
         m_targetRigidbody.angularVelocity = new Vector3(0f, 0f, 0f);
 
         // release the projectile back to the pool
+        m_onDespawn?.Invoke();
         objectPool.Release(this);
     }
 }

@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4185811755698913118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abcd3d530db54948a492cb0862025bc, type: 3}
+  m_Name: RailShooter_Player
+  m_EditorClassIdentifier: 
+  m_constrainedAxes: 7
+  m_axisRangeX: {x: -6, y: 6}
+  m_axisRangeY: {x: 3, y: 9}
+  m_axisRangeZ: {x: 0, y: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1213f4841406acb4db7c9806b4ca43e1, type: 3}
+  m_Name: '[WorldPerspectives]'
+  m_EditorClassIdentifier: 
+  m_dataDefinitions:
+  - {fileID: 8827910540652386665}
+  - {fileID: 569141026411893817}
+  - {fileID: 2842425346656373391}
+  - {fileID: -4185811755698913118}
+--- !u!114 &569141026411893817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abcd3d530db54948a492cb0862025bc, type: 3}
+  m_Name: TopDown_Player
+  m_EditorClassIdentifier: 
+  m_constrainedAxes: 7
+  m_axisRangeX: {x: -7, y: 7}
+  m_axisRangeY: {x: 5, y: 5}
+  m_axisRangeZ: {x: -4.5, y: 4.5}
+--- !u!114 &2842425346656373391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abcd3d530db54948a492cb0862025bc, type: 3}
+  m_Name: RailShooter
+  m_EditorClassIdentifier: 
+  m_constrainedAxes: 7
+  m_axisRangeX: {x: -6, y: 6}
+  m_axisRangeY: {x: 3, y: 9}
+  m_axisRangeZ: {x: -1, y: 10}
+--- !u!114 &8827910540652386665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abcd3d530db54948a492cb0862025bc, type: 3}
+  m_Name: TopDown
+  m_EditorClassIdentifier: 
+  m_constrainedAxes: 7
+  m_axisRangeX: {x: -7.5, y: 7.5}
+  m_axisRangeY: {x: 5, y: 5}
+  m_axisRangeZ: {x: -4, y: 4}
