@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6433183388061516654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97653ba072186f14bb9c41409fbbbe39, type: 3}
+  m_Name: Common
+  m_EditorClassIdentifier: 
+  m_radius: 1.5
+  m_durationMultiplier: 2
+--- !u!114 &-3716946800282331944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97653ba072186f14bb9c41409fbbbe39, type: 3}
+  m_Name: Legendary
+  m_EditorClassIdentifier: 
+  m_radius: 3
+  m_durationMultiplier: 1
+--- !u!114 &-3376012894769598882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97653ba072186f14bb9c41409fbbbe39, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: 
+  m_radius: 1
+  m_durationMultiplier: 3
+--- !u!114 &-2178966989717067604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97653ba072186f14bb9c41409fbbbe39, type: 3}
+  m_Name: Corrupted
+  m_EditorClassIdentifier: 
+  m_radius: 0.5
+  m_durationMultiplier: 1
+--- !u!114 &-1946938432650319817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97653ba072186f14bb9c41409fbbbe39, type: 3}
+  m_Name: Rare
+  m_EditorClassIdentifier: 
+  m_radius: 2.5
+  m_durationMultiplier: 1.25
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e5a735367fb024483f0c04495c69fb, type: 3}
+  m_Name: '[ShardsAttraction]'
+  m_EditorClassIdentifier: 
+  m_dataDefinitions:
+  - {fileID: -3376012894769598882}
+  - {fileID: -6433183388061516654}
+  - {fileID: 1993530732065259234}
+  - {fileID: -1946938432650319817}
+  - {fileID: -3716946800282331944}
+  - {fileID: -2178966989717067604}
+--- !u!114 &1993530732065259234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97653ba072186f14bb9c41409fbbbe39, type: 3}
+  m_Name: Uncommon
+  m_EditorClassIdentifier: 
+  m_radius: 2
+  m_durationMultiplier: 1.5

@@ -143,9 +143,32 @@ MonoBehaviour:
   m_Name: '[Augment]'
   m_EditorClassIdentifier: 
   m_dataDefinitions:
-  - {fileID: -532288725352972895}
   - {fileID: -4386351680670305786}
   - {fileID: -4629241041628979029}
   - {fileID: -635140617022527070}
   - {fileID: -5099356032752877091}
   - {fileID: -5970862837192173391}
+  - {fileID: -532288725352972895}
+  - {fileID: 3568157389546311449}
+--- !u!114 &3568157389546311449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
+  m_Name: 'States: Shards Attraction'
+  m_EditorClassIdentifier: 
+  m_displayName: Attraction
+  m_description: Shards attraction force
+  m_duration: 15
+  m_availableTiers:
+  - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
+  m_icon: {fileID: 0}
