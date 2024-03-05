@@ -118,6 +118,7 @@ public class AugmentController : MonoBehaviour
         public AugmentDefinition AugmentDefinition;
         public AugmentBehaviour[] TierLogic;
         public UnityEvent<float> OnAugmentUpdate;
+        public UnityEvent OnAnyTierDeactivated;
 
         private MonoBehaviour m_owner;
 
@@ -191,6 +192,7 @@ public class AugmentController : MonoBehaviour
                 return;
             }
 
+            OnAnyTierDeactivated?.Invoke();
             Debug.Assert(m_augmentBehavioursMap.ContainsKey(ActiveTier));
             m_augmentBehavioursMap[ActiveTier].OnTierDeactivated?.Invoke();
             IsActive = false;
