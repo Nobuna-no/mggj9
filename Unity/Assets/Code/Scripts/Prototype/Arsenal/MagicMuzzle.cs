@@ -1,71 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Pool;
 
-public class MagicMuzzle : MonoBehaviour
+public class MagicMuzzle : UnityPoolBehaviour<PoolableRigidbody>
 {
-    [Tooltip("Prefab to shoot")]
-    [SerializeField] private MagicBullet projectilePrefab;
+    [Header("Magic Muzzle")]
     [Tooltip("Projectile force")]
-    [SerializeField] private float muzzleVelocity = 700f;
+    [SerializeField] private float m_muzzleVelocity = 700f;
     [Tooltip("End point of gun where shots appear")]
-    [SerializeField] private Transform[] muzzlesPosition;
+    [SerializeField] private Transform[] m_muzzlesPosition;
     [Tooltip("Time between shots / smaller = higher rate of fire")]
-    [SerializeField] private float cooldownWindow = 0.1f;
-    [SerializeField] float spreadAngle = 5f; // Adjust this value to control the spread
+    [SerializeField] private float m_cooldownWindow = 0.1f;
+    [SerializeField] float m_spreadAngle = 5f; // Adjust this value to control the spread
+    [SerializeField] private bool m_shootingEnable = false;
 
-    // stack-based ObjectPool available with Unity 2021 and above
-    private IObjectPool<MagicBullet> objectPool;
+    private float m_nextTimeToShoot;
 
-    // throw an exception if we try to return an existing item, already in the pool
-    [SerializeField] private bool collectionCheck = true;
-
-    // extra options to control the pool capacity and maximum size
-    [SerializeField] private int defaultCapacity = 20;
-    [SerializeField] private int maxSize = 100;
-
-    private float nextTimeToShoot;
-
-    private void Awake()
+    public void EnableShooting()
     {
-        objectPool = new ObjectPool<MagicBullet>(CreateProjectile,
-            OnGetFromPool, OnReleaseToPool, OnDestroyPooledObject,
-            collectionCheck, defaultCapacity, maxSize);
+        m_shootingEnable = true;
     }
 
-    // invoked when creating an item to populate the object pool
-    private MagicBullet CreateProjectile()
+    public void DisableShooting()
     {
-        MagicBullet projectileInstance = Instantiate(projectilePrefab);
-        projectileInstance.ObjectPool = objectPool;
-        return projectileInstance;
-    }
-
-    // invoked when returning an item to the object pool
-    private void OnReleaseToPool(MagicBullet pooledObject)
-    {
-        pooledObject.gameObject.SetActive(false);
-    }
-
-    // invoked when retrieving the next item from the object pool
-    private void OnGetFromPool(MagicBullet pooledObject)
-    {
-        pooledObject.gameObject.SetActive(true);
-    }
-
-    // invoked when we exceed the maximum number of pooled items (i.e. destroy the pooled object)
-    private void OnDestroyPooledObject(MagicBullet pooledObject)
-    {
-        Destroy(pooledObject.gameObject);
+        m_shootingEnable = false;
     }
 
     private void FixedUpdate()
     {
-        // shoot if we have exceeded delay
-        if (Input.GetButton("Fire1") && Time.time > nextTimeToShoot && objectPool != null)
+        if (!m_shootingEnable)
         {
-            foreach (var muzzlePosition in muzzlesPosition)
+            return;
+        }
+
+        // shoot if we have exceeded delay
+        if (Time.time > m_nextTimeToShoot && Pool != null)
+        {
+            foreach (var muzzlePosition in m_muzzlesPosition)
             {
                 if (!muzzlePosition.gameObject.activeInHierarchy)
                 {
@@ -73,7 +42,7 @@ public class MagicMuzzle : MonoBehaviour
                 }
 
                 // get a pooled object instead of instantiating
-                MagicBullet bulletObject = objectPool.Get();
+                PoolableRigidbody bulletObject = Pool.Get();
 
                 if (bulletObject == null)
                     continue;
@@ -84,23 +53,21 @@ public class MagicMuzzle : MonoBehaviour
                 // Define a spread angle (in degrees)
 
                 // Generate a random rotation within the spread angle
-                Quaternion spreadRotation = Quaternion.Euler(Random.Range(-spreadAngle, spreadAngle), Random.Range(-spreadAngle, spreadAngle), 0f);
+                Quaternion spreadRotation = Quaternion.Euler(Random.Range(-m_spreadAngle, m_spreadAngle), Random.Range(-m_spreadAngle, m_spreadAngle), 0f);
 
                 // Apply the spread rotation to the bullet's forward direction
                 Vector3 spreadDirection = spreadRotation * bulletObject.transform.forward;
 
                 // Move projectile forward
-                bulletObject.GetComponent<Rigidbody>().AddForce(spreadDirection * muzzleVelocity, ForceMode.Acceleration);
-
-                // move projectile forward
+                bulletObject.GetComponent<Rigidbody>().AddForce(spreadDirection * m_muzzleVelocity, ForceMode.Acceleration);
                 // bulletObject.GetComponent<Rigidbody>().AddForce(bulletObject.transform.forward * muzzleVelocity, ForceMode.Acceleration);
 
                 // turn off after a few seconds
-                bulletObject.Deactivate();
+                bulletObject.Spawn();
             }
 
             // set cooldown delay
-            nextTimeToShoot = Time.time + cooldownWindow;
+            m_nextTimeToShoot = Time.time + m_cooldownWindow;
         }
     }
 }
