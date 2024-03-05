@@ -27,4 +27,37 @@ public class WorldBoundariesDefinition : DataDefinition
     private bool IsLockingY => (m_constrainedAxes & ConstrainedAxis.Y) != 0;
     private bool IsLockingZ => (m_constrainedAxes & ConstrainedAxis.Z) != 0;
 #endif
+
+    public Vector3 RemapPositionToBoundaries(Vector3 position)
+    {
+        // Remap the position to the un-clamped boundaries.
+        return new Vector3(
+            Mathf.LerpUnclamped(AxisRangeX.x, AxisRangeX.y, Mathf.InverseLerp(-1f, 1f, position.x)),
+            Mathf.LerpUnclamped(AxisRangeY.x, AxisRangeY.y, Mathf.InverseLerp(-1f, 1f, position.y)),
+            Mathf.LerpUnclamped(AxisRangeZ.x, AxisRangeZ.y, Mathf.InverseLerp(-1f, 1f, position.z))
+            );
+    }
+
+    public Vector3 ClampPositionToBoundaries(Vector3 position)
+    {
+        // Remap the position to the un-clamped boundaries.
+        return new Vector3(
+            Mathf.Clamp(position.x, AxisRangeX.x, AxisRangeX.y),
+            Mathf.Clamp(position.y, AxisRangeY.x, AxisRangeY.y),
+            Mathf.Clamp(position.z, AxisRangeZ.x, AxisRangeZ.y)
+            );
+    }
+
+    public Vector3 RemapPositionToBoundariesUnclamped(Vector3 position)
+    {
+        // Remap the position to the un-clamped boundaries.
+        return new Vector3(
+            Mathf.LerpUnclamped(AxisRangeX.x, AxisRangeX.y,
+                Mathf.InverseLerp(-1f, 1f, position.x) + Mathf.Sign(position.x) * (Mathf.Abs(position.x) > 1 ? Mathf.Abs(position.x) - 1 : 0)),
+            Mathf.LerpUnclamped(AxisRangeY.x, AxisRangeY.y,
+                Mathf.InverseLerp(-1f, 1f, position.y) + Mathf.Sign(position.y) * (Mathf.Abs(position.y) > 1 ? Mathf.Abs(position.y) - 1 : 0)),
+            Mathf.LerpUnclamped(AxisRangeZ.x, AxisRangeZ.y,
+                Mathf.InverseLerp(-1f, 1f, position.z) + Mathf.Sign(position.z) * (Mathf.Abs(position.z) > 1 ? Mathf.Abs(position.z) - 1 : 0))
+            );
+    }
 }

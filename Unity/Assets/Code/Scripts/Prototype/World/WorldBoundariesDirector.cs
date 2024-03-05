@@ -12,6 +12,8 @@ public class WorldBoundariesDirector : Singleton<WorldBoundariesDirector>
     private PerspectiveSettings m_activeSettings = null;
     private WorldBoundariesDefinition m_activeDefinition = null;
 
+    public WorldBoundariesDefinition ActiveBoundaries => m_activeDefinition;
+
     public void SetPerspective(WorldBoundariesDefinition perspective)
     {
         // If already in this perspective, exit.
@@ -49,7 +51,7 @@ public class WorldBoundariesDirector : Singleton<WorldBoundariesDirector>
     }
 #endif
 
-    private void Awake()
+    protected override void OnSingletonAwake()
     {
         m_perspectivesMap = new Dictionary<WorldBoundariesDefinition, PerspectiveSettings>();
         foreach (var p in m_settings)
