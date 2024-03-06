@@ -17,8 +17,8 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
 
     private void Start()
     {
-        WorldBoundariesDirector.Instance.OnWorldPerspectiveChanged += OnWorldPerspectiveChanged;
-        m_worldBoundaries = WorldBoundariesDirector.Instance.ActiveBoundaries;
+        WorldPerspectiveManager.Instance.OnWorldPerspectiveChanged += OnWorldPerspectiveChanged;
+        m_worldBoundaries = WorldPerspectiveManager.Instance.ActiveBoundaries;
     }
 
     private void OnWorldPerspectiveChanged(WorldBoundariesDefinition newBoundaries)

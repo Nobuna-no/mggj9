@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class WorldBoundariesDirector : Singleton<WorldBoundariesDirector>
+public class WorldPerspectiveManager : Singleton<WorldPerspectiveManager>
 {
     [SerializeField] private PerspectiveSettings[] m_settings;
     [SerializeField] private WorldBoundariesDefinition m_initialPerspective;
@@ -14,6 +14,7 @@ public class WorldBoundariesDirector : Singleton<WorldBoundariesDirector>
     private WorldBoundariesDefinition m_activeDefinition = null;
 
     public WorldBoundariesDefinition ActiveBoundaries => m_activeDefinition;
+
     public event Action<WorldBoundariesDefinition> OnWorldPerspectiveChanged;
 
     public void SetPerspective(WorldBoundariesDefinition perspective)
@@ -24,15 +25,21 @@ public class WorldBoundariesDirector : Singleton<WorldBoundariesDirector>
             return;
         }
 
+        OnWorldPerspectiveChanged?.Invoke(perspective);
+
         if (m_activeSettings != null)
         {
             m_activeSettings.OnPerspectiveExited?.Invoke(m_activeDefinition);
+            m_activeSettings = null;
         }
 
-        m_activeSettings = m_perspectivesMap[perspective];
+        if (m_perspectivesMap.TryGetValue(perspective, out m_activeSettings))
+        {
+            m_activeSettings = m_perspectivesMap[perspective];
+            m_activeSettings.OnPerspectiveActivated?.Invoke(perspective);
+        }
+
         m_activeDefinition = perspective;
-        m_activeSettings.OnPerspectiveActivated?.Invoke(perspective);
-        OnWorldPerspectiveChanged?.Invoke(perspective);
     }
 
     public bool TryGetPerspectiveSettings(WorldBoundariesDefinition key, out PerspectiveSettings out_settings)
@@ -47,11 +54,13 @@ public class WorldBoundariesDirector : Singleton<WorldBoundariesDirector>
 
 #if UNITY_EDITOR
     [SerializeField] private WorldBoundariesDefinition m_debugPerspective;
+
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     private void DebugSetPerspective()
     {
         SetPerspective(m_debugPerspective);
     }
+
 #endif
 
     protected override void OnSingletonAwake()

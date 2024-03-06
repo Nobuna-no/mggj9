@@ -40,7 +40,7 @@ public class WorldBoundariesDefinition : DataDefinition
 
     public Vector3 ClampPositionToBoundaries(Vector3 position)
     {
-        // Remap the position to the un-clamped boundaries.
+        // Remap the position to the boundaries.
         return new Vector3(
             Mathf.Clamp(position.x, AxisRangeX.x, AxisRangeX.y),
             Mathf.Clamp(position.y, AxisRangeY.x, AxisRangeY.y),

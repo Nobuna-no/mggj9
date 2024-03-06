@@ -12,7 +12,7 @@ public class ShardSpawner : UnityPoolBehaviour<PoolableShard>
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     public void SpawnShards()
     {
-        var boundaries = WorldBoundariesDirector.Instance.ActiveBoundaries;
+        var boundaries = WorldPerspectiveManager.Instance.ActiveBoundaries;
 
         for (int i = 0; i < m_numberOfShards; i++)
         {

@@ -22,7 +22,14 @@ public class EnemySpawnerDirector : MonoBehaviour
         m_container = spawnedEntity.AddComponent<SplineContainer>();
     }
 
-    public void SetWorldPerspectiveDefinition(WorldBoundariesDefinition worldPerspectiveDefinition)
+    public void Start()
+    {
+        Debug.Assert(WorldPerspectiveManager.IsSingletonValid);
+        WorldPerspectiveManager.Instance.OnWorldPerspectiveChanged += SetWorldPerspective;
+        SetWorldPerspective(WorldPerspectiveManager.Instance.ActiveBoundaries);
+    }
+
+    public void SetWorldPerspective(WorldBoundariesDefinition worldPerspectiveDefinition)
     {
         m_boundariesDefinition = worldPerspectiveDefinition;
     }
@@ -49,7 +56,7 @@ public class EnemySpawnerDirector : MonoBehaviour
         for (int j = 0; j < m_scaledPath.Count; j++)
         {
             BezierKnot knot = m_scaledPath[j];
-            knot.Position = RemapPositionToBoundaries(knot.Position);//Vector3.Scale(knot.Position, m_worldSize);
+            knot.Position = m_boundariesDefinition.RemapPositionToBoundariesUnclamped(knot.Position);//Vector3.Scale(knot.Position, m_worldSize);
             m_scaledPath[j] = knot;
             m_scaledPath.SetTangentMode(TangentMode.AutoSmooth);
         }
@@ -58,22 +65,22 @@ public class EnemySpawnerDirector : MonoBehaviour
         StartCoroutine(WaitAndSpawnEntity(sequence));
     }
 
-    private Vector3 RemapPositionToBoundaries(Vector3 position)
-    {
-        // Remap the position to the un-clamped boundaries.
-        return new Vector3(
-            Mathf.LerpUnclamped(m_boundariesDefinition.AxisRangeX.x, m_boundariesDefinition.AxisRangeX.y,
-                Mathf.InverseLerp(-1f, 1f, position.x) + Mathf.Sign(position.x) * (Mathf.Abs(position.x) > 1 ? Mathf.Abs(position.x) - 1 : 0)),
-            Mathf.LerpUnclamped(m_boundariesDefinition.AxisRangeY.x, m_boundariesDefinition.AxisRangeY.y,
-                Mathf.InverseLerp(-1f, 1f, position.y) + Mathf.Sign(position.y) * (Mathf.Abs(position.y) > 1 ? Mathf.Abs(position.y) - 1 : 0)),
-            Mathf.LerpUnclamped(m_boundariesDefinition.AxisRangeZ.x, m_boundariesDefinition.AxisRangeZ.y,
-                Mathf.InverseLerp(-1f, 1f, position.z) + Mathf.Sign(position.z) * (Mathf.Abs(position.z) > 1 ? Mathf.Abs(position.z) - 1 : 0))
-            );
-    }
+    //private Vector3 RemapPositionToBoundaries(Vector3 position)
+    //{
+    //    // Remap the position to the un-clamped boundaries.
+    //    return new Vector3(
+    //        Mathf.LerpUnclamped(m_boundariesDefinition.AxisRangeX.x, m_boundariesDefinition.AxisRangeX.y,
+    //            Mathf.InverseLerp(-1f, 1f, position.x) + Mathf.Sign(position.x) * (Mathf.Abs(position.x) > 1 ? Mathf.Abs(position.x) - 1 : 0)),
+    //        Mathf.LerpUnclamped(m_boundariesDefinition.AxisRangeY.x, m_boundariesDefinition.AxisRangeY.y,
+    //            Mathf.InverseLerp(-1f, 1f, position.y) + Mathf.Sign(position.y) * (Mathf.Abs(position.y) > 1 ? Mathf.Abs(position.y) - 1 : 0)),
+    //        Mathf.LerpUnclamped(m_boundariesDefinition.AxisRangeZ.x, m_boundariesDefinition.AxisRangeZ.y,
+    //            Mathf.InverseLerp(-1f, 1f, position.z) + Mathf.Sign(position.z) * (Mathf.Abs(position.z) > 1 ? Mathf.Abs(position.z) - 1 : 0))
+    //        );
+    //}
 
     private void SpawnEntity(EnemyWavesDefinition.Sequence sequence)
     {
-        Vector3 scaledOrigin = RemapPositionToBoundaries(sequence.Tween.Origin);
+        Vector3 scaledOrigin = m_boundariesDefinition.RemapPositionToBoundariesUnclamped(sequence.Tween.Origin);
         GameObject spawnedEntity = Instantiate(sequence.PROTO_PrefabToSpawn, scaledOrigin, Quaternion.identity);
 
         if (sequence.UseSpline)
@@ -87,7 +94,7 @@ public class EnemySpawnerDirector : MonoBehaviour
         }
         else
         {
-            Vector3 scaledDestination = RemapPositionToBoundaries(sequence.Tween.Destination);//Vector3.Scale(m_spawningSequence.Tween.Destination, m_worldSize);
+            Vector3 scaledDestination = m_boundariesDefinition.RemapPositionToBoundariesUnclamped(sequence.Tween.Destination);//Vector3.Scale(m_spawningSequence.Tween.Destination, m_worldSize);
             StartCoroutine(MoveToDestination(spawnedEntity, scaledDestination, sequence.TweenDuration, sequence.Tween.Curve));
         }
 
