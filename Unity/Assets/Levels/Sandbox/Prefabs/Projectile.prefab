@@ -110,7 +110,7 @@ MonoBehaviour:
   OnHit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7665263781291023039}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MagicBullet, Assembly-CSharp
         m_MethodName: ManualDeactivate
         m_Mode: 1
@@ -133,8 +133,8 @@ GameObject:
   - component: {fileID: 1532107114494989067}
   - component: {fileID: 2114686631629225656}
   - component: {fileID: 2113312536350751972}
-  - component: {fileID: 7665263781291023039}
   - component: {fileID: -6205046079494832223}
+  - component: {fileID: 3362232036833199714}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -210,7 +210,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7665263781291023039
+--- !u!54 &-6205046079494832223
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8349245460026685317}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3362232036833199714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,11 +246,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8349245460026685317}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff2f6964a95c98e48b205f8df3c01535, type: 3}
+  m_Script: {fileID: 11500000, guid: 97c40dbb34a23a34ba372fbab7268de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeoutDelay: 3
-  m_targetRigidbody: {fileID: 0}
   m_onSpawn:
     m_PersistentCalls:
       m_Calls:
@@ -254,30 +279,4 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!54 &-6205046079494832223
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8349245460026685317}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_timeoutDelay: 3

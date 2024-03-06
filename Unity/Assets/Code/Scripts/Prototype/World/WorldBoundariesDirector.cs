@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,6 +14,7 @@ public class WorldBoundariesDirector : Singleton<WorldBoundariesDirector>
     private WorldBoundariesDefinition m_activeDefinition = null;
 
     public WorldBoundariesDefinition ActiveBoundaries => m_activeDefinition;
+    public event Action<WorldBoundariesDefinition> OnWorldPerspectiveChanged;
 
     public void SetPerspective(WorldBoundariesDefinition perspective)
     {
@@ -30,6 +32,7 @@ public class WorldBoundariesDirector : Singleton<WorldBoundariesDirector>
         m_activeSettings = m_perspectivesMap[perspective];
         m_activeDefinition = perspective;
         m_activeSettings.OnPerspectiveActivated?.Invoke(perspective);
+        OnWorldPerspectiveChanged?.Invoke(perspective);
     }
 
     public bool TryGetPerspectiveSettings(WorldBoundariesDefinition key, out PerspectiveSettings out_settings)

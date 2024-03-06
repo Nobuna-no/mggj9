@@ -14,7 +14,7 @@ using UnityEngine.Pool;
 */
 
 [RequireComponent(typeof(Rigidbody))]
-public class PoolableRigidbody : UnityPoolableBehaviour<PoolableRigidbody>
+public class Bullet : UnityPoolableBehaviour<Bullet>
 {
     // public property to give the projectile a reference to its ObjectPool
     public Rigidbody TargetRigidbody { get; private set; }

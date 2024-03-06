@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7137842858064249359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4174634a4838034bb2b5671f6f1814c, type: 3}
+  m_Name: spread-shot
+  m_EditorClassIdentifier: 
+  m_virtualMuzzles:
+  - m_localOffset: {x: 0, y: 0, z: 0}
+    m_bulletCountRange: {x: 5, y: 7}
+    m_spreadAngleRange: {x: 5, y: 5}
+    m_bulletSpawnDelay: {x: 4.9694095, y: 4.9694095}
+    m_velocityMultiplierRange: {x: 0, y: 0}
+  m_fireRatePerSecond: 1
+  m_openFireDurationRange: {x: 0, y: 0}
+  m_delayRangeBetweenOpenFire: {x: 0, y: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090afd545b16ff04d83feff28d47cf33, type: 3}
+  m_Name: '[MagicMuzzle]'
+  m_EditorClassIdentifier: 
+  m_dataDefinitions:
+  - {fileID: 4947238607986206781}
+  - {fileID: -7137842858064249359}
+  - {fileID: 5479309479033262596}
+--- !u!114 &4947238607986206781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4174634a4838034bb2b5671f6f1814c, type: 3}
+  m_Name: single-shot
+  m_EditorClassIdentifier: 
+  m_virtualMuzzles:
+  - m_localOffset: {x: 0, y: 0, z: 0}
+    m_bulletCountRange: {x: 1, y: 1}
+    m_spreadAngleRange: {x: 0, y: 0}
+    m_bulletSpawnDelay: {x: 0, y: 0}
+    m_velocityMultiplierRange: {x: 1, y: 1}
+  m_fireRatePerSecond: 1
+  m_openFireDurationRange: {x: 1, y: 1}
+  m_delayRangeBetweenOpenFire: {x: 1, y: 1}
+--- !u!114 &5479309479033262596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4174634a4838034bb2b5671f6f1814c, type: 3}
+  m_Name: burst-shot
+  m_EditorClassIdentifier: 
+  m_virtualMuzzles:
+  - m_localOffset: {x: 0, y: 0, z: 0}
+    m_bulletCountRange: {x: 0, y: 0}
+    m_spreadAngleRange: {x: 0, y: 0}
+    m_bulletSpawnDelay: {x: 0, y: 0}
+    m_velocityMultiplierRange: {x: 0, y: 0}
+  m_fireRatePerSecond: 1
+  m_openFireDurationRange: {x: 0, y: 0}
+  m_delayRangeBetweenOpenFire: {x: 0, y: 0}

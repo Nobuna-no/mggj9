@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MagicMuzzle : UnityPoolBehaviour<PoolableRigidbody>
+public class Muzzle : UnityPoolBehaviour<Bullet>
 {
     [Header("Magic Muzzle")]
     [Tooltip("Projectile force")]
@@ -12,7 +12,19 @@ public class MagicMuzzle : UnityPoolBehaviour<PoolableRigidbody>
     [SerializeField] float m_spreadAngle = 5f; // Adjust this value to control the spread
     [SerializeField] private bool m_shootingEnable = false;
 
+    private WorldBoundariesDefinition m_worldBoundaries;
     private float m_nextTimeToShoot;
+
+    private void Start()
+    {
+        WorldBoundariesDirector.Instance.OnWorldPerspectiveChanged += OnWorldPerspectiveChanged;
+        m_worldBoundaries = WorldBoundariesDirector.Instance.ActiveBoundaries;
+    }
+
+    private void OnWorldPerspectiveChanged(WorldBoundariesDefinition newBoundaries)
+    {
+        m_worldBoundaries = newBoundaries;
+    }
 
     public void EnableShooting()
     {
@@ -41,25 +53,27 @@ public class MagicMuzzle : UnityPoolBehaviour<PoolableRigidbody>
                     continue;
                 }
 
-                // get a pooled object instead of instantiating
-                PoolableRigidbody bulletObject = Pool.Get();
-
+                Bullet bulletObject = Pool.Get();
                 if (bulletObject == null)
                     continue;
 
                 // align to gun barrel/muzzle position
                 bulletObject.transform.SetPositionAndRotation(muzzlePosition.position, muzzlePosition.rotation);
 
-                // Define a spread angle (in degrees)
+
 
                 // Generate a random rotation within the spread angle
-                Quaternion spreadRotation = Quaternion.Euler(Random.Range(-m_spreadAngle, m_spreadAngle), Random.Range(-m_spreadAngle, m_spreadAngle), 0f);
-
-                // Apply the spread rotation to the bullet's forward direction
+                // need to constrain the y axis for top down and x for sidescroll
+                bool constrainedXSpread = m_worldBoundaries.AxisRangeX.y - m_worldBoundaries.AxisRangeX.x == 0;
+                bool constrainedYSpread = m_worldBoundaries.AxisRangeY.y - m_worldBoundaries.AxisRangeY.x == 0;
+                Quaternion spreadRotation = Quaternion.Euler(0,
+                    constrainedXSpread ? 0 : Random.Range(-m_spreadAngle, m_spreadAngle),
+                    constrainedYSpread ? 0 : Random.Range(-m_spreadAngle, m_spreadAngle));
                 Vector3 spreadDirection = spreadRotation * bulletObject.transform.forward;
+                // spreadDirection = m_worldBoundaries.RemapPositionToBoundaries(spreadDirection);
+                bulletObject.transform.forward = spreadDirection;
 
-                // Move projectile forward
-                bulletObject.GetComponent<Rigidbody>().AddForce(spreadDirection * m_muzzleVelocity, ForceMode.Acceleration);
+                bulletObject.TargetRigidbody.AddForce(spreadDirection * m_muzzleVelocity, ForceMode.Acceleration);
                 // bulletObject.GetComponent<Rigidbody>().AddForce(bulletObject.transform.forward * muzzleVelocity, ForceMode.Acceleration);
 
                 // turn off after a few seconds
