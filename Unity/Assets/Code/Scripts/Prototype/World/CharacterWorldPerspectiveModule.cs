@@ -8,7 +8,6 @@ public class CharacterWorldPerspectiveModule : CharacterVelocityModuleBase
 {
     [SerializeField] private WorldBoundariesDefinition m_perspectiveDefinition;
     [SerializeField, Range(0, 100)] private float m_lerpSpeed = 1f;
-    [SerializeField, Range(0, 100)] private float m_decelerationSpeed = 1f;
     [SerializeField] private AnimationCurve m_slowdownCurve;
     [SerializeField] private float m_distanceToBorderTrehsold = 1f;
 

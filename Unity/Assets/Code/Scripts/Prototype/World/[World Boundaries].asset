@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1213f4841406acb4db7c9806b4ca43e1, type: 3}
-  m_Name: '[WorldPerspectives]'
+  m_Name: '[World Boundaries]'
   m_EditorClassIdentifier: 
   m_dataDefinitions:
   - {fileID: 8827910540652386665}
