@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3881958537495674821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: xtop curved line:xbottom left point
+  m_EditorClassIdentifier: 
+  m_origin:
+    m_mode: 1
+    m_point: {x: 0, y: 0, z: 2}
+    m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+  m_destination:
+    m_mode: 1
+    m_point: {x: 0, y: 0, z: 0}
+    m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 1
+--- !u!114 &-304305527910125891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: xtop point:center line
+  m_EditorClassIdentifier: 
+  m_origin:
+    m_mode: 0
+    m_point: {x: 0, y: 0, z: 2}
+    m_spline: {fileID: 0}
+  m_destination:
+    m_mode: 1
+    m_point: {x: 0, y: 0, z: 0}
+    m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5a2e3d5a759ac4f9f8173c8f616941, type: 3}
+  m_Name: '[BattleMotions]'
+  m_EditorClassIdentifier: 
+  m_dataDefinitions:
+  - {fileID: -304305527910125891}
+  - {fileID: -3881958537495674821}

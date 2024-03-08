@@ -5,6 +5,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/* Change to do:
+ * - Need to be able to inject wave
+ * - Need to be able to inject rule
+ *
+ * Responsability:
+ * - Injects the active wave sequence to the EnemySpawnerManager
+ * - Rule and GameMode State handling: Listen to the enemies and player
+ *      - Is wave finished?
+ *      - Has player died?
+ */
+
 public class BattleManager : MonoBehaviour
 {
 #if UNITY_EDITOR

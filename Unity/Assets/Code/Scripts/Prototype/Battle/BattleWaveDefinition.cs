@@ -4,9 +4,10 @@ using NaughtyAttributes;
 using UnityEngine.Splines;
 using System.Collections.Generic;
 
-public class EnemyWavesDefinition : DataDefinition
+public class BattleWaveDefinition : DataDefinition
 {
-    [SerializeField] private Sequence[] m_sequences;
+    [SerializeField] private NewSequence[] m_newSequences;
+    [SerializeField, HideInInspector] private Sequence[] m_sequences;
     // [SerializeField] private PoolObjectDefinition m_entityToSpawn;
 
     public IReadOnlyList<Sequence> WavesSequence => m_sequences;
@@ -67,5 +68,17 @@ public class EnemyWavesDefinition : DataDefinition
             public SplineAnimate.EasingMode EasingMode => m_easingMode;
             public SplineAnimate.LoopMode LoopMode => m_loopMode;
         }
+    }
+
+    [System.Serializable]
+    public class NewSequence
+    {
+        [Tooltip("Delay before the sequence start. In seconds.")]
+        [SerializeField] private float m_delay = 0;
+        [SerializeField] private BattleMotionDefinition m_motion;
+        [SerializeField] private PoolableBattler m_battler;
+        [SerializeField, Min(1)] private int m_spawnCount = 1;
+        [Tooltip("In seconds.")]
+        [SerializeField] private int m_spawnOffset = 1;
     }
 }

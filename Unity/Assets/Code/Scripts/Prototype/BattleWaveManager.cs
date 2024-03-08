@@ -10,10 +10,10 @@ using UnityEngine.Splines;
 public class BattleWaveManager : MonoBehaviour
 {
     [Header("Battle Wave Manager")]
-    [SerializeField] private EnemyWavesCollection m_battlesCollection;
+    [SerializeField] private BattleWaveCollection m_battlesCollection;
     [SerializeField] private bool m_startNextBattleAutomatically = true;
     [SerializeField] private float m_delayBetweenWaves = 1f;
-    private EnemyWavesDefinition m_activeWavesDefinition;
+    private BattleWaveDefinition m_activeWavesDefinition;
     [SerializeField] private WorldBoundariesDefinition m_boundariesDefinition;
 
     [SerializeField] private UnityEvent m_onCurrentWaveCompleted;
@@ -159,7 +159,7 @@ public class BattleWaveManager : MonoBehaviour
         }
     }
 
-    private void PreparePathAndSpawnEntities(EnemyWavesDefinition.Sequence sequence)
+    private void PreparePathAndSpawnEntities(BattleWaveDefinition.Sequence sequence)
     {
         if (sequence == null)
         {
@@ -180,7 +180,7 @@ public class BattleWaveManager : MonoBehaviour
         StartCoroutine(WaitAndSpawnEntity(sequence));
     }
 
-    private void SpawnEntity(EnemyWavesDefinition.Sequence sequence)
+    private void SpawnEntity(BattleWaveDefinition.Sequence sequence)
     {
         Vector3 scaledOrigin = m_boundariesDefinition.RemapPositionToBoundariesUnclamped(sequence.Tween.Origin);
         GameObject spawnedEntity = Instantiate(sequence.PROTO_PrefabToSpawn, scaledOrigin, Quaternion.identity);
@@ -267,7 +267,7 @@ public class BattleWaveManager : MonoBehaviour
 
     }
 
-    private IEnumerator WaitAndSpawnSequence(EnemyWavesDefinition.Sequence sequence)
+    private IEnumerator WaitAndSpawnSequence(BattleWaveDefinition.Sequence sequence)
     {
         yield return new WaitForSecondsRealtime(sequence.Delay);
         PreparePathAndSpawnEntities(sequence);
@@ -282,7 +282,7 @@ public class BattleWaveManager : MonoBehaviour
         OpponentDespawn();
     }
 
-    private IEnumerator WaitAndSpawnEntity(EnemyWavesDefinition.Sequence sequence)
+    private IEnumerator WaitAndSpawnEntity(BattleWaveDefinition.Sequence sequence)
     {
         int remainingSpawn = sequence.EntityToSpawnCount;
 

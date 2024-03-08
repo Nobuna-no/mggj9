@@ -20,7 +20,7 @@ public class LevelStateState : StateWithTransition<LevelStateDefinition, LevelSt
 
         [SerializeField] private WorldBoundariesDefinition m_perspective;
         [SerializeField] private Rule m_rule = Rule.None;
-        [SerializeField] private EnemyWavesCollection m_enemyWaves;
+        [SerializeField] private BattleWaveCollection m_enemyWaves;
         [SerializeField] private PoolObjectDefinition m_tiles;
     }
 }
