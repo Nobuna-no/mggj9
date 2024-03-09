@@ -1,13 +1,15 @@
-using System.Collections;
 using NaughtyAttributes;
+using NobunAtelier;
+using System.Collections;
 using UnityEngine;
 
 public class ShardSpawner : UnityPoolBehaviour<PoolableShard>
 {
     [Header("Shards Spawner")]
     [SerializeField] private int m_numberOfShards = 10;
+
     [SerializeField, MinMaxSlider(0, 10)] private Vector2 m_spawnAreaRadius = Vector2.one; // Size of the spawn area
-    [SerializeField, MinMaxSlider(0,1)] private Vector2 m_spawnDelayRange = Vector2.left; // Delay between spawning each shard
+    [SerializeField, MinMaxSlider(0, 1)] private Vector2 m_spawnDelayRange = Vector2.left; // Delay between spawning each shard
 
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     public void SpawnShards()
@@ -23,7 +25,7 @@ public class ShardSpawner : UnityPoolBehaviour<PoolableShard>
         }
     }
 
-    IEnumerator WaitForSecondsRealtime(float delay, Vector3 position)
+    private IEnumerator WaitForSecondsRealtime(float delay, Vector3 position)
     {
         yield return new WaitForSeconds(delay);
 
@@ -31,5 +33,4 @@ public class ShardSpawner : UnityPoolBehaviour<PoolableShard>
         shard.transform.SetPositionAndRotation(position, Quaternion.Euler(new Vector3(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f))));
         shard.Spawn();
     }
-
 }

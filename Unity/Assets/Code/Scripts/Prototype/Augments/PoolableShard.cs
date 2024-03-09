@@ -1,9 +1,5 @@
+using NobunAtelier;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Pool;
-using System.Collections;
-
-
 
 [RequireComponent(typeof(Rigidbody))]
 public class PoolableShard : UnityPoolableBehaviour<PoolableShard>

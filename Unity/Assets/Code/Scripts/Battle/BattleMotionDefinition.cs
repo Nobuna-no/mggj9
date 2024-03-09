@@ -1,31 +1,44 @@
-using UnityEngine;
-using NobunAtelier;
-using UnityEngine.Splines;
 using NaughtyAttributes;
+using NobunAtelier;
+using UnityEngine;
 
 public class BattleMotionDefinition : DataDefinition
 {
+    [SerializeField] private MotionSpace m_origin;
+    [SerializeField] private MotionSpace m_destination;
+    [SerializeField] private AnimationCurve m_motionCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+    [SerializeField] private float m_motionDuration = 1f;
+
+    public MotionSpace Origin => m_origin;
+    public MotionSpace Destination => m_destination;
+    public AnimationCurve Curve => m_motionCurve;
+    public float Duration => m_motionDuration;
+
     [System.Serializable]
     public class MotionSpace
     {
-        public enum Type
+        public enum SpaceType
         {
             Point,
-            // Range,
             Spline
         }
 
-        [SerializeField] private Type m_mode = Type.Point;
-        [SerializeField, AllowNesting,ShowIf("ShowSpline")] private Vector3 m_point;
-        [SerializeField, AllowNesting, HideIf("ShowSpline")] private SplineDefinition m_spline;
-        private bool ShowSpline => m_mode == Type.Point;
+        [SerializeField] private SpaceType m_mode = SpaceType.Point;
+        [SerializeField, AllowNesting, ShowIf("PointMode")] private Vector3 m_point;
+        [SerializeField, AllowNesting, HideIf("PointMode")] private SplineDefinition m_spline;
+        [SerializeField, AllowNesting, HideIf("PointMode")] private Vector3 m_splineOrigin;
+        [SerializeField, AllowNesting, HideIf("PointMode")] private float m_splineScale = 1f;
+
+#if UNITY_EDITOR
+        private bool PointMode => m_mode == SpaceType.Point;
+#endif
+        public SpaceType Type => m_mode;
+        public Vector3 Point => m_point;
+        public SplineDefinition SplineDefinition => m_spline;
+        public Vector3 SplineOrigin => m_splineOrigin;
+        public float SplineScale => m_splineScale;
     }
 
-    [SerializeField] private MotionSpace m_origin;
-    [SerializeField] private MotionSpace m_destination;
-    // [SerializeField] private MotionLocation m_exit;
-    [SerializeField] private AnimationCurve m_motionCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-    [SerializeField] private float m_motionDuration = 1f;
     // This is going to be transform in world perspective space.
     // We really care about value between -1 and 1
     // [SerializeField, Tooltip("Delay before this sequence start")] private float m_delay = 0;
@@ -40,7 +53,7 @@ public class BattleMotionDefinition : DataDefinition
     // [SerializeField] private GameObject m_PROTO_prefabToSpawn;
 
     //  public bool UseSpline => m_useSplinePath;
-    public AnimationCurve Curve => m_motionCurve;
+
     // public float Delay => m_delay;
     // public PointDefinition Tween => m_tween;
     // public SplinePathSettings Spline => m_splinePath;
@@ -54,27 +67,27 @@ public class BattleMotionDefinition : DataDefinition
     // private bool ShowSpline => m_useSplinePath;
     // private bool ShowVectors => !m_useSplinePath;
 
-    [System.Serializable]
-    public class PointDefinition
-    {
-        [SerializeField] private Vector3 m_origin;
-        [SerializeField] private Vector3 m_destination;
-        [SerializeField] private Vector3 m_escapeDestination;
+    //[System.Serializable]
+    //public class PointDefinition
+    //{
+    //    [SerializeField] private Vector3 m_origin;
+    //    [SerializeField] private Vector3 m_destination;
+    //    [SerializeField] private Vector3 m_escapeDestination;
 
-        public Vector3 Origin => m_origin;
-        public Vector3 Destination => m_destination;
-        public Vector3 EscapeDestination => m_escapeDestination;
-    }
+    //    public Vector3 Origin => m_origin;
+    //    public Vector3 Destination => m_destination;
+    //    public Vector3 EscapeDestination => m_escapeDestination;
+    //}
 
-    [System.Serializable]
-    public class SplinePathSettings
-    {
-        [SerializeField] private Spline m_path;
-        [SerializeField] private SplineAnimate.EasingMode m_easingMode;
-        [SerializeField] private SplineAnimate.LoopMode m_loopMode;
+    //[System.Serializable]
+    //public class SplinePathSettings
+    //{
+    //    [SerializeField] private Spline m_path;
+    //    [SerializeField] private SplineAnimate.EasingMode m_easingMode;
+    //    [SerializeField] private SplineAnimate.LoopMode m_loopMode;
 
-        public Spline Path => m_path;
-        public SplineAnimate.EasingMode EasingMode => m_easingMode;
-        public SplineAnimate.LoopMode LoopMode => m_loopMode;
-    }
+    //    public Spline Path => m_path;
+    //    public SplineAnimate.EasingMode EasingMode => m_easingMode;
+    //    public SplineAnimate.LoopMode LoopMode => m_loopMode;
+    //}
 }

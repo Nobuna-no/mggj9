@@ -1,4 +1,5 @@
 using UnityEngine;
+using NobunAtelier;
 
 public class Muzzle : UnityPoolBehaviour<Bullet>
 {

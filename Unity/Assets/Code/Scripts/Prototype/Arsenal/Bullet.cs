@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Pool;
+using NobunAtelier;
 
 /* Some ideas to make shooting more interesting"
  * 1. Power-ups: Add power-ups that modify the behavior of projectiles, such as increasing their damage, size, speed, or adding special effects.

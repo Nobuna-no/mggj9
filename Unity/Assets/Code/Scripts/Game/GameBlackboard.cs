@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameBlackboard : Singleton<GameBlackboard>
@@ -8,7 +9,9 @@ public class GameBlackboard : Singleton<GameBlackboard>
     [SerializeField] private float m_defaultFireRateMultiplier = 1;
 
     [SerializeField] private ShardsAttractionDefinition m_defaultAttractionDefinition;
+    [SerializeField] private Transform m_playerTransform;
 
+    public static Transform PlayerTransform => Instance.m_playerTransform;
     public static BlackboardValue<float> MovementSpeedMultiplier { get; } = new BlackboardValue<float>();
     public static BlackboardValue<float> FireRateMultiplier { get; } = new BlackboardValue<float>();
     public static BlackboardValue<ShardsAttractionDefinition> AttractionSettings { get; } = new BlackboardValue<ShardsAttractionDefinition>();

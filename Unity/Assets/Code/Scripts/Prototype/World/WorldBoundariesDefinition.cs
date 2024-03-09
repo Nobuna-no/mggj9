@@ -60,4 +60,16 @@ public class WorldBoundariesDefinition : DataDefinition
                 Mathf.InverseLerp(-1f, 1f, position.z) + Mathf.Sign(position.z) * (Mathf.Abs(position.z) > 1 ? Mathf.Abs(position.z) - 1 : 0))
             );
     }
+
+    public bool IsPositionInBoundary(Vector3 position)
+    {
+        return IsInRange(position.x, AxisRangeX) &&
+               IsInRange(position.y, AxisRangeY) &&
+               IsInRange(position.z, AxisRangeZ);
+    }
+
+    private bool IsInRange(float value, Vector2 range)
+    {
+        return value >= range.x && value <= range.y;
+    }
 }

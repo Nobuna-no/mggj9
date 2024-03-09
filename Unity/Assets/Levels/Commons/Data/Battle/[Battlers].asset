@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-338608473468897678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61cee0e354b7ea4e9e5e0b43094cc13, type: 3}
+  m_Name: Sandbag
+  m_EditorClassIdentifier: 
+  m_poolablePrefab: {fileID: 3360776783618814209, guid: ed0aa7e750d59a84b83d197268f21c94,
+    type: 3}
+  m_reserveSize: 10
+  m_reserveGrowCount: 10
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581e2d5dac4115b43bb8c2b28af8ad08, type: 3}
+  m_Name: '[Battlers]'
+  m_EditorClassIdentifier: 
+  m_dataDefinitions:
+  - {fileID: -338608473468897678}
