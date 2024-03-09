@@ -17,6 +17,7 @@ using NobunAtelier;
 [RequireComponent(typeof(Rigidbody))]
 public class Bullet : UnityPoolableBehaviour<Bullet>
 {
+    [SerializeField] private ParticleSystem m_particleSystem;
     // public property to give the projectile a reference to its ObjectPool
     public Rigidbody TargetRigidbody { get; private set; }
 
@@ -35,5 +36,11 @@ public class Bullet : UnityPoolableBehaviour<Bullet>
         // reset the moving Rigidbody
         TargetRigidbody.velocity = new Vector3(0f, 0f, 0f);
         TargetRigidbody.angularVelocity = new Vector3(0f, 0f, 0f);
+    }
+
+    public void SpawnParticle()
+    {
+        var fx = Instantiate(m_particleSystem, transform.position, transform.rotation);
+        fx.Play();
     }
 }

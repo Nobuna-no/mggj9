@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f692764043a4b6041a9f338965c88afd, type: 3}
   m_Name: Sandbag
   m_EditorClassIdentifier: 
-  m_InitialValue: 1
-  m_MaxValue: 1
+  m_InitialValue: 3
+  m_MaxValue: 3
   m_invulnerabilityDuration: 0.15
   m_burialType: 2
   m_burialDelay: {x: 5, y: 5}

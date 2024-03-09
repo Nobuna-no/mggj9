@@ -111,6 +111,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3362232036833199714}
+        m_TargetAssemblyTypeName: Bullet, Assembly-CSharp
+        m_MethodName: SpawnParticle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3362232036833199714}
         m_TargetAssemblyTypeName: NobunAtelier.UnityPoolableBehaviour`1[[Bullet,
           Assembly-CSharp
         m_MethodName: Despawn
@@ -281,3 +293,5 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_timeoutDelay: 3
+  m_particleSystem: {fileID: 4198436773916837192, guid: 658a0fc8efab76e4d9c278881fdbdff8,
+    type: 3}
