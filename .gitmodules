@@ -1,3 +1,6 @@
 [submodule "Unity/Packages/com.nobunatelier.core"]
 	path = Unity/Packages/com.nobunatelier.core
 	url = https://github.com/Nobuna-no/com.nobunatelier.core.git
+[submodule "Unity/Assets/Licensed/mggj9-private"]
+	path = Unity/Assets/Licensed/mggj9-private
+	url = https://github.com/Nobuna-no/mggj9-private.git
