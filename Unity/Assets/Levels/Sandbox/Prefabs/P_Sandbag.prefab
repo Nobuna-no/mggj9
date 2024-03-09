@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8875415797527841048}
-  - component: {fileID: 3360776783618814209}
+  - component: {fileID: 4771320998592693334}
   - component: {fileID: 6102152013345632371}
   - component: {fileID: 5475273165920627536}
   - component: {fileID: 6309319287692304800}
@@ -42,7 +42,7 @@ Transform:
   - {fileID: 3673655048510454834}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3360776783618814209
+--- !u!114 &4771320998592693334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,9 +51,54 @@ MonoBehaviour:
   m_GameObject: {fileID: 2060886784808705541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5d3b7682c6f22c4d92eb7288f9fe61c, type: 3}
+  m_Script: {fileID: 11500000, guid: 47dbd04c31b47404191dde965cbb0af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_onCreation:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onActivation:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5475273165920627536}
+        m_TargetAssemblyTypeName: NobunAtelier.Gameplay.HealthBehaviour, NobunAtelier.Core
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5475273165920627536}
+        m_TargetAssemblyTypeName: NobunAtelier.Gameplay.HealthBehaviour, NobunAtelier.Core
+        m_MethodName: set_IsVulnerable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  m_onDeactivation:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5475273165920627536}
+        m_TargetAssemblyTypeName: NobunAtelier.Gameplay.HealthBehaviour, NobunAtelier.Core
+        m_MethodName: set_IsVulnerable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6102152013345632371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,7 +128,7 @@ MonoBehaviour:
   m_priority: 0
   m_definition: {fileID: -2553174863390738440, guid: a0555a6b353266c41a5987030298b1f1,
     type: 2}
-  m_resetOnStart: 1
+  m_resetOnStart: 0
   m_objectToMakeDisappear: {fileID: 4529980668193455844}
   OnHit:
     m_PersistentCalls:
@@ -138,13 +183,37 @@ MonoBehaviour:
         m_CallState: 2
   OnBurial:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4771320998592693334}
+        m_TargetAssemblyTypeName: PoolableBehaviour, NobunAtelier.Core
+        m_MethodName: set_IsActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnResurrection:
     m_PersistentCalls:
       m_Calls: []
   OnDestroy:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6309319287692304800}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_detectCollisions
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDisappearing:
     m_PersistentCalls:
       m_Calls:
@@ -160,9 +229,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PoolableBehaviour, NobunAtelier.Core
-        m_MethodName: set_IsActive
+  OnReset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4529980668193455844}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -170,11 +242,20 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
-  OnReset:
-    m_PersistentCalls:
-      m_Calls: []
+      - m_Target: {fileID: 6309319287692304800}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_detectCollisions
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_CurrentLifeValue: 0
   m_debugHitDefinition: {fileID: 0}
   m_isVulnerable: 1
@@ -687,6 +768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302442364004722509, guid: 10434d6bf3af98b46a88ab696f543ee3,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3302442364004722509, guid: 10434d6bf3af98b46a88ab696f543ee3,
         type: 3}

@@ -97,7 +97,6 @@ MonoBehaviour:
         m_MetaData:
         - Mode: 0
           Tension: 0
-          m_DistanceToInterpolation: []
         m_Closed: 0
         m_IntData:
           m_Data: []
@@ -115,6 +114,90 @@ MonoBehaviour:
     m_delayInSecondBetweenSpawn: 1
     m_PROTO_prefabToSpawn: {fileID: 2060886784808705541, guid: ed0aa7e750d59a84b83d197268f21c94,
       type: 3}
+--- !u!114 &-8662567463008568410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-0002
+  m_EditorClassIdentifier: 
+  m_newSequences:
+  - m_delay: 0
+    m_motion: {fileID: -5450877834127179898, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 4
+    m_spawnOffset: 0.2
+  - m_delay: 3
+    m_motion: {fileID: -3598608062531114926, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 4
+    m_spawnOffset: 0.2
+  - m_delay: 3
+    m_motion: {fileID: -3440602250930853671, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  m_sequences: []
+--- !u!114 &-8443190965100643187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-0005
+  m_EditorClassIdentifier: 
+  m_newSequences:
+  - m_delay: 0
+    m_motion: {fileID: -5925811058989119384, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 4
+    m_spawnOffset: 0.5
+  - m_delay: 1
+    m_motion: {fileID: -5925811058989119384, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 4
+    m_spawnOffset: 0.5
+  - m_delay: 1.5
+    m_motion: {fileID: -5930579249670294818, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 1.5
+    m_motion: {fileID: 5992730738617382417, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 1.5
+    m_motion: {fileID: 3227048370010680108, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  m_sequences: []
 --- !u!114 &-7033109220893815305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +233,139 @@ MonoBehaviour:
     m_spawnCount: 4
     m_spawnOffset: 0.5
   m_sequences: []
+--- !u!114 &-2206422214725090151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-0006
+  m_EditorClassIdentifier: 
+  m_newSequences:
+  - m_delay: 0
+    m_motion: {fileID: -9194326751991977424, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 3
+    m_spawnOffset: 0.5
+  - m_delay: 1
+    m_motion: {fileID: -8544501771381816064, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 3
+    m_spawnOffset: 0.5
+  - m_delay: 2
+    m_motion: {fileID: -9194326751991977424, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 3
+    m_spawnOffset: 0.5
+  - m_delay: 3
+    m_motion: {fileID: -8544501771381816064, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 3
+    m_spawnOffset: 0.5
+  m_sequences: []
+--- !u!114 &-1263854994069925327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-001
+  m_EditorClassIdentifier: 
+  m_newSequences:
+  - m_delay: 0
+    m_motion: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 1.5
+    m_motion: {fileID: 550655394682958734, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 3
+    m_motion: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 4.5
+    m_motion: {fileID: 550655394682958734, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 6
+    m_motion: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 6
+    m_motion: {fileID: 550655394682958734, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  m_sequences: []
+--- !u!114 &-398826951851530073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-0004
+  m_EditorClassIdentifier: 
+  m_newSequences:
+  - m_delay: 0
+    m_motion: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 3
+    m_spawnOffset: 0.5
+  - m_delay: 0
+    m_motion: {fileID: 4037441939232977103, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 3
+    m_spawnOffset: 0.5
+  - m_delay: 0
+    m_motion: {fileID: -2632769063821521968, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 6
+    m_spawnOffset: 0.5
+  m_sequences: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,5 +379,68 @@ MonoBehaviour:
   m_Name: '[BattleWaves]'
   m_EditorClassIdentifier: 
   m_dataDefinitions:
-  - {fileID: -7033109220893815305}
+  - {fileID: -1263854994069925327}
+  - {fileID: -8662567463008568410}
+  - {fileID: 2433878222667594370}
+  - {fileID: -398826951851530073}
+  - {fileID: -8443190965100643187}
+  - {fileID: -2206422214725090151}
   - {fileID: -8963294406363732422}
+  - {fileID: 4510705057481015118}
+  - {fileID: -7033109220893815305}
+--- !u!114 &2433878222667594370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-0003
+  m_EditorClassIdentifier: 
+  m_newSequences:
+  - m_delay: 0
+    m_motion: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0.5
+  - m_delay: 0
+    m_motion: {fileID: 5992730738617382417, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 0
+    m_motion: {fileID: 550655394682958734, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  m_sequences: []
+--- !u!114 &4510705057481015118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-00XX-2
+  m_EditorClassIdentifier: 
+  m_newSequences:
+  - m_delay: 0
+    m_motion: {fileID: -6158648790605822735, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_spawnCount: 6
+    m_spawnOffset: 0
+  m_sequences: []

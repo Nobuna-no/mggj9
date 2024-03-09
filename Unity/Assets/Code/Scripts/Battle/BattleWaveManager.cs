@@ -25,7 +25,7 @@ public class BattleWaveManager : MonoBehaviour
     // private SplineContainer m_container;
 
     private Dictionary<HealthBehaviour, BattlerData> m_activeBattlers = new Dictionary<HealthBehaviour, BattlerData>();
-    [SerializeField, ReadOnly] private int m_remaningSequence = 0;
+    [SerializeField, ReadOnly] private int m_remainingSequence = 0;
     [SerializeField, ReadOnly] private int m_remainingOpponent = 0;
     private bool m_isInitialized = false;
 
@@ -125,7 +125,7 @@ public class BattleWaveManager : MonoBehaviour
         }
 
         m_activeWavesDefinition = m_battlesCollection.Definitions[m_currentWaveIndex];
-        m_remaningSequence = m_activeWavesDefinition.WavesSequence.Count;
+        m_remainingSequence = m_activeWavesDefinition.WavesSequence.Count;
         foreach (var sequence in m_activeWavesDefinition.WavesSequence)
         {
             StartCoroutine(SpawnSequenceRoutine(sequence));
@@ -141,6 +141,10 @@ public class BattleWaveManager : MonoBehaviour
             battler.HealthBehaviour.Kill();
         }
 
+        StopAllCoroutines();
+        m_remainingOpponent = 0;
+        m_remainingSequence = 0;
+
         m_onCurrentWaveCompleted?.Invoke();
         m_isInitialized = false;
 
@@ -152,6 +156,7 @@ public class BattleWaveManager : MonoBehaviour
 
         if (m_startNextBattleAutomatically)
         {
+            Debug.Log($"{this.name}: Automatically starting a new wave...");
             StartCoroutine(BattleWaveStartDelayedRoutine(m_delayBetweenWaves));
         }
         else
@@ -163,16 +168,13 @@ public class BattleWaveManager : MonoBehaviour
 
     private IEnumerator BattleWaveStartDelayedRoutine(float time)
     {
-        Debug.Log($"{this.name}: BattleWaveStartDelayedRoutine timer start");
         yield return new WaitForSeconds(time);
-        Debug.Log($"{this.name}: BattleWaveStartDelayedRoutine timer end");
         BattleWaveInit(m_currentWaveIndex);
         BattleWaveStart();
     }
 
     //private void SpawnSequence()
     //{
-
     //}
 
     //private void PreparePathAndSpawnEntities(BattleWaveDefinition.Sequence sequence)
@@ -199,9 +201,8 @@ public class BattleWaveManager : MonoBehaviour
     private void SpawnBattler(BattleWaveDefinition.Sequence sequence, int index)
     {
         BattleMotionDefinition motion = sequence.Motion;
-        float splineEval = (float)index / (sequence.SpawnCount - 1);
-        Vector3 remappedOrigin = ComputeRemappedMotionPosition(motion.Origin, splineEval);
-        Vector3 remappedDestination = ComputeRemappedMotionPosition(motion.Destination, splineEval);
+        Vector3 remappedOrigin = ComputeRemappedMotionPosition(motion.Origin, index, sequence.SpawnCount);
+        Vector3 remappedDestination = ComputeRemappedMotionPosition(motion.Destination, index, sequence.SpawnCount);
 
         m_remainingOpponent++;
         PoolableBehaviour battler = PoolManager.Instance.SpawnObject(sequence.BattlerDefintion, remappedOrigin);
@@ -209,18 +210,18 @@ public class BattleWaveManager : MonoBehaviour
         Rigidbody rb = battler.GetComponent<Rigidbody>();
         Debug.Assert(hp && rb, this);
         m_activeBattlers.Add(hp, new BattlerData()
-            {
-                PoolableBehaviour = battler,
-                HealthBehaviour = hp,
-                Rigidbody = rb
-            });
+        {
+            PoolableBehaviour = battler,
+            HealthBehaviour = hp,
+            Rigidbody = rb
+        });
         hp.OnBehaviourBurial += BattlerDespawn;
 
         StartCoroutine(BattlerMotionRoutine(m_activeBattlers[hp], remappedDestination, motion.Duration, motion.Curve,
             !m_boundariesDefinition.IsPositionInBoundary(remappedDestination)));
     }
 
-    private Vector3 ComputeRemappedMotionPosition(BattleMotionDefinition.MotionSpace motion, float indexRatio)
+    private Vector3 ComputeRemappedMotionPosition(BattleMotionDefinition.MotionSpace motion, float index, float totalIndexes)
     {
         Vector3 remappedPos;
         if (motion.Type == BattleMotionDefinition.MotionSpace.SpaceType.Point)
@@ -229,7 +230,8 @@ public class BattleWaveManager : MonoBehaviour
         }
         else
         {
-            Vector3 splinePosition = motion.SplineDefinition.Spline.EvaluatePosition(indexRatio) * motion.SplineScale;
+            float splineProgress = (float)index / (motion.SplineDefinition.Spline.Closed ? totalIndexes : totalIndexes - 1);
+            Vector3 splinePosition = motion.SplineDefinition.Spline.EvaluatePosition(splineProgress) * motion.SplineScale;
             remappedPos = m_boundariesDefinition.RemapPositionToBoundariesUnclamped(motion.SplineOrigin + splinePosition);
         }
 
@@ -279,18 +281,19 @@ public class BattleWaveManager : MonoBehaviour
         }
 
         // Returns to pool.
-        m_activeBattlers[behaviour].PoolableBehaviour.IsActive = false;
+        // No need, this is handled on the object itself.
+        // m_activeBattlers[behaviour].PoolableBehaviour.IsActive = false;
 
         m_activeBattlers.Remove(behaviour);
         --m_remainingOpponent;
-        if (m_activeBattlers.Count == 0)
+        if (m_remainingOpponent == 0 && m_remainingSequence == 0)
         {
             Debug.Log($"{this.name}: 0 remaining opponent, Spawner done");
             BattleWaveStop();
         }
         else
         {
-            Debug.Log($"{this.name}: {m_remainingOpponent} remaining opponent(s)");
+            Debug.Log($"{this.name}: {m_remainingOpponent} remaining opponent(s) out of remaining {m_remainingSequence} sequence(s).");
         }
     }
 
@@ -335,6 +338,7 @@ public class BattleWaveManager : MonoBehaviour
 
         if (despawnAtDest)
         {
+            BattlerDespawn(battler.HealthBehaviour);
         }
     }
 
@@ -348,7 +352,7 @@ public class BattleWaveManager : MonoBehaviour
             yield return new WaitForSeconds(sequence.SpawnOffset);
         }
 
-        --m_remaningSequence;
+        --m_remainingSequence;
     }
 
     //private IEnumerator DespawnAfterTimeout(GameObject entity, float delay)
@@ -358,5 +362,4 @@ public class BattleWaveManager : MonoBehaviour
     //    Destroy(entity);
     //    BattlerDespawn();
     //}
-
 }

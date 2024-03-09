@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e26ef3903911c49a4f46cf6bb4033c, type: 3}
   m_Name: Pure Crystal
   m_EditorClassIdentifier: 
-  m_allies: []
+  m_allies:
+  - {fileID: -6867300203005203209}
   m_enemies:
   - {fileID: -2646964364257430254}
 --- !u!114 &-2646964364257430254
@@ -27,7 +28,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e26ef3903911c49a4f46cf6bb4033c, type: 3}
   m_Name: Dark Crystal
   m_EditorClassIdentifier: 
-  m_allies: []
+  m_allies:
+  - {fileID: -2646964364257430254}
   m_enemies:
   - {fileID: -6867300203005203209}
 --- !u!114 &11400000

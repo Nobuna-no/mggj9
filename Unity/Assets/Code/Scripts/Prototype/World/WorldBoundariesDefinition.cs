@@ -16,7 +16,8 @@ public class WorldBoundariesDefinition : DataDefinition
     [SerializeField, ShowIf("IsLockingX")] private Vector2 m_axisRangeX = new Vector2(-1f, 1f);
     [SerializeField, ShowIf("IsLockingY")] private Vector2 m_axisRangeY = new Vector2(-1f, 1f);
     [SerializeField, ShowIf("IsLockingZ")] private Vector2 m_axisRangeZ = new Vector2(-1f, 1f);
-
+    [Tooltip("Unclamped remapped position being greater than 1 will be add this offset")]
+    [SerializeField] private float m_unclampedPadding = 0.25f;
     public ConstrainedAxis ConstrainedAxesFlags => m_constrainedAxes;
     public Vector2 AxisRangeX => m_axisRangeX;
     public Vector2 AxisRangeY => m_axisRangeY;
@@ -53,11 +54,11 @@ public class WorldBoundariesDefinition : DataDefinition
         // Remap the position to the un-clamped boundaries.
         return new Vector3(
             Mathf.LerpUnclamped(AxisRangeX.x, AxisRangeX.y,
-                Mathf.InverseLerp(-1f, 1f, position.x) + Mathf.Sign(position.x) * (Mathf.Abs(position.x) > 1 ? Mathf.Abs(position.x) - 1 : 0)),
+                Mathf.InverseLerp(-1f, 1f, position.x) + Mathf.Sign(position.x) * (Mathf.Abs(position.x) > 1 ? m_unclampedPadding : 0)),
             Mathf.LerpUnclamped(AxisRangeY.x, AxisRangeY.y,
-                Mathf.InverseLerp(-1f, 1f, position.y) + Mathf.Sign(position.y) * (Mathf.Abs(position.y) > 1 ? Mathf.Abs(position.y) - 1 : 0)),
+                Mathf.InverseLerp(-1f, 1f, position.y) + Mathf.Sign(position.y) * (Mathf.Abs(position.y) > 1 ? m_unclampedPadding : 0)),
             Mathf.LerpUnclamped(AxisRangeZ.x, AxisRangeZ.y,
-                Mathf.InverseLerp(-1f, 1f, position.z) + Mathf.Sign(position.z) * (Mathf.Abs(position.z) > 1 ? Mathf.Abs(position.z) - 1 : 0))
+                Mathf.InverseLerp(-1f, 1f, position.z) + Mathf.Sign(position.z) * (Mathf.Abs(position.z) > 1 ? m_unclampedPadding : 0))
             );
     }
 

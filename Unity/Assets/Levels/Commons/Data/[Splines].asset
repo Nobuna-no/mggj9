@@ -90,17 +90,13 @@ MonoBehaviour:
     m_MetaData:
     - Mode: 4
       Tension: 0
-      m_DistanceToInterpolation: []
     - Mode: 4
       Tension: 0
-      m_DistanceToInterpolation: []
     - Mode: 4
       Tension: 0
-      m_DistanceToInterpolation: []
     - Mode: 4
       Tension: 0
-      m_DistanceToInterpolation: []
-    m_Closed: 0
+    m_Closed: 1
     m_IntData:
       m_Data: []
     m_FloatData:
@@ -181,13 +177,10 @@ MonoBehaviour:
     m_MetaData:
     - Mode: 3
       Tension: 0
-      m_DistanceToInterpolation: []
     - Mode: 2
       Tension: 0
-      m_DistanceToInterpolation: []
     - Mode: 2
       Tension: 0
-      m_DistanceToInterpolation: []
     m_Closed: 0
     m_IntData:
       m_Data: []
@@ -215,6 +208,112 @@ MonoBehaviour:
   - {fileID: 4928268877867659846}
   - {fileID: 4828253108794129712}
   - {fileID: -7783724962219513988}
+  - {fileID: 4450657479794640386}
+--- !u!114 &4450657479794640386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a05b88759f935f41819a237502901c4, type: 3}
+  m_Name: Square (top facing)
+  m_EditorClassIdentifier: 
+  m_spline:
+    m_EditModeType: 1
+    m_Knots:
+    - Position:
+        x: -0.5
+        y: 0
+        z: -0.5
+      TangentIn:
+        x: 0
+        y: 0
+        z: 0
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0
+      Rotation:
+        value:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+    - Position:
+        x: -0.5
+        y: 0
+        z: 0.5
+      TangentIn:
+        x: 0
+        y: 0
+        z: 0
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0
+      Rotation:
+        value:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+    - Position:
+        x: 0.5
+        y: 0
+        z: 0.5
+      TangentIn:
+        x: 0
+        y: 0
+        z: 0
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0
+      Rotation:
+        value:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+    - Position:
+        x: 0.5
+        y: 0
+        z: -0.5
+      TangentIn:
+        x: 0
+        y: 0
+        z: 0
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0
+      Rotation:
+        value:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
+    m_MetaData:
+    - Mode: 0
+      Tension: 0
+    - Mode: 0
+      Tension: 0
+    - Mode: 0
+      Tension: 0
+    - Mode: 0
+      Tension: 0
+    m_Closed: 1
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
 --- !u!114 &4828253108794129712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,20 +401,36 @@ MonoBehaviour:
           y: 0.70710677
           z: 0
           w: -0.70710677
+    - Position:
+        x: -0.5
+        y: 0
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.2761424
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.2761424
+      Rotation:
+        value:
+          x: 0
+          y: 0
+          z: 0
+          w: 1
     m_MetaData:
-    - Mode: 4
+    - Mode: 0
       Tension: 0
-      m_DistanceToInterpolation: []
-    - Mode: 4
+    - Mode: 0
       Tension: 0
-      m_DistanceToInterpolation: []
-    - Mode: 4
+    - Mode: 0
       Tension: 0
-      m_DistanceToInterpolation: []
-    - Mode: 4
+    - Mode: 0
       Tension: 0
-      m_DistanceToInterpolation: []
-    m_Closed: 0
+    - Mode: 0
+      Tension: 0
+    m_Closed: 1
     m_IntData:
       m_Data: []
     m_FloatData:
@@ -396,13 +511,10 @@ MonoBehaviour:
     m_MetaData:
     - Mode: 3
       Tension: 0
-      m_DistanceToInterpolation: []
     - Mode: 2
       Tension: 0
-      m_DistanceToInterpolation: []
     - Mode: 2
       Tension: 0
-      m_DistanceToInterpolation: []
     m_Closed: 0
     m_IntData:
       m_Data: []
@@ -466,10 +578,8 @@ MonoBehaviour:
     m_MetaData:
     - Mode: 1
       Tension: 0
-      m_DistanceToInterpolation: []
     - Mode: 1
       Tension: 0
-      m_DistanceToInterpolation: []
     m_Closed: 0
     m_IntData:
       m_Data: []
