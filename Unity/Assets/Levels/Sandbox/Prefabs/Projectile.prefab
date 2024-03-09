@@ -110,9 +110,10 @@ MonoBehaviour:
   OnHit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MagicBullet, Assembly-CSharp
-        m_MethodName: ManualDeactivate
+      - m_Target: {fileID: 3362232036833199714}
+        m_TargetAssemblyTypeName: NobunAtelier.UnityPoolableBehaviour`1[[Bullet,
+          Assembly-CSharp
+        m_MethodName: Despawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
