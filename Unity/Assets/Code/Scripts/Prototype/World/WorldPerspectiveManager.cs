@@ -71,8 +71,7 @@ public class WorldPerspectiveManager : Singleton<WorldPerspectiveManager>
             m_perspectivesMap.Add(p.Definition, p);
         }
 
-        Debug.Assert(m_perspectivesMap != null);
-        Debug.Assert(m_perspectivesMap.ContainsKey(m_initialPerspective));
+        Debug.Assert(m_perspectivesMap.ContainsKey(m_initialPerspective), $"{this.name}: m_perspectivesMap doesn't contain initial definition.");
         m_activeSettings = m_perspectivesMap[m_initialPerspective];
         m_activeDefinition = m_initialPerspective;
     }

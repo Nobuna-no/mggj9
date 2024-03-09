@@ -1,5 +1,6 @@
 using NaughtyAttributes;
 using NobunAtelier;
+using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.AppUI.UI;
@@ -37,8 +38,8 @@ public class AugmentController : MonoBehaviour
 
     public void Awake()
     {
-        Debug.Assert(m_augmentsCollection != null);
-        Debug.Assert(m_augmentTierCollection != null);
+        Debug.Assert(m_augmentsCollection != null, "m_augmentsCollection != null");
+        Debug.Assert(m_augmentTierCollection != null, "m_augmentTierCollection != null");
 
         m_augmentTiersMap = new Dictionary<AugmentTierDefinition, List<AugmentDefinition>>(m_augmentTierCollection.Definitions.Count);
         foreach (var tier in m_augmentTierCollection.Definitions)
@@ -151,7 +152,7 @@ public class AugmentController : MonoBehaviour
 
         public void Activate(AugmentTierDefinition tier)
         {
-            Debug.Assert(m_augmentBehavioursMap.ContainsKey(tier));
+            Debug.Assert(m_augmentBehavioursMap.ContainsKey(tier), "m_augmentBehavioursMap.ContainsKey(tier)");
             if (IsActive/*&& !m_augmentBehavioursMap[tier].InheritsPreviousTiersEffect*/)
             {
                 Deactivate();
@@ -193,7 +194,7 @@ public class AugmentController : MonoBehaviour
             }
 
             OnAnyTierDeactivated?.Invoke();
-            Debug.Assert(m_augmentBehavioursMap.ContainsKey(ActiveTier));
+            Debug.Assert(m_augmentBehavioursMap.ContainsKey(ActiveTier), $"Augment's m_augmentBehavioursMap doesn't contain ActiveTier.");
             m_augmentBehavioursMap[ActiveTier].OnTierDeactivated?.Invoke();
             IsActive = false;
             ActiveTier = null;

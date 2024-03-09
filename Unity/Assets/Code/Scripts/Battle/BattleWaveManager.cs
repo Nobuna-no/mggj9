@@ -60,7 +60,7 @@ public class BattleWaveManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Assert(WorldPerspectiveManager.IsSingletonValid);
+        Debug.Assert(WorldPerspectiveManager.IsSingletonValid, "WorldPerspectiveManager.IsSingletonValid");
         WorldPerspectiveManager.Instance.OnWorldPerspectiveChanged += SetWorldPerspective;
         SetWorldPerspective(WorldPerspectiveManager.Instance.ActiveBoundaries);
         BattleInit();
@@ -92,10 +92,12 @@ public class BattleWaveManager : MonoBehaviour
     {
         // Debug.Assert(m_gameModeStateMachine);
 
-        m_playerController = m_playerCharacter.Controller as PlayerController;
-        Debug.Assert(m_playerController != null);
-        Debug.Assert(m_playerCharacter.TryGetAbilityModule<HealthBehaviour>(out m_playerHealth));
-
+        // m_playerController = m_playerCharacter.Controller as PlayerController;
+        // Debug.Assert(m_playerController != null, "m_playerController != null");
+        if (!m_playerCharacter.TryGetAbilityModule<HealthBehaviour>(out m_playerHealth))
+        {
+            Debug.LogError("m_playerCharacter doesn't have a valid HealthBehaviour");
+        }
         // m_playerController.DisableInput();
         // ResetPlayerPosition();?
 
@@ -142,6 +144,7 @@ public class BattleWaveManager : MonoBehaviour
             UnsubscribeBattler(battler.HealthBehaviour);
             battler.HealthBehaviour.Kill();
         }
+        m_activeBattlers.Clear();
 
         StopAllCoroutines();
         m_remainingOpponent = 0;
@@ -184,7 +187,7 @@ public class BattleWaveManager : MonoBehaviour
         PoolableBehaviour battler = PoolManager.Instance.SpawnObject(sequence.BattlerDefintion, remappedOrigin);
         HealthBehaviour hp = battler.GetComponent<HealthBehaviour>();
         Rigidbody rb = battler.GetComponent<Rigidbody>();
-        Debug.Assert(hp && rb, this);
+        Debug.Assert(hp && rb, "hp && rb", this);
         m_activeBattlers.Add(hp, new BattlerData()
         {
             PoolableBehaviour = battler,
@@ -229,6 +232,7 @@ public class BattleWaveManager : MonoBehaviour
         }
 
         UnsubscribeBattler(behaviour);
+        m_activeBattlers.Remove(behaviour);
 
         --m_remainingOpponent;
         if (m_remainingOpponent == 0 && m_remainingSequence == 0)
@@ -246,7 +250,6 @@ public class BattleWaveManager : MonoBehaviour
     {
         behaviour.OnBehaviourDeath -= BattlerDeath;
         behaviour.OnBehaviourBurial -= BattlerDespawn;
-        m_activeBattlers.Remove(behaviour);
     }
 
     private void OnPlayerBurial()

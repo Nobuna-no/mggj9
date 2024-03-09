@@ -18,7 +18,7 @@ public class WorldPerspectiveListener : MonoBehaviour
             m_perspectiveEventsMap.Add(perspectiveEvent.Definition, perspectiveEvent);
         }
 
-        Debug.Assert(WorldPerspectiveManager.IsSingletonValid);
+        Debug.Assert(WorldPerspectiveManager.IsSingletonValid, "WorldPerspectiveManager.IsSingletonValid");
         WorldPerspectiveManager.Instance.OnWorldPerspectiveChanged += SetWorldPerspective;
         SetWorldPerspective(WorldPerspectiveManager.Instance.ActiveBoundaries);
     }
