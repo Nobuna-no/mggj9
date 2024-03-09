@@ -1,7 +1,6 @@
 using NobunAtelier;
 using NobunAtelier.Editor;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEditor;
 
 [CustomEditor(typeof(BattleMotionDefinition))]

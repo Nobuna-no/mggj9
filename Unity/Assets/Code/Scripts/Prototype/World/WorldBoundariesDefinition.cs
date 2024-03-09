@@ -1,6 +1,6 @@
-using UnityEngine;
-using NobunAtelier;
 using NaughtyAttributes;
+using NobunAtelier;
+using UnityEngine;
 
 public class WorldBoundariesDefinition : DataDefinition
 {
@@ -16,8 +16,10 @@ public class WorldBoundariesDefinition : DataDefinition
     [SerializeField, ShowIf("IsLockingX")] private Vector2 m_axisRangeX = new Vector2(-1f, 1f);
     [SerializeField, ShowIf("IsLockingY")] private Vector2 m_axisRangeY = new Vector2(-1f, 1f);
     [SerializeField, ShowIf("IsLockingZ")] private Vector2 m_axisRangeZ = new Vector2(-1f, 1f);
+
     [Tooltip("Unclamped remapped position being greater than 1 will be add this offset")]
     [SerializeField] private float m_unclampedPadding = 0.25f;
+
     public ConstrainedAxis ConstrainedAxesFlags => m_constrainedAxes;
     public Vector2 AxisRangeX => m_axisRangeX;
     public Vector2 AxisRangeY => m_axisRangeY;

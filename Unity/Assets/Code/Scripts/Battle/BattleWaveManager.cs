@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Splines;
+using static UnityEngine.InputSystem.OnScreen.OnScreenStick;
 
 public class BattleWaveManager : MonoBehaviour
 {
@@ -17,12 +18,8 @@ public class BattleWaveManager : MonoBehaviour
     private BattleWaveDefinition m_activeWavesDefinition;
     [SerializeField] private WorldBoundariesDefinition m_boundariesDefinition;
 
-    [SerializeField] private UnityEvent m_onCurrentWaveCompleted;
     [SerializeField] private UnityEvent m_onAllWaveCompleted;
     [SerializeField] private UnityEvent m_onGameOver;
-
-    // private Spline m_scaledPath;
-    // private SplineContainer m_container;
 
     private Dictionary<HealthBehaviour, BattlerData> m_activeBattlers = new Dictionary<HealthBehaviour, BattlerData>();
     [SerializeField, ReadOnly] private int m_remainingSequence = 0;
@@ -40,6 +37,10 @@ public class BattleWaveManager : MonoBehaviour
     private HealthBehaviour m_playerHealth;
 
     private int m_currentWaveIndex = 0;
+
+    [Header("Debug")]
+    [SerializeField]
+    private bool m_displayDebugUI = true;
 
     private class BattlerData
     {
@@ -113,6 +114,7 @@ public class BattleWaveManager : MonoBehaviour
         m_isInitialized = true;
         m_currentWaveIndex = waveIndex;
         m_remainingOpponent = 0;
+        m_remainingSequence = 0;
         m_activeBattlers.Clear();
     }
 
@@ -137,7 +139,7 @@ public class BattleWaveManager : MonoBehaviour
     {
         foreach (var battler in m_activeBattlers.Values)
         {
-            battler.HealthBehaviour.OnBehaviourBurial -= BattlerDespawn;
+            UnsubscribeBattler(battler.HealthBehaviour);
             battler.HealthBehaviour.Kill();
         }
 
@@ -145,7 +147,6 @@ public class BattleWaveManager : MonoBehaviour
         m_remainingOpponent = 0;
         m_remainingSequence = 0;
 
-        m_onCurrentWaveCompleted?.Invoke();
         m_isInitialized = false;
 
         if (++m_currentWaveIndex == m_battlesCollection.Definitions.Count)
@@ -173,31 +174,6 @@ public class BattleWaveManager : MonoBehaviour
         BattleWaveStart();
     }
 
-    //private void SpawnSequence()
-    //{
-    //}
-
-    //private void PreparePathAndSpawnEntities(BattleWaveDefinition.Sequence sequence)
-    //{
-    //    if (sequence == null)
-    //    {
-    //        Debug.LogWarning("Sequence is not set.");
-    //        return;
-    //    }
-
-    //    //m_scaledPath = new Spline(sequence.Spline.Path);
-    //    //for (int j = 0; j < m_scaledPath.Count; j++)
-    //    //{
-    //    //    BezierKnot knot = m_scaledPath[j];
-    //    //    knot.Position = m_boundariesDefinition.RemapPositionToBoundariesUnclamped(knot.Position);//Vector3.Scale(knot.Position, m_worldSize);
-    //    //    m_scaledPath[j] = knot;
-    //    //    m_scaledPath.SetTangentMode(TangentMode.AutoSmooth);
-    //    //}
-    //    //m_container.Spline = m_scaledPath;
-
-    //    StartCoroutine(SpawnSequenceRoutine(sequence));
-    //}
-
     private void SpawnBattler(BattleWaveDefinition.Sequence sequence, int index)
     {
         BattleMotionDefinition motion = sequence.Motion;
@@ -216,6 +192,7 @@ public class BattleWaveManager : MonoBehaviour
             Rigidbody = rb
         });
         hp.OnBehaviourBurial += BattlerDespawn;
+        hp.OnBehaviourDeath += BattlerDeath;
 
         StartCoroutine(BattlerMotionRoutine(m_activeBattlers[hp], remappedDestination, motion.Duration, motion.Curve,
             !m_boundariesDefinition.IsPositionInBoundary(remappedDestination)));
@@ -238,39 +215,10 @@ public class BattleWaveManager : MonoBehaviour
         return remappedPos;
     }
 
-    //private void SpawnEntity(BattleWaveDefinition.OldSequence sequence)
-    //{
-    //    Vector3 scaledOrigin = m_boundariesDefinition.RemapPositionToBoundariesUnclamped(sequence.Tween.Origin);
-    //    GameObject spawnedEntity = Instantiate(sequence.PROTO_PrefabToSpawn, scaledOrigin, Quaternion.identity);
-    //    m_remainingOpponent++;
-
-    //    HealthBehaviour hp = spawnedEntity.GetComponent<HealthBehaviour>();
-    //    Rigidbody rb = spawnedEntity.GetComponent<Rigidbody>();
-    //    Debug.Assert(hp && rb, this);
-
-    //    m_activeBattlers.Add(hp, new BattlerData() { HealthBehaviour = hp, Rigidbody = rb });
-    //    hp.OnBehaviourBurial += BattlerDespawn;
-
-    //    //if (sequence.UseSpline)
-    //    //{
-    //    //    var animator = spawnedEntity.AddComponent<SplineAnimate>();
-    //    //    animator.Container = m_container;
-    //    //    animator.Duration = sequence.TweenDuration;
-    //    //    animator.Easing = sequence.Spline.EasingMode;
-    //    //    animator.Loop = sequence.Spline.LoopMode;
-    //    //    animator.Play();
-    //    //}
-    //    //else
-    //    //{
-    //        Vector3 scaledDestination = m_boundariesDefinition.RemapPositionToBoundariesUnclamped(sequence.Tween.Destination);//Vector3.Scale(m_spawningSequence.Tween.Destination, m_worldSize);
-    //        StartCoroutine(MoveToDestinationRoutine(spawnedEntity, scaledDestination, sequence.TweenDuration, sequence.Tween.Curve));
-    //    //}
-
-    //    if (sequence.DespawnWhenReachingDestinaton)
-    //    {
-    //        StartCoroutine(DespawnAfterTimeout(spawnedEntity, sequence.TweenDuration));
-    //    }
-    //}
+    private void BattlerDeath(HealthBehaviour behaviour)
+    {
+        BattlerDespawn(behaviour);
+    }
 
     private void BattlerDespawn(HealthBehaviour behaviour)
     {
@@ -280,11 +228,8 @@ public class BattleWaveManager : MonoBehaviour
             return;
         }
 
-        // Returns to pool.
-        // No need, this is handled on the object itself.
-        // m_activeBattlers[behaviour].PoolableBehaviour.IsActive = false;
+        UnsubscribeBattler(behaviour);
 
-        m_activeBattlers.Remove(behaviour);
         --m_remainingOpponent;
         if (m_remainingOpponent == 0 && m_remainingSequence == 0)
         {
@@ -297,11 +242,18 @@ public class BattleWaveManager : MonoBehaviour
         }
     }
 
+    private void UnsubscribeBattler(HealthBehaviour behaviour)
+    {
+        behaviour.OnBehaviourDeath -= BattlerDeath;
+        behaviour.OnBehaviourBurial -= BattlerDespawn;
+        m_activeBattlers.Remove(behaviour);
+    }
+
     private void OnPlayerBurial()
     {
         foreach (var battler in m_activeBattlers.Values)
         {
-            battler.HealthBehaviour.OnBehaviourBurial -= BattlerDespawn;
+            UnsubscribeBattler(battler.HealthBehaviour);
             battler.PoolableBehaviour.IsActive = false;
         }
         m_activeBattlers.Clear();
@@ -355,11 +307,34 @@ public class BattleWaveManager : MonoBehaviour
         --m_remainingSequence;
     }
 
-    //private IEnumerator DespawnAfterTimeout(GameObject entity, float delay)
-    //{
-    //    yield return new WaitForSecondsRealtime(delay);
-    //    // Replace by pooling logic
-    //    Destroy(entity);
-    //    BattlerDespawn();
-    //}
+    public void ToggleDebugUI()
+    {
+        m_displayDebugUI = !m_displayDebugUI;
+    }
+
+    private void OnGUI()
+    {
+        if (!m_displayDebugUI)
+        {
+            return;
+        }
+
+        using (new GUILayout.VerticalScope(GUI.skin.box))
+        {
+            GUILayout.Label("Battle Wave Manager");
+
+            int i = 0;
+            foreach (var bw in m_battlesCollection.Definitions)
+            {
+                if (GUILayout.Button(bw.name))
+                {
+                    m_startNextBattleAutomatically = false;
+                    BattleWaveStop();
+                    m_currentWaveIndex = i;
+                    BattleWaveStart();
+                }
+                ++i;
+            }
+        }
+    }
 }
