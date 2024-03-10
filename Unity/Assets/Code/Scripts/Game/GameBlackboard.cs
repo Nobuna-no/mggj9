@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class GameBlackboard : Singleton<GameBlackboard>
 {
+    public enum DebugType
+    {
+        None,
+        Battle,
+        Augment,
+
+        Count
+    }
+
     [Header("Game Blackboard")]
     [SerializeField] private float m_defaultFireRateMultiplier = 1;
     [SerializeField] private float m_defaultDamageMultiplier = 1;
     [SerializeField] private float m_defaultMovementSpeedMultiplier = 1;
     [SerializeField] private ShardsAttractionDefinition m_defaultAttractionDefinition;
 
+    public DebugType ActiveDebugMenu = DebugType.None;
     public static BlackboardValue<float> FireRateMultiplier { get; } = new BlackboardValue<float>();
     public static BlackboardValue<float> DamageMultiplier { get; } = new BlackboardValue<float>();
     public static BlackboardValue<float> MovementSpeedMultiplier { get; } = new BlackboardValue<float>();
@@ -78,5 +88,45 @@ public class GameBlackboard : Singleton<GameBlackboard>
         }
 
         public event Action<T> OnValueChanged;
+    }
+
+    public void SetDebugMode(int value)
+    {
+        var newValue = (DebugType)(int)Mathf.Repeat(value, (int)DebugType.Count);
+
+        if (ActiveDebugMenu == newValue)
+        {
+            ActiveDebugMenu = DebugType.None;
+        }
+        else
+        {
+            ActiveDebugMenu = newValue;
+        }
+    }
+
+    private void OnGUI()
+    {
+        switch (ActiveDebugMenu)
+        {
+            case DebugType.Augment:
+                GUILayout.Label("Debug - (F1) Close, (F2)Battle...");
+                var ac = FindAnyObjectByType<AugmentController>();
+                if (ac)
+                {
+                    ac.DrawManagerDebugIMGUI();
+                }
+                break;
+            case DebugType.Battle:
+                GUILayout.Label("Debug - (F1) Close, (F3)Augment...");
+                var bwm = FindAnyObjectByType<BattleWaveManager>();
+                if (bwm)
+                {
+                    bwm.DrawManagerDebugIMGUI();
+                }
+                break;
+            default:
+                GUILayout.Label("Debug - (F2) Battle, (F3)Augment...");
+                break;
+        }
     }
 }

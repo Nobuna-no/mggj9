@@ -242,20 +242,11 @@ public class AugmentController : Singleton<AugmentController>
         }
     }
 
-    [Header("Debug")]
-    [SerializeField]
-    private bool m_displayDebugUI = true;
-
     private Vector2 m_debugScrollview;
     private Dictionary<string, bool> m_lazyBoolmap;
 
-    private void OnGUI()
+    public void DrawManagerDebugIMGUI()
     {
-        if (!m_displayDebugUI)
-        {
-            return;
-        }
-
         if (m_lazyBoolmap == null)
         {
             m_lazyBoolmap = new Dictionary<string, bool>();
@@ -304,11 +295,6 @@ public class AugmentController : Singleton<AugmentController>
             }
             GUILayout.EndScrollView();
         }
-    }
-
-    public void ToggleDebugUI()
-    {
-        m_displayDebugUI = !m_displayDebugUI;
     }
 
     [System.Serializable]

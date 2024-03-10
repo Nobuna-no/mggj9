@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Splines;
-using static UnityEngine.InputSystem.OnScreen.OnScreenStick;
 
 public class BattleWaveManager : MonoBehaviour
 {
@@ -37,10 +36,6 @@ public class BattleWaveManager : MonoBehaviour
     private HealthBehaviour m_playerHealth;
 
     private int m_currentWaveIndex = 0;
-
-    [Header("Debug")]
-    [SerializeField]
-    private bool m_displayDebugUI = true;
     private Vector2 m_debugScrollview;
 
     private class BattlerData
@@ -326,21 +321,10 @@ public class BattleWaveManager : MonoBehaviour
         --m_remainingSequence;
     }
 
-    public void ToggleDebugUI()
+    public void DrawManagerDebugIMGUI()
     {
-        m_displayDebugUI = !m_displayDebugUI;
-    }
-    private void OnGUI()
-    {
-        if (!m_displayDebugUI)
-        {
-            GUILayout.Label("F2: Battle Debug\nF3: Augment Debug");
-            return;
-        }
-
         using (new GUILayout.VerticalScope())
         {
-            GUILayout.Label("Press F2 to close debug...");
             using (new GUILayout.VerticalScope(GUI.skin.box))
             {
                 GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
