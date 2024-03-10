@@ -1,6 +1,8 @@
 using UnityEngine;
 using NobunAtelier;
 using NaughtyAttributes;
+using Unity.Collections.LowLevel.Unsafe;
+using System.Collections.Generic;
 
 public class Muzzle : UnityPoolBehaviour<Bullet>
 {
@@ -14,26 +16,79 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
     [SerializeField] float m_spreadAngle = 5f; // Adjust this value to control the spread
     [SerializeField] private bool m_shootingEnable = false;
     [SerializeField] private bool m_isAffectedByAugment = false;
+    [SerializeField, ShowIf("m_isAffectedByAugment")] private AugmentDefinition m_damageAugmentDefinition;
+    [SerializeField, ShowIf("m_isAffectedByAugment")] private TierPrefab[] m_bulletPerAugmentTier;
 
     private WorldBoundariesDefinition m_worldBoundaries;
     private float m_nextTimeToShoot;
     private float m_fireRateMultiplier = 1;
+
+    private Dictionary<AugmentTierDefinition, TierPrefab> m_bulletPerAugmentTierMap;
+    private AugmentController.Augment m_damageAugment;
+    private Bullet m_defaultBullet;
+
+    [System.Serializable]
+    private class TierPrefab
+    {
+        [SerializeField] private AugmentTierDefinition m_augmentTier;
+        [SerializeField] private Bullet m_bullet;
+
+        public AugmentTierDefinition AugmentTier => m_augmentTier;
+        public Bullet BulletPrefab => m_bullet;
+    }
 
     private void Start()
     {
         WorldPerspectiveManager.Instance.OnWorldPerspectiveChanged += OnWorldPerspectiveChanged;
         m_worldBoundaries = WorldPerspectiveManager.Instance.ActiveBoundaries;
 
-        if (m_isAffectedByAugment && GameBlackboard.IsSingletonValid)
+        if (m_isAffectedByAugment && GameBlackboard.IsSingletonValid && AugmentController.IsSingletonValid)
         {
+            // Listen to BB fire rate
             GameBlackboard.FireRateMultiplier.OnValueChanged += FireRateMultiplier_OnValueChanged;
             m_fireRateMultiplier = GameBlackboard.FireRateMultiplier.Value;
+
+            // Retrieve damage augment and subscribe to event
+            m_defaultBullet = m_objectPrefab;
+            if (!AugmentController.Instance.TryGetAugment(m_damageAugmentDefinition, out m_damageAugment))
+            {
+                Debug.LogWarning($"Failed to retrieved '{m_damageAugmentDefinition.name}' from AugmentController", this);
+            }
+            m_damageAugment.OnAugmentTierChanged += M_damageAugment_OnAugmentTierChanged;
+            m_damageAugment.OnAugmentDeactivated += M_damageAugment_OnAugmentDeactivated;
+
+            m_bulletPerAugmentTierMap = new Dictionary<AugmentTierDefinition, TierPrefab>(m_bulletPerAugmentTier.Length);
+            foreach (var bulletTier in m_bulletPerAugmentTier)
+            {
+                m_bulletPerAugmentTierMap.Add(bulletTier.AugmentTier, bulletTier);
+            }
         }
     }
 
-    private void FireRateMultiplier_OnValueChanged(float val)
+    private void OnDestroy()
     {
-        m_fireRateMultiplier = val;
+        m_damageAugment.OnAugmentTierChanged -= M_damageAugment_OnAugmentTierChanged;
+        m_damageAugment.OnAugmentDeactivated -= M_damageAugment_OnAugmentDeactivated;
+    }
+
+    private void M_damageAugment_OnAugmentTierChanged(AugmentTierDefinition tier)
+    {
+        if (!m_bulletPerAugmentTierMap.TryGetValue(tier, out var bullet))
+        {
+            Debug.LogWarning($"Failed to retrieved '{tier.name}' from m_bulletPerAugmentTierMap", this);
+        }
+
+        m_objectPrefab = bullet.BulletPrefab;
+    }
+
+    private void M_damageAugment_OnAugmentDeactivated()
+    {
+        m_objectPrefab = m_defaultBullet;
+    }
+
+    private void FireRateMultiplier_OnValueChanged(float value)
+    {
+        m_fireRateMultiplier = value;
     }
 
     private void OnWorldPerspectiveChanged(WorldBoundariesDefinition newBoundaries)
@@ -74,8 +129,6 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
 
                 // align to gun barrel/muzzle position
                 bulletObject.transform.SetPositionAndRotation(muzzlePosition.position, muzzlePosition.rotation);
-
-
 
                 // Generate a random rotation within the spread angle
                 // need to constrain the y axis for top down and x for sidescroll

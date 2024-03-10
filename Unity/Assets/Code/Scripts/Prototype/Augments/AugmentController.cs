@@ -131,6 +131,7 @@ public class AugmentController : Singleton<AugmentController>
         [SerializeField] private string m_name;
         public AugmentDefinition AugmentDefinition;
         public AugmentBehaviour[] TierLogic;
+        public UnityEvent OnAnyTierActivated;
         public UnityEvent OnAnyTierDeactivated;
         public event Action<float> OnAugmentUpdate;
         public event Action OnAugmentDeactivated;
@@ -189,6 +190,7 @@ public class AugmentController : Singleton<AugmentController>
 
             ActiveTier = tier;
             m_augmentBehavioursMap[tier]?.OnTierActivated?.Invoke();
+            OnAnyTierActivated?.Invoke();
             IsActive = true;
         }
 

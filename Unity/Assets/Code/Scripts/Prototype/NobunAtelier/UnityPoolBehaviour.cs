@@ -8,7 +8,7 @@ namespace NobunAtelier
     {
         [Header("UnityPool Behaviour")]
         [Tooltip("Prefab to shoot")]
-        [SerializeField] private T m_projectilePrefab;
+        [SerializeField] protected T m_objectPrefab;
 
         [Tooltip("Throw an exception if we try to return an existing item, already in the pool")]
         [SerializeField] private bool m_collectionCheck = true;
@@ -31,7 +31,7 @@ namespace NobunAtelier
         // invoked when creating an item to populate the object pool
         protected virtual T CreateProjectile()
         {
-            T projectileInstance = Instantiate(m_projectilePrefab);
+            T projectileInstance = Instantiate(m_objectPrefab);
             projectileInstance.ObjectPool = m_objectPool;
             return projectileInstance;
         }

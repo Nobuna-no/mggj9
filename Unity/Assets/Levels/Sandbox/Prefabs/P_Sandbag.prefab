@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6321e810957bb02438ddd21cec47e49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_projectilePrefab: {fileID: 4075301088020434522, guid: e4442425328d365469f6be1db621f315,
+  m_objectPrefab: {fileID: 4075301088020434522, guid: e4442425328d365469f6be1db621f315,
     type: 3}
   m_collectionCheck: 1
   m_defaultCapacity: 20
@@ -57,6 +57,8 @@ MonoBehaviour:
   m_spreadAngle: 10
   m_shootingEnable: 1
   m_isAffectedByAugment: 0
+  m_damageAugmentDefinition: {fileID: 0}
+  m_bulletPerAugmentTier: []
 --- !u!1 &944948646613448554
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,8 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428cc8b75d4f6a14792121e569dce08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_projectilePrefab: {fileID: 4342816593736524558, guid: 8903a4e7d3b95224ca1aca2d7afea9eb,
-    type: 3}
+  m_objectPrefab: {fileID: 0}
   m_collectionCheck: 1
   m_defaultCapacity: 20
   m_maxSize: 100
