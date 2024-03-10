@@ -112,11 +112,12 @@ public class SimulacraVelocityModule : CharacterVelocityModuleBase
         switch (m_accelerationApplication)
         {
             case VelocityProcessing.FromRawInput:
-                m_velocity = m_movementVector * m_speed;
+                m_velocity = m_movementVector * m_speed * m_moveSpeedMultiplier;
                 m_movementVector = Vector3.zero;
                 return m_velocity + currentVel;
 
             case VelocityProcessing.FromAcceleration:
+                // nah dont have time
                 return vel;
 
             case VelocityProcessing.DesiredVelocityFromAcceleration:

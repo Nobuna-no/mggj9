@@ -746,7 +746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428cc8b75d4f6a14792121e569dce08d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_objectPrefab: {fileID: 0}
+  m_objectPrefab: {fileID: 4342816593736524558, guid: 8903a4e7d3b95224ca1aca2d7afea9eb,
+    type: 3}
   m_collectionCheck: 1
   m_defaultCapacity: 20
   m_maxSize: 100
