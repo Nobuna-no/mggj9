@@ -6,8 +6,8 @@ AudioContainerElement:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Damage_03_{-7682183614365817831}
-  m_AudioClip: {fileID: 8300000, guid: e19227660a6c8714894e8c899694c92e, type: 3}
+  m_Name: Damage_07_{-7682183614365817831}
+  m_AudioClip: {fileID: 8300000, guid: 4438f9d4a65999d45b1464bf35a7e959, type: 3}
   m_Volume: 0
   m_Enabled: 1
 --- !u!1233149941 &5057537525375073154
@@ -16,8 +16,8 @@ AudioContainerElement:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Damage_01_{5057537525375073154}
-  m_AudioClip: {fileID: 8300000, guid: 0d7c9a1271477954fafc032107821e46, type: 3}
+  m_Name: Damage_10_{5057537525375073154}
+  m_AudioClip: {fileID: 8300000, guid: 868a711517502aa4e9a51c150bf3f499, type: 3}
   m_Volume: 0
   m_Enabled: 1
 --- !u!1307931743 &6418180475301049370
@@ -26,7 +26,7 @@ AudioRandomContainer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SFX_Battler_Hurt
+  m_Name: SFX_Battler_Death
   m_Volume: -10
   m_Pitch: -300
   m_AutomaticTriggerTime: 0
@@ -54,7 +54,7 @@ AudioContainerElement:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Damage_02_{8720257477609365223}
-  m_AudioClip: {fileID: 8300000, guid: 139d8cb6ce002924a918b9033f8a5098, type: 3}
+  m_Name: Damage_08_{8720257477609365223}
+  m_AudioClip: {fileID: 8300000, guid: 5e800b2f0b054b9488fe031d8881800f, type: 3}
   m_Volume: 0
   m_Enabled: 1

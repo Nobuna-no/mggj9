@@ -34,6 +34,6 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   m_mixerGroup: {fileID: -7980971229981054239, guid: 02988b23d62207c4285e4dce83330feb,
     type: 2}
-  m_volume: 0.3
+  m_volume: 0.2
   m_loop: 1
   m_releaseResourceOnStop: 0
