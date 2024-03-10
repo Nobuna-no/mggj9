@@ -102,6 +102,7 @@ public class BattleWaveManager : MonoBehaviour
         // ResetPlayerPosition();?
 
         m_playerHealth.OnBurial.AddListener(OnPlayerBurial);
+        m_playerHealth.OnResurrection.AddListener(OnPlayerResurrection);
         m_playerHealth.Reset();
         BattleWaveInit(0);
     }
@@ -194,6 +195,7 @@ public class BattleWaveManager : MonoBehaviour
             HealthBehaviour = hp,
             Rigidbody = rb
         });
+        // Will only be called if not death.
         hp.OnBehaviourBurial += BattlerDespawn;
         hp.OnBehaviourDeath += BattlerDeath;
 
@@ -220,11 +222,6 @@ public class BattleWaveManager : MonoBehaviour
 
     private void BattlerDeath(HealthBehaviour behaviour)
     {
-        BattlerDespawn(behaviour);
-    }
-
-    private void BattlerDespawn(HealthBehaviour behaviour)
-    {
         if (!m_activeBattlers.ContainsKey(behaviour))
         {
             Debug.LogWarning($"HealthBehaviour {behaviour.gameObject.name} is calling `BattlerDespawn` but is not registered!", this);
@@ -246,6 +243,18 @@ public class BattleWaveManager : MonoBehaviour
         }
     }
 
+    private void BattlerDespawn(HealthBehaviour behaviour)
+    {
+        if (!m_activeBattlers.ContainsKey(behaviour))
+        {
+            Debug.LogWarning($"HealthBehaviour {behaviour.gameObject.name} is calling `BattlerDespawn` but is not registered!", this);
+            return;
+        }
+
+        m_activeBattlers[behaviour].PoolableBehaviour.IsActive = false;
+        BattlerDeath(behaviour);
+    }
+
     private void UnsubscribeBattler(HealthBehaviour behaviour)
     {
         behaviour.OnBehaviourDeath -= BattlerDeath;
@@ -260,16 +269,22 @@ public class BattleWaveManager : MonoBehaviour
             battler.PoolableBehaviour.IsActive = false;
         }
         m_activeBattlers.Clear();
+        m_remainingOpponent = 0;
+        m_remainingSequence = 0;
+        m_isInitialized = false;
 
         m_playerHealth.OnBurial.RemoveListener(OnPlayerBurial);
         m_onGameOver?.Invoke();
-
-        m_isInitialized = false;
 
         if (m_gameModeStateMachine)
         {
             m_gameModeStateMachine.SetState(m_gameOverState);
         }
+    }
+
+    private void OnPlayerResurrection()
+    {
+        m_playerHealth.OnBurial.AddListener(OnPlayerBurial);
     }
 
     private IEnumerator BattlerMotionRoutine(BattlerData battler, Vector3 destination, float duration, AnimationCurve curve, bool despawnAtDest)

@@ -30,6 +30,8 @@ MonoBehaviour:
   - {fileID: 1663987322350219202}
   - {fileID: -1101606268812316213}
   - {fileID: 1502618121058170661}
+  - {fileID: 7174516532495372267}
+  - {fileID: 5358296826899353793}
 --- !u!114 &1502618121058170661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,6 +57,34 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93865acbc69c87d45a4d2873fe8950d5, type: 3}
   m_Name: Idle
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_requiredPriorState: {fileID: 0}
+--- !u!114 &5358296826899353793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93865acbc69c87d45a4d2873fe8950d5, type: 3}
+  m_Name: dead
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_requiredPriorState: {fileID: 0}
+--- !u!114 &7174516532495372267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93865acbc69c87d45a4d2873fe8950d5, type: 3}
+  m_Name: hurt
   m_EditorClassIdentifier: 
   m_description: 
   m_requiredPriorState: {fileID: 0}

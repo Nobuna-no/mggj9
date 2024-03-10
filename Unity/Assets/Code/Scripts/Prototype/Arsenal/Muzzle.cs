@@ -1,5 +1,6 @@
 using UnityEngine;
 using NobunAtelier;
+using NaughtyAttributes;
 
 public class Muzzle : UnityPoolBehaviour<Bullet>
 {
@@ -9,7 +10,7 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
     [Tooltip("End point of gun where shots appear")]
     [SerializeField] private Transform[] m_muzzlesPosition;
     [Tooltip("Time between shots / smaller = higher rate of fire")]
-    [SerializeField] private float m_cooldownWindow = 0.1f;
+    [SerializeField, MinMaxSlider(0.1f, 5f)] private Vector2 m_cooldownWindow = Vector2.one;
     [SerializeField] float m_spreadAngle = 5f; // Adjust this value to control the spread
     [SerializeField] private bool m_shootingEnable = false;
 
@@ -82,7 +83,7 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
             }
 
             // set cooldown delay
-            m_nextTimeToShoot = Time.time + m_cooldownWindow;
+            m_nextTimeToShoot = Time.time + Random.Range(m_cooldownWindow.x, m_cooldownWindow.y);
         }
     }
 }

@@ -16,7 +16,17 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 703436c03f8c52946ba9b3c3d6b9c75f
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 69d0b771652623d42ae720dc90094c7a
+    m_Address: Assets/Audio/BGM/Battle -MusMus-BGM-067.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aca23c025a3e5454b92409ccb9c2fd15
+    m_Address: Assets/Licensed/mggj9-private/Audio/Arcane Heart Beat Twice Fast.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c7250da45786a484787e6e4efaa14b47, type: 2}
   m_SchemaSet:

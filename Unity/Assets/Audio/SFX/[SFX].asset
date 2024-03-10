@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15bf0eb498e11074fabd9c15ce8eb373, type: 3}
+  m_Name: '[SFX]'
+  m_EditorClassIdentifier: 
+  m_dataDefinitions:
+  - {fileID: 3956168785393836593}
+--- !u!114 &3956168785393836593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d18292bb4ef144bbc7606416c5fa28, type: 3}
+  m_Name: SFX-player-hurt
+  m_EditorClassIdentifier: 
+  m_canStartDelayedToPreventCPUOverhead: 1
+  m_audioAssetReference:
+    m_AssetGUID: aca23c025a3e5454b92409ccb9c2fd15
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  m_mixerGroup: {fileID: -8782959826925811631, guid: 02988b23d62207c4285e4dce83330feb,
+    type: 2}
+  m_volume: 1
+  m_loop: 0
+  m_releaseResourceOnStop: 0

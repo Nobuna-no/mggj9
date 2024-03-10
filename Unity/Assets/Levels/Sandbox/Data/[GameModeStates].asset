@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8707185388861303612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2272840f4cefc6542834d2fa5e6aae90, type: 3}
+  m_Name: Init
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_requiredPriorState: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9,23 +23,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb09627459b48148b0d2309b684e4bd, type: 3}
-  m_Name: '[Hits]'
+  m_Script: {fileID: 11500000, guid: c342a1d9d5d495d4d987fd5708bbd203, type: 3}
+  m_Name: '[GameModeStates]'
   m_EditorClassIdentifier: 
   m_dataDefinitions:
-  - {fileID: 1888599393155182875}
---- !u!114 &1888599393155182875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c47c2ec959a822439c3493bcca4f0cb, type: 3}
-  m_Name: 1dmg
-  m_EditorClassIdentifier: 
-  m_damageAmount: 1
-  m_pushBackDefinition: {fileID: 2089767103866390779, guid: da879cabe78dbcf4798009a9fd6587cb,
-    type: 2}
+  - {fileID: -8707185388861303612}
