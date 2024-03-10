@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_probability: 0.3
   m_crystalPrefab: {fileID: 0}
+  m_icon: {fileID: 21300000, guid: 8bd67d38be6d70c4e9758236da37c1c6, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_probability: 1
   m_crystalPrefab: {fileID: 0}
+  m_icon: {fileID: 21300000, guid: fc01e44af59d17b4bb7ab0958d35b6ca, type: 3}
 --- !u!114 &5577249598986882823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_probability: 0.2
   m_crystalPrefab: {fileID: 0}
+  m_icon: {fileID: 21300000, guid: 1dcebddb6ec6f5a46ae5202bca6b617d, type: 3}
 --- !u!114 &5829897845308056388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_probability: 0.7
   m_crystalPrefab: {fileID: 0}
+  m_icon: {fileID: 21300000, guid: 02d8d565368aa86469c03e904976f86e, type: 3}
 --- !u!114 &8013678198164930333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,3 +92,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_probability: 0.5
   m_crystalPrefab: {fileID: 0}
+  m_icon: {fileID: 21300000, guid: 51300b8c879247c48b56360d97f52195, type: 3}

@@ -1,11 +1,13 @@
 using NaughtyAttributes;
 using NobunAtelier;
 using NUnit.Framework;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.AppUI.UI;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 // Which programming pattern best fit my need? (while keeping velocity & flexibility in mind)
 //  I feel like DataDefinition is working well when designing a data driven system.
@@ -24,7 +26,7 @@ using UnityEngine.Events;
  * defining bonuses and their common properties, while also allowing to define tier-specific
  * functionalities using MonoBehaviour. A kind of Hybrid Data-Driven System...
  */
-public class AugmentController : MonoBehaviour
+public class AugmentController : Singleton<AugmentController>
 {
     [SerializeField] private AugmentCollection m_augmentsCollection;
     [SerializeField] private AugmentTierCollection m_augmentTierCollection;
@@ -113,20 +115,33 @@ public class AugmentController : MonoBehaviour
         }
     }
 
+    public bool TryGetAugment(AugmentDefinition definition, out Augment out_augment)
+    {
+        if (m_augmentsMap.TryGetValue(definition, out out_augment))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     [System.Serializable]
     public class Augment
     {
+        [SerializeField] private string m_name;
         public AugmentDefinition AugmentDefinition;
         public AugmentBehaviour[] TierLogic;
-        public UnityEvent<float> OnAugmentUpdate;
         public UnityEvent OnAnyTierDeactivated;
+        public event Action<float> OnAugmentUpdate;
+        public event Action OnAugmentDeactivated;
+        public event Action<AugmentTierDefinition> OnAugmentTierChanged;
 
         private MonoBehaviour m_owner;
 
         [Header("EXPERIMENTAL")]
         private bool m_tierLevelDownToDeactivate = true;
 
-        private float m_remainingTime = 0;
+        private float m_remainingProgress = 0;
         public bool IsActive { get; protected set; }
         public AugmentTierDefinition ActiveTier { get; protected set; }
 
@@ -157,14 +172,19 @@ public class AugmentController : MonoBehaviour
             {
                 Deactivate();
             }
+            else
+            {
+                // Was not actived yet, spawn UI
+                SimulacraUIManager.Instance.SpawnAugmentUI(AugmentDefinition);
+            }
 
-            if (m_remainingTime <= 0)
+            if (m_remainingProgress <= 0)
             {
                 m_owner.StartCoroutine(CountDown());
             }
             else
             {
-                m_remainingTime = AugmentDefinition.Duration;
+                m_remainingProgress = AugmentDefinition.Duration;
             }
 
             ActiveTier = tier;
@@ -174,11 +194,11 @@ public class AugmentController : MonoBehaviour
 
         public IEnumerator CountDown()
         {
-            m_remainingTime = AugmentDefinition.Duration;
-            while (m_remainingTime > 0)
+            m_remainingProgress = 1;
+            while (m_remainingProgress > 0)
             {
-                m_remainingTime -= Time.deltaTime;
-                OnAugmentUpdate?.Invoke(m_remainingTime);
+                m_remainingProgress -= Time.deltaTime / AugmentDefinition.Duration;
+                OnAugmentUpdate?.Invoke(m_remainingProgress);
                 // Trigger the event with the remaining time as parameter
                 yield return null;
             }

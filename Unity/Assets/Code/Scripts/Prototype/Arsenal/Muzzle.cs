@@ -13,14 +13,27 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
     [SerializeField, MinMaxSlider(0.1f, 5f)] private Vector2 m_cooldownWindow = Vector2.one;
     [SerializeField] float m_spreadAngle = 5f; // Adjust this value to control the spread
     [SerializeField] private bool m_shootingEnable = false;
+    [SerializeField] private bool m_isAffectedByAugment = false;
 
     private WorldBoundariesDefinition m_worldBoundaries;
     private float m_nextTimeToShoot;
+    private float m_fireRateMultiplier = 1;
 
     private void Start()
     {
         WorldPerspectiveManager.Instance.OnWorldPerspectiveChanged += OnWorldPerspectiveChanged;
         m_worldBoundaries = WorldPerspectiveManager.Instance.ActiveBoundaries;
+
+        if (m_isAffectedByAugment && GameBlackboard.IsSingletonValid)
+        {
+            GameBlackboard.FireRateMultiplier.OnValueChanged += FireRateMultiplier_OnValueChanged;
+            m_fireRateMultiplier = GameBlackboard.FireRateMultiplier.Value;
+        }
+    }
+
+    private void FireRateMultiplier_OnValueChanged(float val)
+    {
+        m_fireRateMultiplier = val;
     }
 
     private void OnWorldPerspectiveChanged(WorldBoundariesDefinition newBoundaries)
@@ -83,7 +96,7 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
             }
 
             // set cooldown delay
-            m_nextTimeToShoot = Time.time + Random.Range(m_cooldownWindow.x, m_cooldownWindow.y);
+            m_nextTimeToShoot = Time.time + Random.Range(m_cooldownWindow.x, m_cooldownWindow.y) / m_fireRateMultiplier;
         }
     }
 }

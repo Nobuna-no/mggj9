@@ -2086,6 +2086,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ea7e65ddecc2549b7de11e51df61dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_dontDestroyOnLoad: 0
+  m_onlyDestroyDuplicatedComponent: 1
   m_augmentsCollection: {fileID: 11400000, guid: a06a5db0eef533e43b9f12f102d7644f,
     type: 2}
   m_augmentTierCollection: {fileID: 11400000, guid: e53a1915753239a4f8199bbe0a10def7,
@@ -2286,9 +2288,6 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
-    OnAugmentUpdate:
-      m_PersistentCalls:
-        m_Calls: []
     OnAnyTierDeactivated:
       m_PersistentCalls:
         m_Calls: []
@@ -2400,9 +2399,6 @@ MonoBehaviour:
       m_onTierDeactivated:
         m_PersistentCalls:
           m_Calls: []
-    OnAugmentUpdate:
-      m_PersistentCalls:
-        m_Calls: []
     OnAnyTierDeactivated:
       m_PersistentCalls:
         m_Calls:
