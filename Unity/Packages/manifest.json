@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.nobunatelier.core": "file:C:/ENIGMA/1.Projects/com.nobunatelier.core",
+    "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "2.0.0",
     "com.unity.cinemachine": "3.0.1",
     "com.unity.collab-proxy": "2.2.0",

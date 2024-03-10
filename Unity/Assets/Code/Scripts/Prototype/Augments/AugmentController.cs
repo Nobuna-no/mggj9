@@ -257,25 +257,72 @@ public class AugmentController : Singleton<AugmentController>
             GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
             GUILayout.Label("Augments");
 
-            int i = 0;
-            m_debugScrollview = GUILayout.BeginScrollView(m_debugScrollview);
-            foreach (var augment in m_augmentsMap.Values)
+            string keyShowTierOnly = "Tiers";
+            if (!m_lazyBoolmap.ContainsKey(keyShowTierOnly))
+            {
+                m_lazyBoolmap[keyShowTierOnly] = false;
+            }
+
+            GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
+            if ((m_lazyBoolmap[keyShowTierOnly] = GUILayout.Toggle(m_lazyBoolmap[keyShowTierOnly], keyShowTierOnly, GUI.skin.button)))
             {
                 using (new GUILayout.VerticalScope(GUI.skin.box))
                 {
-                    var name = augment.Definition.name;
-                    if (!m_lazyBoolmap.ContainsKey(name))
+                    GUILayout.Label("Activate All Augments of tier:");
+                    foreach (var tier in m_augmentTiersMap)
                     {
-                        m_lazyBoolmap.Add(name, false);
+                        if (GUILayout.Button(tier.Key.name))
+                        {
+                            foreach (var item in tier.Value)
+                            {
+                                if (!m_augmentsMap.TryGetValue(item, out var augment))
+                                {
+                                    continue;
+                                }
+
+                                foreach (var tierLogic in augment.TierLogic)
+                                {
+                                    if (tierLogic.TierDefinition == tier.Key)
+                                    {
+                                        // My brain hurt...
+                                        ActivateAugment(item, tier.Key);
+                                        break;
+                                    }
+                                }
+                            }
+                        }
                     }
+                }
+            }
 
-                    m_lazyBoolmap[name] = GUILayout.Toggle(m_lazyBoolmap[name], augment.Definition.name);
+            string keyShowAll = "All Augments";
+            if (!m_lazyBoolmap.ContainsKey(keyShowAll))
+            {
+                m_lazyBoolmap[keyShowAll] = false;
+            }
 
-                    if (!m_lazyBoolmap[name])
-                    {
-                        continue;
-                    }
+            GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
+            if (!(m_lazyBoolmap[keyShowAll] = GUILayout.Toggle(m_lazyBoolmap[keyShowAll], keyShowAll, GUI.skin.button)))
+            {
+                return;
+            }
+            m_debugScrollview = GUILayout.BeginScrollView(m_debugScrollview);
+            foreach (var augment in m_augmentsMap.Values)
+            {
+                var name = augment.Definition.name;
+                if (!m_lazyBoolmap.ContainsKey(name))
+                {
+                    m_lazyBoolmap.Add(name, false);
+                }
 
+                m_lazyBoolmap[name] = GUILayout.Toggle(m_lazyBoolmap[name], augment.Definition.name);
+                if (!m_lazyBoolmap[name])
+                {
+                    continue;
+                }
+
+                using (new GUILayout.VerticalScope(GUI.skin.window))
+                {
                     string status = augment.ActiveTier != null ? augment.ActiveTier.name : "Disabled";
                     GUILayout.Label($"Description: {augment.Definition.Description}");
                     GUILayout.Label($"Status: {status}");
