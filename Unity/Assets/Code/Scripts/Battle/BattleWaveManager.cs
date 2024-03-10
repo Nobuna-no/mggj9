@@ -23,7 +23,7 @@ public class BattleWaveManager : MonoBehaviour
 
     private Dictionary<HealthBehaviour, BattlerData> m_activeBattlers = new Dictionary<HealthBehaviour, BattlerData>();
     [SerializeField, ReadOnly] private int m_remainingSequence = 0;
-    [SerializeField, ReadOnly] private int m_remainingOpponent = 0;
+    [SerializeField, ReadOnly] private int m_remainingBattlers = 0;
     private bool m_isInitialized = false;
 
     [SerializeField] private GameModeStateMachine m_gameModeStateMachine;
@@ -116,7 +116,7 @@ public class BattleWaveManager : MonoBehaviour
 
         m_isInitialized = true;
         m_currentWaveIndex = waveIndex;
-        m_remainingOpponent = 0;
+        m_remainingBattlers = 0;
         m_remainingSequence = 0;
         m_activeBattlers.Clear();
     }
@@ -148,7 +148,7 @@ public class BattleWaveManager : MonoBehaviour
         m_activeBattlers.Clear();
 
         StopAllCoroutines();
-        m_remainingOpponent = 0;
+        m_remainingBattlers = 0;
         m_remainingSequence = 0;
 
         m_isInitialized = false;
@@ -184,7 +184,7 @@ public class BattleWaveManager : MonoBehaviour
         Vector3 remappedOrigin = ComputeRemappedMotionPosition(motion.Origin, index, sequence.SpawnCount);
         Vector3 remappedDestination = ComputeRemappedMotionPosition(motion.Destination, index, sequence.SpawnCount);
 
-        m_remainingOpponent++;
+        m_remainingBattlers++;
         PoolableBehaviour battler = PoolManager.Instance.SpawnObject(sequence.BattlerDefintion, remappedOrigin);
         HealthBehaviour hp = battler.GetComponent<HealthBehaviour>();
         Rigidbody rb = battler.GetComponent<Rigidbody>();
@@ -231,15 +231,15 @@ public class BattleWaveManager : MonoBehaviour
         UnsubscribeBattler(behaviour);
         m_activeBattlers.Remove(behaviour);
 
-        --m_remainingOpponent;
-        if (m_remainingOpponent == 0 && m_remainingSequence == 0)
+        --m_remainingBattlers;
+        if (m_remainingBattlers == 0 && m_remainingSequence == 0)
         {
             Debug.Log($"{this.name}: 0 remaining opponent, Spawner done");
             BattleWaveStop();
         }
         else
         {
-            Debug.Log($"{this.name}: {m_remainingOpponent} remaining opponent(s) out of remaining {m_remainingSequence} sequence(s).");
+            Debug.Log($"{this.name}: {m_remainingBattlers} remaining opponent(s) out of remaining {m_remainingSequence} sequence(s).");
         }
     }
 
@@ -269,7 +269,7 @@ public class BattleWaveManager : MonoBehaviour
             battler.PoolableBehaviour.IsActive = false;
         }
         m_activeBattlers.Clear();
-        m_remainingOpponent = 0;
+        m_remainingBattlers = 0;
         m_remainingSequence = 0;
         m_isInitialized = false;
 
@@ -329,29 +329,53 @@ public class BattleWaveManager : MonoBehaviour
     {
         m_displayDebugUI = !m_displayDebugUI;
     }
-
+    private Vector2 m_debugScrollview;
     private void OnGUI()
     {
         if (!m_displayDebugUI)
         {
+            GUILayout.Label("Press F2 to open debug...");
             return;
         }
 
-        using (new GUILayout.VerticalScope(GUI.skin.box))
+        using (new GUILayout.VerticalScope())
         {
-            GUILayout.Label("Battle Wave Manager");
-
-            int i = 0;
-            foreach (var bw in m_battlesCollection.Definitions)
+            GUILayout.Label("Press F2 to close debug...");
+            using (new GUILayout.VerticalScope(GUI.skin.box))
             {
-                if (GUILayout.Button(bw.name))
+                GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
+                GUILayout.Label("Settings");
+                m_playerHealth.IsVulnerable = !GUILayout.Toggle(!m_playerHealth.IsVulnerable, "God Mode");
+            }
+
+            using (new GUILayout.VerticalScope(GUI.skin.box))
+            {
+                GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
+                GUILayout.Label("Battle Waves");
+                if (m_activeWavesDefinition != null)
                 {
-                    m_startNextBattleAutomatically = false;
-                    BattleWaveStop();
-                    m_currentWaveIndex = i;
-                    BattleWaveStart();
+                    using (new GUILayout.VerticalScope(GUI.skin.window))
+                    {
+                        GUILayout.Label($"Active Wave: {m_activeWavesDefinition.name}");
+                        GUILayout.Label($"Sequence: {m_remainingSequence}/{m_activeWavesDefinition.WavesSequence.Count}");
+                        GUILayout.Label($"Remaining Battlers: {m_remainingBattlers}");
+                    }
                 }
-                ++i;
+
+                int i = 0;
+                m_debugScrollview = GUILayout.BeginScrollView(m_debugScrollview);
+                foreach (var bw in m_battlesCollection.Definitions)
+                {
+                    if (GUILayout.Button(bw.name))
+                    {
+                        m_startNextBattleAutomatically = false;
+                        BattleWaveStop();
+                        m_currentWaveIndex = i;
+                        BattleWaveStart();
+                    }
+                    ++i;
+                }
+                GUILayout.EndScrollView();
             }
         }
     }

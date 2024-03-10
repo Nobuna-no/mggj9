@@ -168,4 +168,4 @@ QualitySettings:
   m_TextureMipmapLimitGroupNames: []
   m_PerPlatformDefaultQuality:
     Standalone: 2
-    WebGL: 0
+    WebGL: 1
