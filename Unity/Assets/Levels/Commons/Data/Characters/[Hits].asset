@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dataDefinitions:
   - {fileID: 1888599393155182875}
+  - {fileID: 3462528118631987453}
 --- !u!114 &1888599393155182875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28,4 +29,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_damageAmount: 1
   m_pushBackDefinition: {fileID: 2089767103866390779, guid: da879cabe78dbcf4798009a9fd6587cb,
+    type: 2}
+--- !u!114 &3462528118631987453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c47c2ec959a822439c3493bcca4f0cb, type: 3}
+  m_Name: 3dmg
+  m_EditorClassIdentifier: 
+  m_damageAmount: 1
+  m_pushBackDefinition: {fileID: 8820676753644517509, guid: da879cabe78dbcf4798009a9fd6587cb,
     type: 2}

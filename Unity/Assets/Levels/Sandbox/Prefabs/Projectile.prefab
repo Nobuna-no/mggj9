@@ -91,7 +91,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3440065911378945707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b53b6fa0491f34ca0a171c8edc4d35, type: 3}
+  m_Script: {fileID: 11500000, guid: a8faab49fb4bf17448c382626a0eea9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_team: {fileID: -6867300203005203209, guid: eacf427dc3728c549b02af175cc0bdf7, type: 2}
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_hitOriginTeam: {fileID: 0}
   m_hitOriginGao: {fileID: 8349245460026685317}
   m_impactOriginSocket: {fileID: 0}
+  m_damageMultiplier: 1
   OnHitboxEnabled:
     m_PersistentCalls:
       m_Calls: []
@@ -135,6 +136,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_isAffectedByAugment: 1
 --- !u!1 &8349245460026685317
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,12 +1,8 @@
 using NaughtyAttributes;
 using NobunAtelier;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static NobunAtelier.Character2DMovementVelocity;
 
-[AddComponentMenu("NobunAtelier/Character/Velocity/VelocityModule: 2D SIMULACRA")]
-public class CharacterVelocityModule_Simple : CharacterVelocityModuleBase
+public class SimulacraVelocityModule : CharacterVelocityModuleBase
 {
     public enum MovementAxes
     {
@@ -30,10 +26,9 @@ public class CharacterVelocityModule_Simple : CharacterVelocityModuleBase
 
     [SerializeField]
     private MovementAxes m_movementAxes = MovementAxes.XZ;
+
     [SerializeField]
     private VelocityProcessing m_accelerationApplication = VelocityProcessing.FromRawInput;
-
-    private Vector3 m_movementVector;
 
     [ShowIf("DisplayCustomMovementAxisFields")]
     public Vector3 CustomForwardAxis = Vector3.forward;
@@ -41,20 +36,49 @@ public class CharacterVelocityModule_Simple : CharacterVelocityModuleBase
     [ShowIf("DisplayCustomMovementAxisFields")]
     public Vector3 CustomRightAxis = Vector3.right;
 
+    [SerializeField] private float m_speed = 1;
+    [SerializeField] public float m_decelerationTime = 1;
+
     [SerializeField, Range(0f, 100f)]
     private float m_accelerationSpeed = 1.0f;
+
     [SerializeField, Range(0f, 100f)]
     private float m_maxAcceleration = 50.0f;
 
     [SerializeField, ReadOnly]
     private Vector3 m_velocity;
 
+    [SerializeField] private bool m_isAffectedByAugment = false;
+
+    private Vector3 m_movementVector;
+    private float m_acceleration = 0;
+    private float m_lastMoveAccel = 0;
+    private float m_noMoveTime = 0;
+    private float m_moveSpeedMultiplier = 1;
+
 #if UNITY_EDITOR
+
     private bool DisplayCustomMovementAxisFields()
     {
         return m_movementAxes == MovementAxes.Custom;
     }
+
 #endif
+
+    public override void ModuleInit(Character character)
+    {
+        base.ModuleInit(character);
+        if (m_isAffectedByAugment && GameBlackboard.IsSingletonValid)
+        {
+            GameBlackboard.MovementSpeedMultiplier.OnValueChanged += MovementSpeedMultiplier_OnValueChanged;
+            m_moveSpeedMultiplier = GameBlackboard.MovementSpeedMultiplier.Value;
+        }
+    }
+
+    private void MovementSpeedMultiplier_OnValueChanged(float value)
+    {
+        m_moveSpeedMultiplier = value;
+    }
 
     public override void MoveInput(Vector3 direction)
     {
@@ -80,11 +104,6 @@ public class CharacterVelocityModule_Simple : CharacterVelocityModuleBase
 
         m_movementVector.Normalize();
     }
-    float m_acceleration = 0;
-    public float m_speed = 1;
-    public float m_decelerationTime = 1;
-    private float m_lastMoveAccel = 0;
-    private float m_noMoveTime = 0;
 
     public override Vector3 VelocityUpdate(Vector3 currentVel, float deltaTime)
     {
@@ -96,8 +115,10 @@ public class CharacterVelocityModule_Simple : CharacterVelocityModuleBase
                 m_velocity = m_movementVector * m_speed;
                 m_movementVector = Vector3.zero;
                 return m_velocity + currentVel;
+
             case VelocityProcessing.FromAcceleration:
                 return vel;
+
             case VelocityProcessing.DesiredVelocityFromAcceleration:
                 return ComputeDesiredVelocityFromAccel(currentVel, deltaTime);
         }
@@ -107,7 +128,7 @@ public class CharacterVelocityModule_Simple : CharacterVelocityModuleBase
 
     private Vector3 ComputeDesiredVelocityFromAccel(Vector3 currentVel, float deltaTime)
     {
-        Vector3 desiredVelocity = m_movementVector * m_speed;
+        Vector3 desiredVelocity = m_movementVector * m_speed * m_moveSpeedMultiplier;
         // float maxSpeedChange = deltaTime * m_maxAcceleration;
         if (m_movementVector != Vector3.zero)
         {

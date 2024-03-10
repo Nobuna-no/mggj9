@@ -99,10 +99,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2646964364257430254, guid: eacf427dc3728c549b02af175cc0bdf7,
         type: 2}
+    - target: {fileID: 4925645521872704188, guid: 62598a5060dc7ad489ffd723b2367cde,
+        type: 3}
+      propertyPath: m_isAffectedByAugment
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8349245460026685317, guid: 62598a5060dc7ad489ffd723b2367cde,
         type: 3}
       propertyPath: m_Name
-      value: P_DarkBullet
+      value: P_BattlerBullet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

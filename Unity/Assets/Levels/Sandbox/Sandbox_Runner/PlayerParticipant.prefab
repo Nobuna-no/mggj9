@@ -597,11 +597,12 @@ MonoBehaviour:
   m_accelerationApplication: 0
   CustomForwardAxis: {x: 0, y: 1, z: 0}
   CustomRightAxis: {x: 1, y: 0, z: 0}
+  m_speed: 0.6
+  m_decelerationTime: 1
   m_accelerationSpeed: 1
   m_maxAcceleration: 50
   m_velocity: {x: 0, y: 0, z: 0}
-  m_speed: 0.6
-  m_decelerationTime: 1
+  m_isAffectedByAugment: 0
 --- !u!114 &8174485447336819461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,6 +826,7 @@ Transform:
   - {fileID: 387308680657578664}
   - {fileID: 1638636634040392130}
   - {fileID: 6119518179754051493}
+  - {fileID: 3442610212669272684}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1706509436751477569
@@ -934,11 +936,12 @@ MonoBehaviour:
   m_accelerationApplication: 0
   CustomForwardAxis: {x: 0, y: 0, z: 1}
   CustomRightAxis: {x: 1, y: 0, z: 0}
+  m_speed: 2
+  m_decelerationTime: 1
   m_accelerationSpeed: 1
   m_maxAcceleration: 25
   m_velocity: {x: 0, y: 0, z: 0}
-  m_speed: 2
-  m_decelerationTime: 1
+  m_isAffectedByAugment: 0
 --- !u!114 &4347062192633992143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1060,6 +1063,58 @@ MonoBehaviour:
   m_cooldownWindow: {x: 1, y: 1}
   m_spreadAngle: 5
   m_shootingEnable: 0
+  m_isAffectedByAugment: 0
+--- !u!1 &1942861178929969559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3442610212669272684}
+  - component: {fileID: 250164368539503123}
+  m_Layer: 0
+  m_Name: Blackboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3442610212669272684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942861178929969559}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8021658600562113734}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &250164368539503123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942861178929969559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3983a38a998042f4dbcd74075eb3b376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dontDestroyOnLoad: 0
+  m_onlyDestroyDuplicatedComponent: 1
+  m_defaultFireRateMultiplier: 1
+  m_defaultDamageMultiplier: 1
+  m_defaultMovementSpeedMultiplier: 1
+  m_defaultAttractionDefinition: {fileID: -3376012894769598882, guid: 0fdbae89c34952d48bd45c596e325766,
+    type: 2}
 --- !u!1 &2469808829594574553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,6 +2096,7 @@ MonoBehaviour:
   m_cooldownWindow: {x: 0.2, y: 0.2}
   m_spreadAngle: 1
   m_shootingEnable: 0
+  m_isAffectedByAugment: 0
 --- !u!1 &6350183259564838554
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,7 +2107,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4638006460281328227}
   - component: {fileID: 3486478114043242391}
-  - component: {fileID: 5538035729317402581}
   m_Layer: 0
   m_Name: Augment Controller
   m_TagString: Untagged
@@ -2093,7 +2148,8 @@ MonoBehaviour:
   m_augmentTierCollection: {fileID: 11400000, guid: e53a1915753239a4f8199bbe0a10def7,
     type: 2}
   m_augment:
-  - AugmentDefinition: {fileID: -4629241041628979029, guid: a06a5db0eef533e43b9f12f102d7644f,
+  - m_name: 'Arsenal: Magic Bow'
+    AugmentDefinition: {fileID: -4629241041628979029, guid: a06a5db0eef533e43b9f12f102d7644f,
       type: 2}
     TierLogic:
     - m_tierDefinition: {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7,
@@ -2291,7 +2347,8 @@ MonoBehaviour:
     OnAnyTierDeactivated:
       m_PersistentCalls:
         m_Calls: []
-  - AugmentDefinition: {fileID: 3568157389546311449, guid: a06a5db0eef533e43b9f12f102d7644f,
+  - m_name: 'Stats: Shards Attraction'
+    AugmentDefinition: {fileID: 3568157389546311449, guid: a06a5db0eef533e43b9f12f102d7644f,
       type: 2}
     TierLogic:
     - m_tierDefinition: {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7,
@@ -2299,7 +2356,7 @@ MonoBehaviour:
       m_onTierActivated:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 5538035729317402581}
+          - m_Target: {fileID: 250164368539503123}
             m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
             m_MethodName: SetAttractionSettings
             m_Mode: 2
@@ -2320,7 +2377,7 @@ MonoBehaviour:
       m_onTierActivated:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 5538035729317402581}
+          - m_Target: {fileID: 250164368539503123}
             m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
             m_MethodName: SetAttractionSettings
             m_Mode: 2
@@ -2341,7 +2398,7 @@ MonoBehaviour:
       m_onTierActivated:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 5538035729317402581}
+          - m_Target: {fileID: 250164368539503123}
             m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
             m_MethodName: SetAttractionSettings
             m_Mode: 2
@@ -2362,7 +2419,7 @@ MonoBehaviour:
       m_onTierActivated:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 5538035729317402581}
+          - m_Target: {fileID: 250164368539503123}
             m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
             m_MethodName: SetAttractionSettings
             m_Mode: 2
@@ -2383,7 +2440,7 @@ MonoBehaviour:
       m_onTierActivated:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 5538035729317402581}
+          - m_Target: {fileID: 250164368539503123}
             m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
             m_MethodName: SetAttractionSettings
             m_Mode: 2
@@ -2402,7 +2459,7 @@ MonoBehaviour:
     OnAnyTierDeactivated:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 5538035729317402581}
+        - m_Target: {fileID: 250164368539503123}
           m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
           m_MethodName: ResetAttractionSettings
           m_Mode: 1
@@ -2414,29 +2471,248 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - m_name: 'Stats: Fire Rate'
+    AugmentDefinition: {fileID: -4386351680670305786, guid: a06a5db0eef533e43b9f12f102d7644f,
+      type: 2}
+    TierLogic:
+    - m_tierDefinition: {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7,
+        type: 2}
+      m_onTierActivated:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 250164368539503123}
+            m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
+            m_MethodName: SetFireRateMultiplier
+            m_Mode: 4
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 1.2
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+      m_onTierDeactivated:
+        m_PersistentCalls:
+          m_Calls: []
+    - m_tierDefinition: {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7,
+        type: 2}
+      m_onTierActivated:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 250164368539503123}
+            m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
+            m_MethodName: SetFireRateMultiplier
+            m_Mode: 4
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 1.5
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+      m_onTierDeactivated:
+        m_PersistentCalls:
+          m_Calls: []
+    - m_tierDefinition: {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7,
+        type: 2}
+      m_onTierActivated:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 250164368539503123}
+            m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
+            m_MethodName: SetFireRateMultiplier
+            m_Mode: 4
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 2
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+      m_onTierDeactivated:
+        m_PersistentCalls:
+          m_Calls: []
+    - m_tierDefinition: {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7,
+        type: 2}
+      m_onTierActivated:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 250164368539503123}
+            m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
+            m_MethodName: SetFireRateMultiplier
+            m_Mode: 4
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 3
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+      m_onTierDeactivated:
+        m_PersistentCalls:
+          m_Calls: []
+    - m_tierDefinition: {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7,
+        type: 2}
+      m_onTierActivated:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 250164368539503123}
+            m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
+            m_MethodName: SetFireRateMultiplier
+            m_Mode: 4
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0.75
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+      m_onTierDeactivated:
+        m_PersistentCalls:
+          m_Calls: []
+    OnAnyTierDeactivated:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 250164368539503123}
+          m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
+          m_MethodName: ResetFireRateMultiplier
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1.5
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - m_name: 'Stats: Damage'
+    AugmentDefinition: {fileID: -4920274571434890949, guid: a06a5db0eef533e43b9f12f102d7644f,
+      type: 2}
+    TierLogic:
+    - m_tierDefinition: {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7,
+        type: 2}
+      m_onTierActivated:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 250164368539503123}
+            m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
+            m_MethodName: SetFireRateMultiplier
+            m_Mode: 4
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 1.2
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+      m_onTierDeactivated:
+        m_PersistentCalls:
+          m_Calls: []
+    - m_tierDefinition: {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7,
+        type: 2}
+      m_onTierActivated:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 250164368539503123}
+            m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
+            m_MethodName: SetFireRateMultiplier
+            m_Mode: 4
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 1.5
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+      m_onTierDeactivated:
+        m_PersistentCalls:
+          m_Calls: []
+    - m_tierDefinition: {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7,
+        type: 2}
+      m_onTierActivated:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 250164368539503123}
+            m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
+            m_MethodName: SetFireRateMultiplier
+            m_Mode: 4
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 2
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+      m_onTierDeactivated:
+        m_PersistentCalls:
+          m_Calls: []
+    - m_tierDefinition: {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7,
+        type: 2}
+      m_onTierActivated:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 250164368539503123}
+            m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
+            m_MethodName: SetFireRateMultiplier
+            m_Mode: 4
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 3
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+      m_onTierDeactivated:
+        m_PersistentCalls:
+          m_Calls: []
+    - m_tierDefinition: {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7,
+        type: 2}
+      m_onTierActivated:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 250164368539503123}
+            m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
+            m_MethodName: SetFireRateMultiplier
+            m_Mode: 4
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0.75
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+      m_onTierDeactivated:
+        m_PersistentCalls:
+          m_Calls: []
+    OnAnyTierDeactivated:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 250164368539503123}
+          m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
+          m_MethodName: ResetFireRateMultiplier
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1.5
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   m_debugAugmentDefinition: {fileID: 3568157389546311449, guid: a06a5db0eef533e43b9f12f102d7644f,
     type: 2}
   m_debugAugmentTierDefinition: {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7,
     type: 2}
---- !u!114 &5538035729317402581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6350183259564838554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3983a38a998042f4dbcd74075eb3b376, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_dontDestroyOnLoad: 0
-  m_onlyDestroyDuplicatedComponent: 1
-  m_defaultMovementSpeedMultiplier: 1
-  m_defaultFireRateMultiplier: 1
-  m_defaultAttractionDefinition: {fileID: -3376012894769598882, guid: 0fdbae89c34952d48bd45c596e325766,
-    type: 2}
-  m_playerTransform: {fileID: 1638636634040392130}
 --- !u!1 &6407624968884039163
 GameObject:
   m_ObjectHideFlags: 0
