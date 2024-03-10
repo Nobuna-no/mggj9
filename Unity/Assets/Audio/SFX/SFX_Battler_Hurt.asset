@@ -56,7 +56,7 @@ AudioRandomContainer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SFX_Hit
+  m_Name: SFX_Battler_Hurt
   m_Volume: -5
   m_Pitch: -300
   m_AutomaticTriggerTime: 0

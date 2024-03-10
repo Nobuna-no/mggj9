@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InitialValue: 3
   m_MaxValue: 3
-  m_invulnerabilityDuration: 0.5
+  m_invulnerabilityDuration: 0.7
   m_burialType: 1
   m_burialDelay: {x: 3, y: 3}
 --- !u!114 &-2553174863390738440

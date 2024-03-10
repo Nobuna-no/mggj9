@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-8665781018097548754
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: footstep_snow_002_{-8665781018097548754}
+  m_AudioClip: {fileID: 8300000, guid: 1d879fb5eb153f646b22dde0397adc69, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6198475940038699869
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: footstep_snow_001_{-6198475940038699869}
+  m_AudioClip: {fileID: 8300000, guid: fbc8ece187f887c4eafe0112f2bbb3ed, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5973439289975899126
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: footstep_snow_003_{-5973439289975899126}
+  m_AudioClip: {fileID: 8300000, guid: 73f5ab0e129dc5142aeacb9c9ac309a6, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3797165644150534169
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: footstep_snow_000_{3797165644150534169}
+  m_AudioClip: {fileID: 8300000, guid: ecec2e53c8a03864b9775fc7e755ea92, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SFX_Battler_Impact
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: -5, y: 0}
+  m_PitchRandomizationRange: {x: -50, y: 50}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: 3797165644150534169}
+  - {fileID: -6198475940038699869}
+  - {fileID: -8665781018097548754}
+  - {fileID: -5973439289975899126}
+  - {fileID: 8778476270368068951}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 0
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 1
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &8778476270368068951
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: footstep_snow_004_{8778476270368068951}
+  m_AudioClip: {fileID: 8300000, guid: fa99fd62cd3da9946b7f542b6db217a5, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
