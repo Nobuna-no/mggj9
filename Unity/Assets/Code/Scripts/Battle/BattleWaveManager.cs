@@ -343,6 +343,7 @@ public class BattleWaveManager : MonoBehaviour
                         GUILayout.Label($"Active Wave: {m_activeWavesDefinition.name}");
                         GUILayout.Label($"Sequence: {m_remainingSequence}/{m_activeWavesDefinition.WavesSequence.Count}");
                         GUILayout.Label($"Remaining Battlers: {m_remainingBattlers}");
+                        m_startNextBattleAutomatically = GUILayout.Toggle(m_startNextBattleAutomatically, "Start wave auto");
                     }
                 }
 
@@ -352,10 +353,12 @@ public class BattleWaveManager : MonoBehaviour
                 {
                     if (GUILayout.Button(bw.name))
                     {
+                        var prevVal = m_startNextBattleAutomatically;
                         m_startNextBattleAutomatically = false;
                         BattleWaveStop();
                         m_currentWaveIndex = i;
                         BattleWaveStart();
+                        m_startNextBattleAutomatically = prevVal;
                     }
                     ++i;
                 }

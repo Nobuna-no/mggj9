@@ -34,6 +34,9 @@ public class AugmentController : Singleton<AugmentController>
     [SerializeField] private AugmentDefinition m_debugAugmentDefinition;
     [SerializeField] private AugmentTierDefinition m_debugAugmentTierDefinition;
 
+    [Header("A/B Testing")]
+    private bool m_tierLevelDownToDeactivate = true;
+
     private Dictionary<AugmentTierDefinition, List<AugmentDefinition>> m_augmentTiersMap;
     private Dictionary<AugmentDefinition, Augment> m_augmentsMap;
 
@@ -155,9 +158,6 @@ public class AugmentController : Singleton<AugmentController>
 
         private MonoBehaviour m_owner;
 
-        [Header("EXPERIMENTAL")]
-        private bool m_tierLevelDownToDeactivate = true;
-
         private float m_remainingProgress = 0;
         public bool IsActive { get; protected set; }
         public AugmentTierDefinition ActiveTier { get; protected set; }
@@ -185,10 +185,16 @@ public class AugmentController : Singleton<AugmentController>
 
         public void Activate(AugmentTierDefinition tier)
         {
-            Debug.Assert(m_augmentBehavioursMap.ContainsKey(tier), "m_augmentBehavioursMap.ContainsKey(tier)");
-            if (IsActive/*&& !m_augmentBehavioursMap[tier].InheritsPreviousTiersEffect*/)
+            if (IsActive)
             {
                 Deactivate();
+
+                // No need to go further if we don't have a tier for this augment.
+                if (!m_augmentBehavioursMap.ContainsKey(tier))
+                {
+                    OnAugmentDeactivated?.Invoke();
+                    return;
+                }
             }
             else
             {
@@ -223,6 +229,13 @@ public class AugmentController : Singleton<AugmentController>
                 yield return null;
             }
 
+
+            if (Instance.m_tierLevelDownToDeactivate && ActiveTier.LevelDownTier != null)
+            {
+                Activate(ActiveTier.LevelDownTier);
+                yield break;
+            }
+
             OnAugmentDeactivated?.Invoke();
             Deactivate();
         }
@@ -254,20 +267,20 @@ public class AugmentController : Singleton<AugmentController>
 
         using (new GUILayout.VerticalScope(GUI.skin.box))
         {
-            GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
             GUILayout.Label("Augments");
 
+            GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
             string keyShowTierOnly = "Tiers";
             if (!m_lazyBoolmap.ContainsKey(keyShowTierOnly))
             {
                 m_lazyBoolmap[keyShowTierOnly] = false;
             }
-
-            GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
             if ((m_lazyBoolmap[keyShowTierOnly] = GUILayout.Toggle(m_lazyBoolmap[keyShowTierOnly], keyShowTierOnly, GUI.skin.button)))
             {
                 using (new GUILayout.VerticalScope(GUI.skin.box))
                 {
+                    m_tierLevelDownToDeactivate = GUILayout.Toggle(m_tierLevelDownToDeactivate, "Level Down On Augment End");
+
                     GUILayout.Label("Activate All Augments of tier:");
                     foreach (var tier in m_augmentTiersMap)
                     {

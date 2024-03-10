@@ -1,5 +1,4 @@
 using NobunAtelier.Gameplay;
-      using NobunAtelier.Gameplay;
 using UnityEngine;
 
 public class BattleHurtbox : HitboxBehaviour
