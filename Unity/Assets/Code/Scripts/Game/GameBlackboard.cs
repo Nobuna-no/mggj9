@@ -59,6 +59,7 @@ public class GameBlackboard : Singleton<GameBlackboard>
     {
         ResetAttractionSettings();
         ResetFireRateMultiplier();
+        ResetDamageMultiplier();
         ResetMovementSpeedMultiplier();
     }
 
@@ -71,7 +72,7 @@ public class GameBlackboard : Singleton<GameBlackboard>
             get { return m_value; }
             set
             {
-                OnValueChanged?.Invoke(m_value);
+                OnValueChanged?.Invoke(value);
                 m_value = value;
             }
         }

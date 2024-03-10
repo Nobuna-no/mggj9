@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_displayName: Fire Rate
   m_description: Increase fire rate
-  m_duration: 15
+  m_duration: 30
   m_availableTiers:
   - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}

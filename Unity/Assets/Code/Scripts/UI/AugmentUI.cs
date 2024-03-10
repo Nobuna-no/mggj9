@@ -9,26 +9,21 @@ public class AugmentUI : PoolableBehaviour
     [SerializeField] private Color m_iconColor = Color.white;
     [SerializeField] private Image m_tierImage;
 
-    public AugmentDefinition TargetAugment
-    {
-        get => m_targetDefinition;
-        set => SetTargetAugment(value);
-    }
-
     private AugmentController.Augment m_targetAugment;
     private AugmentDefinition m_targetDefinition;
 
-    public void SetTargetAugment(AugmentDefinition target)
+    public void SetTargetAugment(AugmentDefinition target,AugmentTierDefinition tier)
     {
         Debug.Assert(target != null, $"{this.name}: AugmentDefinition is null");
 
         m_targetDefinition = target;
         m_iconImage.sprite = m_backgroundImage.sprite = target.Icon;
-        if (AugmentController.Instance.TryGetAugment(m_targetDefinition, out var augment))
+        if (AugmentController.Instance.TryGetAugment(m_targetDefinition, out m_targetAugment))
         {
             m_targetAugment.OnAugmentUpdate += OnProgressUpdate;
             m_targetAugment.OnAugmentDeactivated += OnAugmentEnd;
             m_targetAugment.OnAugmentTierChanged += OnTierChange;
+            m_tierImage.sprite = tier.Icon;
         }
         else
         {

@@ -1,6 +1,4 @@
 using NaughtyAttributes;
-using NobunAtelier;
-using NUnit.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -26,6 +24,7 @@ using Random = UnityEngine.Random;
  * defining bonuses and their common properties, while also allowing to define tier-specific
  * functionalities using MonoBehaviour. A kind of Hybrid Data-Driven System...
  */
+
 public class AugmentController : Singleton<AugmentController>
 {
     [SerializeField] private AugmentCollection m_augmentsCollection;
@@ -38,7 +37,7 @@ public class AugmentController : Singleton<AugmentController>
     private Dictionary<AugmentTierDefinition, List<AugmentDefinition>> m_augmentTiersMap;
     private Dictionary<AugmentDefinition, Augment> m_augmentsMap;
 
-    public void Awake()
+    protected override void OnSingletonAwake()
     {
         Debug.Assert(m_augmentsCollection != null, "m_augmentsCollection != null");
         Debug.Assert(m_augmentTierCollection != null, "m_augmentTierCollection != null");
@@ -67,7 +66,7 @@ public class AugmentController : Singleton<AugmentController>
         {
             foreach (var behaviour in m_augment)
             {
-                if (behaviour.AugmentDefinition != augment)
+                if (behaviour.Definition != augment)
                 {
                     continue;
                 }
@@ -115,6 +114,20 @@ public class AugmentController : Singleton<AugmentController>
         }
     }
 
+    public void ActivateAugment(AugmentDefinition augment, AugmentTierDefinition tier)
+    {
+        if (augment == null || tier == null)
+        {
+            Debug.LogWarning("Trying to set an invalid augment or tier", this);
+            return;
+        }
+
+        if (m_augmentsMap.TryGetValue(augment, out var logic))
+        {
+            logic.Activate(tier);
+        }
+    }
+
     public bool TryGetAugment(AugmentDefinition definition, out Augment out_augment)
     {
         if (m_augmentsMap.TryGetValue(definition, out out_augment))
@@ -129,12 +142,15 @@ public class AugmentController : Singleton<AugmentController>
     public class Augment
     {
         [SerializeField] private string m_name;
-        public AugmentDefinition AugmentDefinition;
+        public AugmentDefinition Definition;
         public AugmentBehaviour[] TierLogic;
         public UnityEvent OnAnyTierActivated;
         public UnityEvent OnAnyTierDeactivated;
+
         public event Action<float> OnAugmentUpdate;
+
         public event Action OnAugmentDeactivated;
+
         public event Action<AugmentTierDefinition> OnAugmentTierChanged;
 
         private MonoBehaviour m_owner;
@@ -147,13 +163,14 @@ public class AugmentController : Singleton<AugmentController>
         public AugmentTierDefinition ActiveTier { get; protected set; }
 
         private Dictionary<AugmentTierDefinition, AugmentBehaviour> m_augmentBehavioursMap;
+        public IReadOnlyList<AugmentBehaviour> AvailableTier => TierLogic;
 
         public void Initialize(MonoBehaviour owner)
         {
             m_owner = owner;
 
-            m_augmentBehavioursMap = new Dictionary<AugmentTierDefinition, AugmentBehaviour>(AugmentDefinition.Tiers.Length);
-            foreach (var tier in AugmentDefinition.Tiers)
+            m_augmentBehavioursMap = new Dictionary<AugmentTierDefinition, AugmentBehaviour>(Definition.Tiers.Length);
+            foreach (var tier in Definition.Tiers)
             {
                 foreach (var logic in TierLogic)
                 {
@@ -176,7 +193,7 @@ public class AugmentController : Singleton<AugmentController>
             else
             {
                 // Was not actived yet, spawn UI
-                SimulacraUIManager.Instance.SpawnAugmentUI(AugmentDefinition);
+                SimulacraUIManager.Instance.SpawnAugmentUI(Definition, tier);
             }
 
             if (m_remainingProgress <= 0)
@@ -185,10 +202,11 @@ public class AugmentController : Singleton<AugmentController>
             }
             else
             {
-                m_remainingProgress = AugmentDefinition.Duration;
+                m_remainingProgress = 1;
             }
 
             ActiveTier = tier;
+            OnAugmentTierChanged?.Invoke(tier);
             m_augmentBehavioursMap[tier]?.OnTierActivated?.Invoke();
             OnAnyTierActivated?.Invoke();
             IsActive = true;
@@ -199,12 +217,13 @@ public class AugmentController : Singleton<AugmentController>
             m_remainingProgress = 1;
             while (m_remainingProgress > 0)
             {
-                m_remainingProgress -= Time.deltaTime / AugmentDefinition.Duration;
+                m_remainingProgress -= Time.deltaTime / Definition.Duration;
                 OnAugmentUpdate?.Invoke(m_remainingProgress);
                 // Trigger the event with the remaining time as parameter
                 yield return null;
             }
 
+            OnAugmentDeactivated?.Invoke();
             Deactivate();
         }
 
@@ -221,6 +240,75 @@ public class AugmentController : Singleton<AugmentController>
             IsActive = false;
             ActiveTier = null;
         }
+    }
+
+    [Header("Debug")]
+    [SerializeField]
+    private bool m_displayDebugUI = true;
+
+    private Vector2 m_debugScrollview;
+    private Dictionary<string, bool> m_lazyBoolmap;
+
+    private void OnGUI()
+    {
+        if (!m_displayDebugUI)
+        {
+            return;
+        }
+
+        if (m_lazyBoolmap == null)
+        {
+            m_lazyBoolmap = new Dictionary<string, bool>();
+        }
+
+        using (new GUILayout.VerticalScope(GUI.skin.box))
+        {
+            GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
+            GUILayout.Label("Augments");
+
+            int i = 0;
+            m_debugScrollview = GUILayout.BeginScrollView(m_debugScrollview);
+            foreach (var augment in m_augmentsMap.Values)
+            {
+                using (new GUILayout.VerticalScope(GUI.skin.box))
+                {
+                    var name = augment.Definition.name;
+                    if (!m_lazyBoolmap.ContainsKey(name))
+                    {
+                        m_lazyBoolmap.Add(name, false);
+                    }
+
+                    m_lazyBoolmap[name] = GUILayout.Toggle(m_lazyBoolmap[name], augment.Definition.name);
+
+                    if (!m_lazyBoolmap[name])
+                    {
+                        continue;
+                    }
+
+                    string status = augment.ActiveTier != null ? augment.ActiveTier.name : "Disabled";
+                    GUILayout.Label($"Description: {augment.Definition.Description}");
+                    GUILayout.Label($"Status: {status}");
+                    GUILayout.Label($"Force Augment Tier:");
+                    using (new GUILayout.HorizontalScope())
+                    {
+                        foreach (var tier in augment.AvailableTier)
+                        {
+                            if (GUILayout.Button(tier.TierDefinition.name))
+                            {
+                                ActivateAugment(augment.Definition, tier.TierDefinition);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            GUILayout.EndScrollView();
+        }
+    }
+
+    public void ToggleDebugUI()
+    {
+        m_displayDebugUI = !m_displayDebugUI;
     }
 
     [System.Serializable]

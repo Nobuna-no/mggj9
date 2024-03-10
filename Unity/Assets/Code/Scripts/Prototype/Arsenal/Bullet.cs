@@ -20,10 +20,16 @@ public class Bullet : UnityPoolableBehaviour<Bullet>
     [SerializeField] private ParticleSystem m_particleSystem;
     // public property to give the projectile a reference to its ObjectPool
     public Rigidbody TargetRigidbody { get; private set; }
+    private Vector3 m_originalScale;
+    private MeshRenderer m_mesh;
+    private Material m_defaultMaterial;
 
     private void Awake()
     {
         TargetRigidbody = GetComponentInChildren<Rigidbody>();
+        m_originalScale = transform.localScale;
+        m_mesh = GetComponent<MeshRenderer>();
+        m_defaultMaterial = m_mesh.material;
     }
 
     protected override void OnSpawn()
@@ -36,6 +42,14 @@ public class Bullet : UnityPoolableBehaviour<Bullet>
         // reset the moving Rigidbody
         TargetRigidbody.velocity = new Vector3(0f, 0f, 0f);
         TargetRigidbody.angularVelocity = new Vector3(0f, 0f, 0f);
+        transform.localScale = m_originalScale;
+        m_mesh.material = m_defaultMaterial;
+    }
+
+    public void SetData(Material material, float scale)
+    {
+        transform.localScale = m_originalScale * scale;
+        m_mesh.material = material;
     }
 
     public void SpawnParticle()

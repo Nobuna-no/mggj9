@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5b13656d81f24a45a679592e2267007, type: 3}
+  m_Name: '[PoolUI]'
+  m_EditorClassIdentifier: 
+  m_dataDefinitions:
+  - {fileID: 8416000292130949524}
+--- !u!114 &8416000292130949524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb268cc1a6d06949986bde39fa116d2, type: 3}
+  m_Name: AugmentIcon
+  m_EditorClassIdentifier: 
+  m_poolablePrefab: {fileID: 3801683585384279985, guid: 6a90bfb7848a4ff4294a095be8d458d6,
+    type: 3}
+  m_reserveSize: 10
+  m_reserveGrowCount: 2

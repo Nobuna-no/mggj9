@@ -295,5 +295,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_timeoutDelay: 3
+  m_mesh: {fileID: 2113312536350751972}
+  m_defaultMaterial: {fileID: 0}
   m_particleSystem: {fileID: 4198436773916837192, guid: 658a0fc8efab76e4d9c278881fdbdff8,
     type: 3}

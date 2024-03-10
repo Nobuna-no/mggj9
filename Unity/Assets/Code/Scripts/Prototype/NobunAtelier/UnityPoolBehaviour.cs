@@ -23,7 +23,12 @@ namespace NobunAtelier
 
         private void Awake()
         {
-            m_objectPool = new ObjectPool<T>(CreateProjectile,
+            m_objectPool = CreateNewPool();
+        }
+
+        protected virtual ObjectPool<T> CreateNewPool()
+        {
+            return new ObjectPool<T>(CreateProjectile,
                 OnGetFromPool, OnReleaseToPool, OnDestroyPooledObject,
                 m_collectionCheck, m_defaultCapacity, m_maxSize);
         }

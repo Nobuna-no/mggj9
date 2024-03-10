@@ -41,6 +41,7 @@ public class BattleWaveManager : MonoBehaviour
     [Header("Debug")]
     [SerializeField]
     private bool m_displayDebugUI = true;
+    private Vector2 m_debugScrollview;
 
     private class BattlerData
     {
@@ -329,12 +330,11 @@ public class BattleWaveManager : MonoBehaviour
     {
         m_displayDebugUI = !m_displayDebugUI;
     }
-    private Vector2 m_debugScrollview;
     private void OnGUI()
     {
         if (!m_displayDebugUI)
         {
-            GUILayout.Label("Press F2 to open debug...");
+            GUILayout.Label("F2: Battle Debug\nF3: Augment Debug");
             return;
         }
 

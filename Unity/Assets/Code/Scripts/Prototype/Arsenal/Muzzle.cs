@@ -3,6 +3,7 @@ using NobunAtelier;
 using NaughtyAttributes;
 using Unity.Collections.LowLevel.Unsafe;
 using System.Collections.Generic;
+using UnityEngine.Pool;
 
 public class Muzzle : UnityPoolBehaviour<Bullet>
 {
@@ -17,24 +18,25 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
     [SerializeField] private bool m_shootingEnable = false;
     [SerializeField] private bool m_isAffectedByAugment = false;
     [SerializeField, ShowIf("m_isAffectedByAugment")] private AugmentDefinition m_damageAugmentDefinition;
-    [SerializeField, ShowIf("m_isAffectedByAugment")] private TierPrefab[] m_bulletPerAugmentTier;
+    [SerializeField, ShowIf("m_isAffectedByAugment")] private BulletTier[] m_bulletPerAugmentTier;
 
     private WorldBoundariesDefinition m_worldBoundaries;
     private float m_nextTimeToShoot;
     private float m_fireRateMultiplier = 1;
 
-    private Dictionary<AugmentTierDefinition, TierPrefab> m_bulletPerAugmentTierMap;
-    private AugmentController.Augment m_damageAugment;
-    private Bullet m_defaultBullet;
+    private Dictionary<AugmentTierDefinition, BulletTier> m_bulletPerAugmentTierMap;
+    private AugmentController.Augment m_activeAugment;
 
     [System.Serializable]
-    private class TierPrefab
+    private class BulletTier
     {
         [SerializeField] private AugmentTierDefinition m_augmentTier;
-        [SerializeField] private Bullet m_bullet;
+        [SerializeField] private Material m_material;
+        [SerializeField] private float m_scale = 1;
 
         public AugmentTierDefinition AugmentTier => m_augmentTier;
-        public Bullet BulletPrefab => m_bullet;
+        public Material TierMaterial => m_material;
+        public float TierScale => m_scale;
     }
 
     private void Start()
@@ -49,15 +51,12 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
             m_fireRateMultiplier = GameBlackboard.FireRateMultiplier.Value;
 
             // Retrieve damage augment and subscribe to event
-            m_defaultBullet = m_objectPrefab;
-            if (!AugmentController.Instance.TryGetAugment(m_damageAugmentDefinition, out m_damageAugment))
+            if (!AugmentController.Instance.TryGetAugment(m_damageAugmentDefinition, out m_activeAugment))
             {
                 Debug.LogWarning($"Failed to retrieved '{m_damageAugmentDefinition.name}' from AugmentController", this);
             }
-            m_damageAugment.OnAugmentTierChanged += M_damageAugment_OnAugmentTierChanged;
-            m_damageAugment.OnAugmentDeactivated += M_damageAugment_OnAugmentDeactivated;
 
-            m_bulletPerAugmentTierMap = new Dictionary<AugmentTierDefinition, TierPrefab>(m_bulletPerAugmentTier.Length);
+            m_bulletPerAugmentTierMap = new Dictionary<AugmentTierDefinition, BulletTier>(m_bulletPerAugmentTier.Length);
             foreach (var bulletTier in m_bulletPerAugmentTier)
             {
                 m_bulletPerAugmentTierMap.Add(bulletTier.AugmentTier, bulletTier);
@@ -67,24 +66,12 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
 
     private void OnDestroy()
     {
-        m_damageAugment.OnAugmentTierChanged -= M_damageAugment_OnAugmentTierChanged;
-        m_damageAugment.OnAugmentDeactivated -= M_damageAugment_OnAugmentDeactivated;
-    }
-
-    private void M_damageAugment_OnAugmentTierChanged(AugmentTierDefinition tier)
-    {
-        if (!m_bulletPerAugmentTierMap.TryGetValue(tier, out var bullet))
+        if (m_isAffectedByAugment && GameBlackboard.IsSingletonValid)
         {
-            Debug.LogWarning($"Failed to retrieved '{tier.name}' from m_bulletPerAugmentTierMap", this);
+            GameBlackboard.FireRateMultiplier.OnValueChanged -= FireRateMultiplier_OnValueChanged;
         }
-
-        m_objectPrefab = bullet.BulletPrefab;
     }
 
-    private void M_damageAugment_OnAugmentDeactivated()
-    {
-        m_objectPrefab = m_defaultBullet;
-    }
 
     private void FireRateMultiplier_OnValueChanged(float value)
     {
@@ -126,6 +113,14 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
                 Bullet bulletObject = Pool.Get();
                 if (bulletObject == null)
                     continue;
+
+                if (m_isAffectedByAugment && m_activeAugment.ActiveTier != null)
+                {
+                    if (m_bulletPerAugmentTierMap.TryGetValue(m_activeAugment.ActiveTier, out var data))
+                    {
+                        bulletObject.SetData(data.TierMaterial, data.TierScale);
+                    }
+                }
 
                 // align to gun barrel/muzzle position
                 bulletObject.transform.SetPositionAndRotation(muzzlePosition.position, muzzlePosition.rotation);
