@@ -155,4 +155,5 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_timeoutDelay: 10
-  m_defaultSpeed: 10
+  m_defaultSpeed: 20
+  m_shardEnergyValue: 1

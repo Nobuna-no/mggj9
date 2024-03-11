@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_levelDownTier: {fileID: 0}
   m_probability: 0.3
-  m_crystalPrefab: {fileID: 0}
+  m_crystalPrefab: {fileID: 8777447631223457373, guid: df560a1e758373640ab105eb51eef137,
+    type: 3}
   m_icon: {fileID: 21300000, guid: 8bd67d38be6d70c4e9758236da37c1c6, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -48,7 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_levelDownTier: {fileID: 0}
   m_probability: 1
-  m_crystalPrefab: {fileID: 0}
+  m_crystalPrefab: {fileID: 5071435410254818211, guid: 15e06ae24fc853a40833920d51882d2f,
+    type: 3}
   m_icon: {fileID: 21300000, guid: fc01e44af59d17b4bb7ab0958d35b6ca, type: 3}
 --- !u!114 &5577249598986882823
 MonoBehaviour:
@@ -64,7 +66,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_levelDownTier: {fileID: 8013678198164930333}
   m_probability: 0.2
-  m_crystalPrefab: {fileID: 0}
+  m_crystalPrefab: {fileID: 8777447631223457373, guid: 092af94734916d34ebaf47511dfd3288,
+    type: 3}
   m_icon: {fileID: 21300000, guid: 1dcebddb6ec6f5a46ae5202bca6b617d, type: 3}
 --- !u!114 &5829897845308056388
 MonoBehaviour:
@@ -80,7 +83,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_levelDownTier: {fileID: 20075028305457967}
   m_probability: 0.7
-  m_crystalPrefab: {fileID: 0}
+  m_crystalPrefab: {fileID: 8777447631223457373, guid: 6177fcf0c50cb0a41b4a665bba92c46c,
+    type: 3}
   m_icon: {fileID: 21300000, guid: 02d8d565368aa86469c03e904976f86e, type: 3}
 --- !u!114 &8013678198164930333
 MonoBehaviour:
@@ -96,5 +100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_levelDownTier: {fileID: 5829897845308056388}
   m_probability: 0.5
-  m_crystalPrefab: {fileID: 0}
+  m_crystalPrefab: {fileID: 8777447631223457373, guid: f6f6cc23106e8344899af1a8e4597989,
+    type: 3}
   m_icon: {fileID: 21300000, guid: 51300b8c879247c48b56360d97f52195, type: 3}

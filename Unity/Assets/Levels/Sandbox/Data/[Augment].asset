@@ -146,7 +146,6 @@ MonoBehaviour:
   m_description: Increase movement speed.
   m_duration: 20
   m_availableTiers:
-  - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}

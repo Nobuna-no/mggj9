@@ -1,10 +1,10 @@
 using NaughtyAttributes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
 
+// Absorbs shard and generate crystal
 [RequireComponent(typeof(SphereCollider))]
 public class ShardsAttractor : MonoBehaviour
 {
@@ -12,7 +12,13 @@ public class ShardsAttractor : MonoBehaviour
     [SerializeField, Tooltip("In seconds.")] private float m_attractionDuration = 5f;
     [SerializeField] private AnimationCurve m_attractionTweenCurve;
     [SerializeField] private float m_absorbtionRange = 0.2f;
-    [SerializeField] private UnityEvent<float> m_onShardAbsorbed;
+    [SerializeField] private float m_shardValueToLevelUp = 10f;
+    [SerializeField] private bool m_canAttractAndAbsorb = true;
+
+    public event Action<float, float> OnShardValueChanged;
+    public event Action OnLevelUp;
+
+    private float m_accumulatedShardValue = 0;
 
     private readonly List<PoolableShard> m_shardsList = new List<PoolableShard>();
 
@@ -24,6 +30,16 @@ public class ShardsAttractor : MonoBehaviour
 
     private float m_attractionDurationMultiplier = 1f;
     private bool m_isRegistered = false;
+
+    public void EnableAttraction()
+    {
+        m_canAttractAndAbsorb = true;
+    }
+
+    public void DisableAbsorption()
+    {
+        m_canAttractAndAbsorb = false;
+    }
 
     private void Awake()
     {
@@ -78,10 +94,12 @@ public class ShardsAttractor : MonoBehaviour
 
             if (distanceSquared < m_absorbtionRange * m_absorbtionRange)
             {
-                m_onShardAbsorbed?.Invoke(shard.Value);
+                m_accumulatedShardValue += shard.Value;
                 shard.Despawn();
                 m_shardsList.RemoveAt(i);
                 m_shardsSpaceTime.Remove(shard);
+                CheckLevelUp();
+                OnShardValueChanged?.Invoke(m_accumulatedShardValue, m_shardValueToLevelUp);
             }
             else
             {
@@ -94,8 +112,23 @@ public class ShardsAttractor : MonoBehaviour
         }
     }
 
+    private void CheckLevelUp()
+    {
+        if (m_accumulatedShardValue > m_shardValueToLevelUp)
+        {
+            m_accumulatedShardValue -= m_shardValueToLevelUp;
+            OnLevelUp?.Invoke();
+            CheckLevelUp();
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
+        if (!m_canAttractAndAbsorb)
+        {
+            return;
+        }
+
         var shard = other.GetComponent<PoolableShard>();
         if (shard == null)
         {

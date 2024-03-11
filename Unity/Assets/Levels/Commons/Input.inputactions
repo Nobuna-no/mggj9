@@ -67,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "GachaButton",
+                    "type": "Button",
+                    "id": "907204ef-0ea1-412c-9db7-198dd22232ff",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -315,7 +324,7 @@
                 {
                     "name": "",
                     "id": "dfe416fc-d8c4-4f1b-8790-4769f3e93772",
-                    "path": "<Keyboard>/f2",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -326,11 +335,33 @@
                 {
                     "name": "",
                     "id": "96c3872f-7b15-4956-af6f-1d0dd971c35c",
-                    "path": "<Keyboard>/f3",
+                    "path": "<Keyboard>/2",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "AugmentDebug",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4ae7d33d-0410-4790-8df0-08ff76b3bc6b",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "GachaButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2e6e56da-1678-4d51-be3e-0c82108a1bf6",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "GachaButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
