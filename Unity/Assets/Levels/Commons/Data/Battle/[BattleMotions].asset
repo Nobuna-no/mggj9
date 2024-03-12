@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0016
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: -2, y: 0, z: -0.25}
@@ -62,6 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0018
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: -2, y: 0, z: 0}
@@ -112,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-S-0001-0007
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 1
     m_point: {x: -2, y: 0, z: 0}
@@ -163,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0044
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 0.5, y: 0, z: 2}
@@ -213,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-00XX-1
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 0, y: 0, z: 1.25}
@@ -263,6 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-00XX-2
   m_EditorClassIdentifier: 
+  m_description: From one point toward curved line
   m_origin:
     m_mode: 0
     m_point: {x: 0, y: 0, z: 1.25}
@@ -274,7 +280,7 @@ MonoBehaviour:
     m_point: {x: -1.25, y: 0, z: 0}
     m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
       type: 2}
-    m_splineOrigin: {x: 0, y: 0, z: 0.25}
+    m_splineOrigin: {x: 0, y: 0, z: 0.5}
     m_splineScale: 0.75
   m_motionCurve:
     serializedVersion: 2
@@ -313,6 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0003
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: -0.25, y: 0, z: 2}
@@ -363,6 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0012
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 2, y: 0, z: 0}
@@ -413,6 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0009
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: -2, y: 0, z: 0.25}
@@ -463,6 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0019
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 2, y: 0, z: 1}
@@ -513,6 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0013
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 2, y: 0, z: 0.25}
@@ -563,6 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0042
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 0, y: 0, z: 2}
@@ -613,6 +625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0014
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 2, y: 0, z: 0.5}
@@ -651,6 +664,58 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_motionDuration: 5
+--- !u!114 &-2105804654115696167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-00XX-4
+  m_EditorClassIdentifier: 
+  m_description: 'Top line toward circle center(x=0) top-middle(z=0.5) '
+  m_origin:
+    m_mode: 1
+    m_point: {x: 0.75, y: 0, z: 2}
+    m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+    m_splineOrigin: {x: 0, y: 0, z: 2}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 1
+    m_point: {x: 0.75, y: 0, z: 0.75}
+    m_spline: {fileID: 4828253108794129712, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+    m_splineOrigin: {x: 0, y: 0, z: 0.5}
+    m_splineScale: 0.5
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 2
 --- !u!114 &-1046131543303814507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,6 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0010
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: -2, y: 0, z: 0.5}
@@ -713,6 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0001
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: -0.75, y: 0, z: 2}
@@ -763,6 +830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0017
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 2, y: 0, z: 0.75}
@@ -844,6 +912,9 @@ MonoBehaviour:
   - {fileID: 1406630548326831594}
   - {fileID: -8199145858556683055}
   - {fileID: 7033622931370394590}
+  - {fileID: -2105804654115696167}
+  - {fileID: 580655068963673764}
+  - {fileID: 6826490550414788567}
 --- !u!114 &476584432060603120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,6 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0007
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 0.75, y: 0, z: 2}
@@ -906,6 +978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0006
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 0.5, y: 0, z: 2}
@@ -944,6 +1017,58 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_motionDuration: 1
+--- !u!114 &580655068963673764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-00XX-5
+  m_EditorClassIdentifier: 
+  m_description: 'Top line toward circle left(x=-0.5) top-middle(z=0.5) '
+  m_origin:
+    m_mode: 1
+    m_point: {x: 0.75, y: 0, z: 2}
+    m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+    m_splineOrigin: {x: 0, y: 0, z: 2}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 1
+    m_point: {x: 0.75, y: 0, z: 0.75}
+    m_spline: {fileID: 4828253108794129712, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+    m_splineOrigin: {x: -0.5, y: 0, z: 0.5}
+    m_splineScale: 0.5
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 2
 --- !u!114 &1406630548326831594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -956,6 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0039
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: -0.75, y: 0, z: 2}
@@ -1006,6 +1132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0008
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: -2, y: 0, z: 0}
@@ -1056,6 +1183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0021
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: -2, y: 0, z: 2}
@@ -1106,6 +1234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0005
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 0.25, y: 0, z: 2}
@@ -1156,6 +1285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0011
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: -2, y: 0, z: 0.75}
@@ -1206,6 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-SR-0001-0007
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 1
     m_point: {x: -2, y: 0, z: 0}
@@ -1257,6 +1388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0002
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: -0.5, y: 0, z: 2}
@@ -1307,6 +1439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0020
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 2, y: 0, z: -1}
@@ -1357,6 +1490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0004
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 0, y: 0, z: 2}
@@ -1395,6 +1529,58 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_motionDuration: 1
+--- !u!114 &6826490550414788567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-00XX-6
+  m_EditorClassIdentifier: 
+  m_description: 'Top line toward circle right(x=0.5) top-middle(z=0.5) '
+  m_origin:
+    m_mode: 1
+    m_point: {x: 0.75, y: 0, z: 2}
+    m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+    m_splineOrigin: {x: 0, y: 0, z: 2}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 1
+    m_point: {x: 0.75, y: 0, z: 0.75}
+    m_spline: {fileID: 4828253108794129712, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+    m_splineOrigin: {x: 0.5, y: 0, z: 0.5}
+    m_splineScale: 0.5
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 2
 --- !u!114 &7033622931370394590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1407,6 +1593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0045
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 0.75, y: 0, z: 2}
@@ -1457,6 +1644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-0015
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 2, y: 0, z: 0.75}
@@ -1507,6 +1695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
   m_Name: BM-TD-00XX-3
   m_EditorClassIdentifier: 
+  m_description: 
   m_origin:
     m_mode: 0
     m_point: {x: 0, y: 0, z: 1.25}

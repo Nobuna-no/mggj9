@@ -14,34 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_displayName: Shield
   m_description: Protect against damage
-  m_duration: 15
-  m_availableTiers:
-  - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
-  - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
-  - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
-  m_icon: {fileID: -241933981, guid: 05e0567213a58c840a3ea79a4409bdfd, type: 3}
---- !u!114 &-5099356032752877091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
-  m_Name: 'Arsenal: Magic Shotgun'
-  m_EditorClassIdentifier: 
-  m_displayName: Magic Shotgun
-  m_description: Burst of high spread projectiles
   m_duration: 10
   m_availableTiers:
-  - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
-  - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
-  - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
-  - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
-  m_icon: {fileID: -579725436, guid: 05e0567213a58c840a3ea79a4409bdfd, type: 3}
+  m_icon: {fileID: -241933981, guid: 05e0567213a58c840a3ea79a4409bdfd, type: 3}
 --- !u!114 &-4920274571434890949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,7 +32,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_displayName: Atk+
   m_description: Increase Damage dealt
-  m_duration: 15
+  m_duration: 30
   m_availableTiers:
   - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
@@ -78,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_displayName: Magic Arrows
   m_description: Fast but small projectiles
-  m_duration: 15
+  m_duration: 30
   m_availableTiers:
   - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
@@ -100,14 +76,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_displayName: Fire Rate
   m_description: Increase fire rate
-  m_duration: 20
+  m_duration: 30
   m_availableTiers:
   - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
-  m_icon: {fileID: -1341189835, guid: 05e0567213a58c840a3ea79a4409bdfd, type: 3}
+  m_icon: {fileID: 112508314, guid: 05e0567213a58c840a3ea79a4409bdfd, type: 3}
 --- !u!114 &-635140617022527070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,14 +98,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_displayName: Magic Bolt
   m_description: Big but slow projectiles
-  m_duration: 10
+  m_duration: 30
   m_availableTiers:
   - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
-  m_icon: {fileID: 1485912186, guid: 05e0567213a58c840a3ea79a4409bdfd, type: 3}
+  m_icon: {fileID: -1696923503, guid: 05e0567213a58c840a3ea79a4409bdfd, type: 3}
 --- !u!114 &-532288725352972895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_displayName: Velocity
   m_description: Increase movement speed.
-  m_duration: 20
+  m_duration: 30
   m_availableTiers:
   - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
@@ -170,10 +146,8 @@ MonoBehaviour:
   - {fileID: -532288725352972895}
   - {fileID: -4629241041628979029}
   - {fileID: -635140617022527070}
-  - {fileID: -5099356032752877091}
   - {fileID: -5516687447529495593}
   - {fileID: 2701664296868313388}
-  - {fileID: 4359865426744530901}
 --- !u!114 &2701664296868313388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +164,6 @@ MonoBehaviour:
   m_description: Replenish life over time
   m_duration: 10
   m_availableTiers:
-  - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
@@ -209,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_displayName: Attraction
   m_description: Shards attraction force
-  m_duration: 15
+  m_duration: 30
   m_availableTiers:
   - {fileID: 20075028305457967, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
@@ -217,22 +190,3 @@ MonoBehaviour:
   - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
   m_icon: {fileID: -1696923503, guid: 05e0567213a58c840a3ea79a4409bdfd, type: 3}
---- !u!114 &4359865426744530901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
-  m_Name: 'Spell: Witch Time'
-  m_EditorClassIdentifier: 
-  m_displayName: Witch Time
-  m_description: Alters time flow
-  m_duration: 5
-  m_availableTiers:
-  - {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
-  - {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7, type: 2}
-  m_icon: {fileID: 112508314, guid: 05e0567213a58c840a3ea79a4409bdfd, type: 3}

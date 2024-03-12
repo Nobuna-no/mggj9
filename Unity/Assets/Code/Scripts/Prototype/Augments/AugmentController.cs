@@ -37,17 +37,12 @@ public class AugmentController : Singleton<AugmentController>
 
     [Header("Gacha Juiciness")]
     [SerializeField] private AugmentTierDefinition m_pityAugmentTier;
-
+    [SerializeField] private UnityEvent m_onPityCrystalObtained;
     [SerializeField] private SplineContainer m_crystalSpline;
     [SerializeField] private SplineContainer m_crystalSplineOpeningPath;
     [SerializeField] private float m_crystalOpeningDuration = 1f;
     [SerializeField] private float m_offsetDurationBetweenOpening = 0.5f;
     [SerializeField, ReadOnly] private int m_remaingCrystalToOpen = 0;
-
-    [Header("Debug")]
-    [SerializeField] private AugmentDefinition m_debugAugmentDefinition;
-
-    [SerializeField] private AugmentTierDefinition m_debugAugmentTierDefinition;
 
     [Header("A/B Testing")]
     private bool m_tierLevelDownToDeactivate = true;
@@ -67,6 +62,8 @@ public class AugmentController : Singleton<AugmentController>
             Debug.LogWarning("Trying to set an invalid augment or tier", this);
             return;
         }
+
+        Debug.Log($"ActivateAugment: {augment.name} ({tier.name})");
 
         if (m_augmentsMap.TryGetValue(augment, out var logic))
         {
@@ -214,6 +211,7 @@ public class AugmentController : Singleton<AugmentController>
         m_remaingCrystalToOpen = m_crystalList.Count;
         if (m_remaingCrystalToOpen == 10)
         {
+            m_onPityCrystalObtained?.Invoke();
             SpawnPityAugment();
         }
 
@@ -344,6 +342,8 @@ public class AugmentController : Singleton<AugmentController>
     {
         yield return new WaitForSeconds(m_offsetDurationBetweenOpening + m_crystalOpeningDuration * indexForDelay);
         crystal.Open(m_crystalSplineOpeningPath, m_crystalOpeningDuration);
+
+        yield return new WaitForSeconds(m_crystalOpeningDuration);
         // All of that just for that line :D
         ActivateAugment(crystal.Augment, crystal.Tier);
 
@@ -379,8 +379,9 @@ public class AugmentController : Singleton<AugmentController>
         public IReadOnlyList<AugmentBehaviour> AvailableTier => TierLogic;
         public bool IsActive { get; protected set; }
 
-        public void Activate(AugmentTierDefinition tier)
+        public void Activate(AugmentTierDefinition tier, bool forceTier = false)
         {
+            var previousTier = ActiveTier;
             if (IsActive)
             {
                 Deactivate();
@@ -405,6 +406,21 @@ public class AugmentController : Singleton<AugmentController>
                 return;
             }
 
+            // Only change tier if the new tier has higher priority
+            if (previousTier == null || forceTier || tier.OverridePriority >= previousTier.OverridePriority)
+            {
+                ActiveTier = tier;
+                OnAugmentTierChanged?.Invoke(tier);
+            }
+            else
+            {
+                ActiveTier = previousTier;
+            }
+
+            OnAnyTierActivated?.Invoke();
+            m_augmentBehavioursMap[tier]?.OnTierActivated?.Invoke();
+            IsActive = true;
+
             if (m_remainingProgress <= 0)
             {
                 m_owner.StartCoroutine(CountDown());
@@ -413,12 +429,6 @@ public class AugmentController : Singleton<AugmentController>
             {
                 m_remainingProgress = 1;
             }
-
-            ActiveTier = tier;
-            OnAugmentTierChanged?.Invoke(tier);
-            m_augmentBehavioursMap[tier]?.OnTierActivated?.Invoke();
-            OnAnyTierActivated?.Invoke();
-            IsActive = true;
         }
 
         public IEnumerator CountDown()
@@ -434,7 +444,7 @@ public class AugmentController : Singleton<AugmentController>
 
             if (Instance.m_tierLevelDownToDeactivate && ActiveTier.LevelDownTier != null)
             {
-                Activate(ActiveTier.LevelDownTier);
+                Activate(ActiveTier.LevelDownTier, true);
                 yield break;
             }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BattleWaveDefinition : DataDefinition
 {
+    [SerializeField, TextArea] private string m_description;
     [SerializeField] private Sequence[] m_newSequences;
     public IReadOnlyList<Sequence> WavesSequence => m_newSequences;
 
@@ -12,6 +13,7 @@ public class BattleWaveDefinition : DataDefinition
     {
         [Tooltip("Delay before the sequence start. In seconds.")]
         [SerializeField] private float m_delay = 0;
+        [SerializeField] private float m_delayBeforeBattlerAttack = 0;
 
         [SerializeField] private BattleMotionDefinition m_motion;
         [SerializeField] private BattlerDefinition m_battler;
@@ -21,6 +23,7 @@ public class BattleWaveDefinition : DataDefinition
         [SerializeField, Min(0)] private float m_spawnOffset = 1;
 
         public float Delay => m_delay;
+        public float DelayBeforeBattlerAttack => m_delayBeforeBattlerAttack;
         public BattleMotionDefinition Motion => m_motion;
         public BattlerDefinition BattlerDefintion => m_battler;
         public int SpawnCount => m_spawnCount;

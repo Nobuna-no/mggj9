@@ -50,12 +50,16 @@ MonoBehaviour:
   m_collectionCheck: 1
   m_defaultCapacity: 20
   m_maxSize: 100
+  m_shootingEnable: 1
   m_muzzleVelocity: 100
   m_muzzlesPosition:
   - {fileID: 550572993168430439}
-  m_cooldownWindow: {x: 1, y: 1}
   m_spreadAngle: 10
-  m_shootingEnable: 1
+  m_cooldownWindow: {x: 1, y: 1}
+  m_delayBeforeFirstShot: 1
+  m_intermittentShooting: 1
+  m_intermittenceOffset: 1
+  m_intermittenceDuration: 1
   m_isAffectedByAugment: 0
   m_damageAugmentDefinition: {fileID: 0}
   m_bulletPerAugmentTier: []
@@ -99,12 +103,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8875415797527841048}
-  - component: {fileID: 4771320998592693334}
+  - component: {fileID: 2623308293913823931}
   - component: {fileID: 6102152013345632371}
   - component: {fileID: 5475273165920627536}
   - component: {fileID: 6309319287692304800}
   - component: {fileID: 2020345462426642005}
-  - component: {fileID: 2623308293913823931}
   m_Layer: 7
   m_Name: P_BattlerBase
   m_TagString: Untagged
@@ -135,7 +138,7 @@ Transform:
   - {fileID: 8072363646087691274}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4771320998592693334
+--- !u!114 &2623308293913823931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +147,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2060886784808705541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47dbd04c31b47404191dde965cbb0af7, type: 3}
+  m_Script: {fileID: 11500000, guid: c7e5c7632b96d2e44a87206a4bd8ea41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_onCreation:
@@ -153,18 +156,6 @@ MonoBehaviour:
   m_onActivation:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5475273165920627536}
-        m_TargetAssemblyTypeName: NobunAtelier.Gameplay.HealthBehaviour, NobunAtelier.Core
-        m_MethodName: Reset
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5475273165920627536}
         m_TargetAssemblyTypeName: NobunAtelier.Gameplay.HealthBehaviour, NobunAtelier.Core
         m_MethodName: set_IsVulnerable
@@ -189,10 +180,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  m_onDeactivation:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onBattlerReadyToFight:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 7049770568613473853}
-        m_TargetAssemblyTypeName: Muzzle, Assembly-CSharp
-        m_MethodName: EnableShooting
-        m_Mode: 1
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -201,21 +198,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  m_onDeactivation:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5475273165920627536}
-        m_TargetAssemblyTypeName: NobunAtelier.Gameplay.HealthBehaviour, NobunAtelier.Core
-        m_MethodName: set_IsVulnerable
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  m_targetMeshes:
+  - {fileID: 978180651296996721}
+  - {fileID: 9149364684078396067}
+  m_skinMaterial: {fileID: 2100000, guid: f787b1b6b94cd924083596cec3729246, type: 2}
+  m_hitMaterial: {fileID: 2100000, guid: b16f64f428b405845a02e79478239092, type: 2}
 --- !u!114 &6102152013345632371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,9 +298,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 7049770568613473853}
-        m_TargetAssemblyTypeName: Muzzle, Assembly-CSharp
-        m_MethodName: DisableShooting
-        m_Mode: 1
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -349,7 +336,7 @@ MonoBehaviour:
   OnBurial:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4771320998592693334}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PoolableBehaviour, NobunAtelier.Core
         m_MethodName: set_IsActive
         m_Mode: 6
@@ -472,23 +459,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2623308293913823931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060886784808705541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7e5c7632b96d2e44a87206a4bd8ea41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_targetMeshes:
-  - {fileID: 978180651296996721}
-  - {fileID: 9149364684078396067}
-  m_skinMaterial: {fileID: 2100000, guid: f787b1b6b94cd924083596cec3729246, type: 2}
-  m_hitMaterial: {fileID: 2100000, guid: b16f64f428b405845a02e79478239092, type: 2}
 --- !u!1 &2503759719158821240
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,8 +725,8 @@ MonoBehaviour:
   m_collectionCheck: 1
   m_defaultCapacity: 10
   m_maxSize: 20
-  m_numberOfShards: 10
-  m_spawnAreaRadius: {x: 1, y: 1}
+  m_numberOfShards: {x: 7, y: 10}
+  m_spawnAreaRadius: {x: 0.1, y: 1}
   m_spawnDelayRange: {x: 0.05, y: 0.3}
 --- !u!1 &4958981191152038443
 GameObject:

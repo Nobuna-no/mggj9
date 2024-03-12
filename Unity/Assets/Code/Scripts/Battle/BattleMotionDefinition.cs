@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BattleMotionDefinition : DataDefinition
 {
+    [SerializeField, TextArea] private string m_description;
     [SerializeField] private MotionSpace m_origin;
     [SerializeField] private MotionSpace m_destination;
     [SerializeField] private AnimationCurve m_motionCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);

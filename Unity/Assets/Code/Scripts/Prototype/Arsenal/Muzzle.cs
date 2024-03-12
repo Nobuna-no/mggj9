@@ -1,22 +1,40 @@
-using UnityEngine;
-using NobunAtelier;
 using NaughtyAttributes;
-using Unity.Collections.LowLevel.Unsafe;
+using NobunAtelier;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Pool;
+using UnityEngine;
 
 public class Muzzle : UnityPoolBehaviour<Bullet>
 {
-    [Header("Magic Muzzle")]
+    [Header("Muzzle")]
+    [SerializeField] private bool m_shootingEnable = false;
+
     [Tooltip("Projectile force")]
     [SerializeField] private float m_muzzleVelocity = 700f;
+
     [Tooltip("End point of gun where shots appear")]
     [SerializeField] private Transform[] m_muzzlesPosition;
+
     [Tooltip("Time between shots / smaller = higher rate of fire")]
-    [SerializeField, MinMaxSlider(0.1f, 5f)] private Vector2 m_cooldownWindow = Vector2.one;
-    [SerializeField] float m_spreadAngle = 5f; // Adjust this value to control the spread
-    [SerializeField] private bool m_shootingEnable = false;
+    [SerializeField] private float m_spreadAngle = 5f; // Adjust this value to control the spread
+
+    [MinMaxSlider(0.1f, 5f)]
+    [SerializeField] private Vector2 m_cooldownWindow = Vector2.one;
+
+    [Tooltip("Should the shooting be disable every so often.")]
+    [SerializeField] private float m_delayBeforeFirstShot = 0f;
+
+    [SerializeField] private bool m_intermittentShooting = false;
+
+    [Tooltip("How often should the shooting be disabled. In seconds.")]
+    [SerializeField, ShowIf("m_intermittentShooting")] private float m_intermittenceOffset = 1f;
+
+    [Tooltip("For how much time should the shooting be disabled. In seconds.")]
+    [SerializeField, ShowIf("m_intermittentShooting")] private float m_intermittenceDuration = 1f;
+
+    [Header("Augment")]
     [SerializeField] private bool m_isAffectedByAugment = false;
+
     [SerializeField, ShowIf("m_isAffectedByAugment")] private AugmentDefinition m_damageAugmentDefinition;
     [SerializeField, ShowIf("m_isAffectedByAugment")] private BulletTier[] m_bulletPerAugmentTier;
 
@@ -39,8 +57,17 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
         public float TierScale => m_scale;
     }
 
-    private void Start()
+    private void OnEnable()
     {
+        if (m_delayBeforeFirstShot > 0)
+        {
+            StartCoroutine(DelayFirstShotRoutine());
+        }
+        else if (m_intermittentShooting)
+        {
+            StartCoroutine(IntermittenceRountine());
+        }
+
         WorldPerspectiveManager.Instance.OnWorldPerspectiveChanged += OnWorldPerspectiveChanged;
         m_worldBoundaries = WorldPerspectiveManager.Instance.ActiveBoundaries;
 
@@ -64,14 +91,43 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
         }
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
+        StopAllCoroutines();
+
+        if (WorldPerspectiveManager.IsSingletonValid)
+        {
+            WorldPerspectiveManager.Instance.OnWorldPerspectiveChanged -= OnWorldPerspectiveChanged;
+        }
+
         if (m_isAffectedByAugment && GameBlackboard.IsSingletonValid)
         {
             GameBlackboard.FireRateMultiplier.OnValueChanged -= FireRateMultiplier_OnValueChanged;
         }
     }
 
+    private IEnumerator DelayFirstShotRoutine()
+    {
+        m_shootingEnable = false;
+        yield return new WaitForSeconds(m_delayBeforeFirstShot);
+        m_shootingEnable = true;
+
+        if (m_intermittentShooting)
+        {
+            StartCoroutine(IntermittenceRountine());
+        }
+    }
+
+    private IEnumerator IntermittenceRountine()
+    {
+        while (m_intermittentShooting)
+        {
+            yield return new WaitForSeconds(m_intermittenceOffset);
+            m_shootingEnable = false;
+            yield return new WaitForSeconds(m_intermittenceDuration);
+            m_shootingEnable = true;
+        }
+    }
 
     private void FireRateMultiplier_OnValueChanged(float value)
     {

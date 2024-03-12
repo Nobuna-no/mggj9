@@ -6,17 +6,17 @@ using UnityEngine;
 public class ShardSpawner : UnityPoolBehaviour<PoolableShard>
 {
     [Header("Shards Spawner")]
-    [SerializeField] private int m_numberOfShards = 10;
+    [SerializeField, MinMaxSlider(0, 20f)] private Vector2 m_numberOfShards = Vector2.one;
 
-    [SerializeField, MinMaxSlider(0, 10)] private Vector2 m_spawnAreaRadius = Vector2.one; // Size of the spawn area
-    [SerializeField, MinMaxSlider(0, 1)] private Vector2 m_spawnDelayRange = Vector2.left; // Delay between spawning each shard
+    [SerializeField, MinMaxSlider(0, 10f)] private Vector2 m_spawnAreaRadius = Vector2.one; // Size of the spawn area
+    [SerializeField, MinMaxSlider(0, 1f)] private Vector2 m_spawnDelayRange = Vector2.left; // Delay between spawning each shard
 
     [Button(enabledMode: EButtonEnableMode.Playmode)]
     public void SpawnShards()
     {
         var boundaries = WorldPerspectiveManager.Instance.ActiveBoundaries;
-
-        for (int i = 0; i < m_numberOfShards; i++)
+        int randomShardCound = (int)Random.Range(m_numberOfShards.x, m_numberOfShards.y);
+        for (int i = 0; i < randomShardCound; i++)
         {
             Vector3 spawnPosition = transform.position + Random.insideUnitSphere * Random.Range(m_spawnAreaRadius.x, m_spawnAreaRadius.y);
             spawnPosition = boundaries.ClampPositionToBoundaries(spawnPosition);

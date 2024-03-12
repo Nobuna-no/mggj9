@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61cee0e354b7ea4e9e5e0b43094cc13, type: 3}
   m_Name: Sandbag
   m_EditorClassIdentifier: 
-  m_poolablePrefab: {fileID: 4771320998592693334, guid: ed0aa7e750d59a84b83d197268f21c94,
+  m_poolablePrefab: {fileID: 2623308293913823931, guid: ed0aa7e750d59a84b83d197268f21c94,
     type: 3}
   m_reserveSize: 10
   m_reserveGrowCount: 10
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61cee0e354b7ea4e9e5e0b43094cc13, type: 3}
   m_Name: Type-4
   m_EditorClassIdentifier: 
-  m_poolablePrefab: {fileID: 2070957384498106161, guid: f7d9d05f13f637445923d7028ec27cee,
+  m_poolablePrefab: {fileID: 8857871356974350812, guid: f7d9d05f13f637445923d7028ec27cee,
     type: 3}
   m_reserveSize: 5
   m_reserveGrowCount: 5
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61cee0e354b7ea4e9e5e0b43094cc13, type: 3}
   m_Name: Type-1
   m_EditorClassIdentifier: 
-  m_poolablePrefab: {fileID: 2070957384498106161, guid: 335f2ffbeda01844c9e9bb318fb3398b,
+  m_poolablePrefab: {fileID: 8857871356974350812, guid: 335f2ffbeda01844c9e9bb318fb3398b,
     type: 3}
   m_reserveSize: 20
   m_reserveGrowCount: 10
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61cee0e354b7ea4e9e5e0b43094cc13, type: 3}
   m_Name: Type-2
   m_EditorClassIdentifier: 
-  m_poolablePrefab: {fileID: 2070957384498106161, guid: 0387df86155d34d4b98a80c07f9ffe42,
+  m_poolablePrefab: {fileID: 8857871356974350812, guid: 0387df86155d34d4b98a80c07f9ffe42,
     type: 3}
   m_reserveSize: 10
   m_reserveGrowCount: 10
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61cee0e354b7ea4e9e5e0b43094cc13, type: 3}
   m_Name: Type-3
   m_EditorClassIdentifier: 
-  m_poolablePrefab: {fileID: 2070957384498106161, guid: 9d24c4f14cb03334f912af16a4024d94,
+  m_poolablePrefab: {fileID: 8857871356974350812, guid: 9d24c4f14cb03334f912af16a4024d94,
     type: 3}
   m_reserveSize: 5
   m_reserveGrowCount: 5

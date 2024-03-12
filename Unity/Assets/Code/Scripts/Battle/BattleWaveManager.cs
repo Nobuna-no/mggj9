@@ -13,6 +13,7 @@ public class BattleWaveManager : MonoBehaviour
     [SerializeField] private BattleWaveCollection m_battlesCollection;
 
     [SerializeField] private bool m_startNextBattleAutomatically = true;
+    [SerializeField] private bool m_loopOnBattleWaveEnd = false;
     [SerializeField] private float m_delayBetweenWaves = 1f;
     private BattleWaveDefinition m_activeWavesDefinition;
     [SerializeField] private WorldBoundariesDefinition m_boundariesDefinition;
@@ -28,6 +29,9 @@ public class BattleWaveManager : MonoBehaviour
     [SerializeField] private GameModeStateMachine m_gameModeStateMachine;
     [SerializeField] private GameModeStateDefinition m_gameOverState;
 
+    [Header("Battlers")]
+    [SerializeField]
+    private float m_battlerRotationSpeed = 10f;
     [Header("Player")]
     [SerializeField]
     private Character m_playerCharacter;
@@ -66,6 +70,7 @@ public class BattleWaveManager : MonoBehaviour
     {
         var targetPosition = m_playerCharacter.Position;
 
+        float deltaT = m_battlerRotationSpeed * Time.deltaTime;
         foreach (var battler in m_activeBattlers.Values)
         {
             Vector3 direction = targetPosition - battler.Rigidbody.position;
@@ -74,7 +79,7 @@ public class BattleWaveManager : MonoBehaviour
             if (direction != Vector3.zero)
             {
                 Quaternion targetRotation = Quaternion.LookRotation(direction);
-                battler.Rigidbody.MoveRotation(Quaternion.Euler(0f, targetRotation.eulerAngles.y, 0f));
+                battler.Rigidbody.rotation = Quaternion.Slerp(battler.Rigidbody.rotation, Quaternion.Euler(0f, targetRotation.eulerAngles.y, 0f), deltaT);
             }
         }
     }
@@ -152,6 +157,11 @@ public class BattleWaveManager : MonoBehaviour
         if (++m_currentWaveIndex == m_battlesCollection.Definitions.Count)
         {
             m_onAllWaveCompleted?.Invoke();
+            if (m_loopOnBattleWaveEnd)
+            {
+                BattleWaveInit(0);
+                BattleWaveStart();
+            }
             return;
         }
 
@@ -182,6 +192,11 @@ public class BattleWaveManager : MonoBehaviour
 
         m_remainingBattlers++;
         PoolableBehaviour battler = PoolManager.Instance.SpawnObject(sequence.BattlerDefintion, remappedOrigin);
+        var bbh = battler.GetComponent<BattlerBehaviour>();
+        if (bbh)
+        {
+            bbh.BattlerReadyToFight(sequence.DelayBeforeBattlerAttack);
+        }
         HealthBehaviour hp = battler.GetComponent<HealthBehaviour>();
         Rigidbody rb = battler.GetComponent<Rigidbody>();
         Debug.Assert(hp && rb, "hp && rb", this);
@@ -344,6 +359,8 @@ public class BattleWaveManager : MonoBehaviour
                         GUILayout.Label($"Sequence: {m_remainingSequence}/{m_activeWavesDefinition.WavesSequence.Count}");
                         GUILayout.Label($"Remaining Battlers: {m_remainingBattlers}");
                         m_startNextBattleAutomatically = GUILayout.Toggle(m_startNextBattleAutomatically, "Start wave auto");
+                        m_loopOnBattleWaveEnd = GUILayout.Toggle(m_loopOnBattleWaveEnd, "Loop");
+
                     }
                 }
 
