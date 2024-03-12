@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1137131639747363781}
   - component: {fileID: 8520159755025863516}
   - component: {fileID: 4925645521872704188}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: hurtbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,5 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_timeoutDelay: 3
-  m_mesh: {fileID: 2113312536350751972}
-  m_defaultMaterial: {fileID: 0}
   m_particleSystem: {fileID: 4198436773916837192, guid: 658a0fc8efab76e4d9c278881fdbdff8,
     type: 3}

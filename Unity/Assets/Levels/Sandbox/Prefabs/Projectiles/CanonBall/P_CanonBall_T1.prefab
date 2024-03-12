@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: -6205046079494832223, guid: 62598a5060dc7ad489ffd723b2367cde,
         type: 3}
       propertyPath: m_Drag
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1532107114494989067, guid: 62598a5060dc7ad489ffd723b2367cde,
         type: 3}
@@ -96,7 +96,7 @@ PrefabInstance:
     - target: {fileID: 8349245460026685317, guid: 62598a5060dc7ad489ffd723b2367cde,
         type: 3}
       propertyPath: m_Name
-      value: P_CanonBall_TierCommon
+      value: P_CanonBall_T1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

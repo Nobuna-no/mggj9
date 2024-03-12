@@ -38,6 +38,7 @@ public class BattlerBehaviour : PoolableWithEvent
 
     protected override void OnActivation()
     {
+        base.OnActivation();
         m_healthBehaviour.OnBehaviourDeath += M_healthBehaviour_OnBehaviourDeath;
         m_healthBehaviour.OnReset.AddListener(OnInvulnerabilityEnd);
         m_healthBehaviour.OnInvulnerabilityBegin.AddListener(OnInvulnerabilityStart);
@@ -59,6 +60,7 @@ public class BattlerBehaviour : PoolableWithEvent
         m_healthBehaviour.OnInvulnerabilityBegin.RemoveListener(OnInvulnerabilityStart);
         m_healthBehaviour.OnInvulnerabilityEnd.RemoveListener(OnInvulnerabilityEnd);
         m_healthBehaviour.IsVulnerable = false;
+        base.OnDeactivation();
     }
 
     private void OnInvulnerabilityStart()

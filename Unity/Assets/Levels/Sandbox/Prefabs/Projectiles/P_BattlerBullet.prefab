@@ -93,6 +93,11 @@ PrefabInstance:
       propertyPath: m_timeoutDelay
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3440065911378945707, guid: 62598a5060dc7ad489ffd723b2367cde,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4925645521872704188, guid: 62598a5060dc7ad489ffd723b2367cde,
         type: 3}
       propertyPath: m_team

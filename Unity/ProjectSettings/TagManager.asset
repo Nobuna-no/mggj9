@@ -14,8 +14,8 @@ TagManager:
   - Obstacle
   - Hitbox
   - Shard
-  - Shield
-  - 
+  - PlayerShield
+  - PlayerHitbox
   - 
   - 
   - 
