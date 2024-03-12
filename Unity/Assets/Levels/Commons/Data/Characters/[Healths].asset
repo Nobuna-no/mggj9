@@ -34,6 +34,40 @@ MonoBehaviour:
   m_invulnerabilityDuration: 0.15
   m_burialType: 2
   m_burialDelay: {x: 5, y: 5}
+--- !u!114 &-1276368357408834200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f692764043a4b6041a9f338965c88afd, type: 3}
+  m_Name: Battler-Type2
+  m_EditorClassIdentifier: 
+  m_InitialValue: 5
+  m_MaxValue: 5
+  m_invulnerabilityDuration: 0.1
+  m_burialType: 2
+  m_burialDelay: {x: 5, y: 5}
+--- !u!114 &-1224905126514310525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f692764043a4b6041a9f338965c88afd, type: 3}
+  m_Name: Battler-Type1
+  m_EditorClassIdentifier: 
+  m_InitialValue: 3
+  m_MaxValue: 3
+  m_invulnerabilityDuration: 0.1
+  m_burialType: 2
+  m_burialDelay: {x: 5, y: 5}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,6 +84,27 @@ MonoBehaviour:
   - {fileID: -6190975074158660817}
   - {fileID: -2553174863390738440}
   - {fileID: 6406766380361891497}
+  - {fileID: -1224905126514310525}
+  - {fileID: -1276368357408834200}
+  - {fileID: 7705954857925259808}
+  - {fileID: 5588751043759164405}
+--- !u!114 &5588751043759164405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f692764043a4b6041a9f338965c88afd, type: 3}
+  m_Name: Battler-Type4
+  m_EditorClassIdentifier: 
+  m_InitialValue: 20
+  m_MaxValue: 20
+  m_invulnerabilityDuration: 0.1
+  m_burialType: 2
+  m_burialDelay: {x: 5, y: 5}
 --- !u!114 &6406766380361891497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,5 +120,22 @@ MonoBehaviour:
   m_InitialValue: 50
   m_MaxValue: 50
   m_invulnerabilityDuration: 0.15
+  m_burialType: 2
+  m_burialDelay: {x: 5, y: 5}
+--- !u!114 &7705954857925259808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f692764043a4b6041a9f338965c88afd, type: 3}
+  m_Name: Battler-Type3
+  m_EditorClassIdentifier: 
+  m_InitialValue: 10
+  m_MaxValue: 10
+  m_invulnerabilityDuration: 0.1
   m_burialType: 2
   m_burialDelay: {x: 5, y: 5}

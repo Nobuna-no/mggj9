@@ -1507,7 +1507,7 @@ GameObject:
   - component: {fileID: 7369236523323858366}
   - component: {fileID: 3289194063629553612}
   m_Layer: 0
-  m_Name: P_Tile
+  m_Name: P_Tile_Sandbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
