@@ -45,6 +45,8 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
     private Dictionary<AugmentTierDefinition, BulletTier> m_bulletPerAugmentTierMap;
     private AugmentController.Augment m_activeAugment;
 
+    public float SpreadAngleMultiplier { get; set; } = 1;
+
     [System.Serializable]
     private class BulletTier
     {
@@ -185,9 +187,11 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
                 // need to constrain the y axis for top down and x for sidescroll
                 bool constrainedXSpread = m_worldBoundaries.AxisRangeX.y - m_worldBoundaries.AxisRangeX.x == 0;
                 bool constrainedYSpread = m_worldBoundaries.AxisRangeY.y - m_worldBoundaries.AxisRangeY.x == 0;
+
+                float spread = m_spreadAngle * SpreadAngleMultiplier;
                 Quaternion spreadRotation = Quaternion.Euler(0,
-                    constrainedXSpread ? 0 : Random.Range(-m_spreadAngle, m_spreadAngle),
-                    constrainedYSpread ? 0 : Random.Range(-m_spreadAngle, m_spreadAngle));
+                    constrainedXSpread ? 0 : Random.Range(-spread, spread),
+                    constrainedYSpread ? 0 : Random.Range(-spread, spread));
                 Vector3 spreadDirection = spreadRotation * bulletObject.transform.forward;
                 // spreadDirection = m_worldBoundaries.RemapPositionToBoundaries(spreadDirection);
                 bulletObject.transform.forward = spreadDirection;
