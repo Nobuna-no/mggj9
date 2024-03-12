@@ -63,8 +63,6 @@ public class AugmentController : Singleton<AugmentController>
             return;
         }
 
-        Debug.Log($"ActivateAugment: {augment.name} ({tier.name})");
-
         if (m_augmentsMap.TryGetValue(augment, out var logic))
         {
             logic.Activate(tier);
@@ -420,6 +418,13 @@ public class AugmentController : Singleton<AugmentController>
             OnAnyTierActivated?.Invoke();
             m_augmentBehavioursMap[tier]?.OnTierActivated?.Invoke();
             IsActive = true;
+
+            // In case a crystal has been open, spawn the correct text.
+            if (!forceTier)
+            {
+                SimulacraUIManager.Instance.SpawnAugmentTextUI(Definition, tier);
+            }
+
 
             if (m_remainingProgress <= 0)
             {

@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 3535504142031901639}
   - component: {fileID: 7687180345046450330}
   m_Layer: 0
-  m_Name: Behaviour
+  m_Name: Heal Augment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,15 +481,15 @@ MonoBehaviour:
   m_healPerAugmentTier:
   - m_augmentTier: {fileID: 8013678198164930333, guid: e53a1915753239a4f8199bbe0a10def7,
       type: 2}
-    m_healOffset: 1
+    m_healOffset: 1.5
     m_healValue: 1
     m_hitDefinition: {fileID: 0}
   - m_augmentTier: {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7,
       type: 2}
-    m_healOffset: 1
+    m_healOffset: 1.5
     m_healValue: 3
     m_hitDefinition: {fileID: 0}
-  - m_augmentTier: {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7,
+  - m_augmentTier: {fileID: -1976743974972975263, guid: e53a1915753239a4f8199bbe0a10def7,
       type: 2}
     m_healOffset: 3
     m_healValue: -1
@@ -1744,7 +1744,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f804260959074e445bc0661da87ccc07, type: 3}
   m_Resource: {fileID: 8300000, guid: f804260959074e445bc0661da87ccc07, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2213,9 +2213,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3534152952121556537}
   m_Layer: 0
-  m_Name: Muzzle_04
+  m_Name: Muzzle_2x0
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -2228,7 +2228,7 @@ Transform:
   m_GameObject: {fileID: 4139436298742957608}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 0.3}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2244,9 +2244,9 @@ GameObject:
   m_Component:
   - component: {fileID: 848534557855438058}
   m_Layer: 0
-  m_Name: Muzzle_01
+  m_Name: Muzzle_-2x0
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -2259,7 +2259,7 @@ Transform:
   m_GameObject: {fileID: 4230041663996270075}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0.5, z: 0.3}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2783,11 +2783,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1869780373215506390}
   - {fileID: 3534152952121556537}
   - {fileID: 3652092442004910181}
-  - {fileID: 848534557855438058}
+  - {fileID: 1869780373215506390}
   - {fileID: 7147232901445230716}
+  - {fileID: 848534557855438058}
   m_Father: {fileID: 746219141697274176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5110712880014445739
@@ -2816,7 +2816,7 @@ MonoBehaviour:
   - {fileID: 7147232901445230716}
   - {fileID: 3534152952121556537}
   m_spreadAngle: 1
-  m_cooldownWindow: {x: 0.3, y: 0.3}
+  m_cooldownWindow: {x: 0.3, y: 0.5}
   m_delayBeforeFirstShot: 0
   m_intermittentShooting: 0
   m_intermittenceOffset: 1
@@ -2859,7 +2859,7 @@ GameObject:
   - component: {fileID: 2442768935048465143}
   - component: {fileID: 4332893510578876604}
   - component: {fileID: 579471084133252569}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Hit-Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2948,7 +2948,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3163,7 +3163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &96000825134664406
 Transform:
   m_ObjectHideFlags: 0
@@ -3246,7 +3246,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 250164368539503123}
           m_TargetAssemblyTypeName: GameBlackboard, Assembly-CSharp
-          m_MethodName: ResetFireRateMultiplier
+          m_MethodName: ResetDamageMultiplier
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3723,13 +3723,37 @@ MonoBehaviour:
       m_onTierActivated:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 4139436298742957608}
+          - m_Target: {fileID: 8996989121994800289}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_MethodName: SetActive
             m_Mode: 6
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: 
@@ -3745,6 +3769,30 @@ MonoBehaviour:
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: 
@@ -3994,40 +4042,52 @@ MonoBehaviour:
         type: 2}
       m_onTierActivated:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 8996989121994800289}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       m_onTierDeactivated:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 8996989121994800289}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
   - m_name: 'Arsenal: Magic Canon'
     Definition: {fileID: -635140617022527070, guid: a06a5db0eef533e43b9f12f102d7644f,
       type: 2}
     OnAnyTierActivated:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 4187974706962532443}
-          m_TargetAssemblyTypeName: Muzzle, Assembly-CSharp
-          m_MethodName: EnableShooting
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
     OnAnyTierDeactivated:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 4187974706962532443}
           m_TargetAssemblyTypeName: Muzzle, Assembly-CSharp
-          m_MethodName: DisableShooting
-          m_Mode: 1
+          m_MethodName: set_SpreadAngleMultiplier
+          m_Mode: 4
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: 0
+            m_FloatArgument: 1
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -4037,50 +4097,26 @@ MonoBehaviour:
       m_onTierActivated:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 6472382343772739699}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
+          - m_Target: {fileID: 4187974706962532443}
+            m_TargetAssemblyTypeName: Muzzle, Assembly-CSharp
+            m_MethodName: set_SpreadAngleMultiplier
+            m_Mode: 4
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
-              m_FloatArgument: 0
+              m_FloatArgument: 0.5
               m_StringArgument: 
-              m_BoolArgument: 1
+              m_BoolArgument: 0
             m_CallState: 2
       m_onTierDeactivated:
         m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 6472382343772739699}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 2
+          m_Calls: []
     - m_tierDefinition: {fileID: 5829897845308056388, guid: e53a1915753239a4f8199bbe0a10def7,
         type: 2}
       m_onTierActivated:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 6472382343772739699}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 2
           - m_Target: {fileID: 73627202351855625}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_MethodName: SetActive
@@ -4096,18 +4132,6 @@ MonoBehaviour:
       m_onTierDeactivated:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 6472382343772739699}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
           - m_Target: {fileID: 73627202351855625}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_MethodName: SetActive
@@ -4125,18 +4149,6 @@ MonoBehaviour:
       m_onTierActivated:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 6472382343772739699}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 2
           - m_Target: {fileID: 73627202351855625}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_MethodName: SetActive
@@ -4161,21 +4173,21 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 1
             m_CallState: 2
-      m_onTierDeactivated:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 6472382343772739699}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
+          - m_Target: {fileID: 4187974706962532443}
+            m_TargetAssemblyTypeName: Muzzle, Assembly-CSharp
+            m_MethodName: set_SpreadAngleMultiplier
+            m_Mode: 4
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
-              m_FloatArgument: 0
+              m_FloatArgument: 1.25
               m_StringArgument: 
-              m_BoolArgument: 0
+              m_BoolArgument: 1
             m_CallState: 2
+      m_onTierDeactivated:
+        m_PersistentCalls:
+          m_Calls:
           - m_Target: {fileID: 73627202351855625}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_MethodName: SetActive
@@ -4205,18 +4217,6 @@ MonoBehaviour:
       m_onTierActivated:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 6472382343772739699}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 2
           - m_Target: {fileID: 73627202351855625}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_MethodName: SetActive
@@ -4265,21 +4265,21 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 1
             m_CallState: 2
-      m_onTierDeactivated:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 6472382343772739699}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
+          - m_Target: {fileID: 4187974706962532443}
+            m_TargetAssemblyTypeName: Muzzle, Assembly-CSharp
+            m_MethodName: set_SpreadAngleMultiplier
+            m_Mode: 4
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
-              m_FloatArgument: 0
+              m_FloatArgument: 1.5
               m_StringArgument: 
-              m_BoolArgument: 0
+              m_BoolArgument: 1
             m_CallState: 2
+      m_onTierDeactivated:
+        m_PersistentCalls:
+          m_Calls:
           - m_Target: {fileID: 73627202351855625}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_MethodName: SetActive
@@ -4332,7 +4332,19 @@ MonoBehaviour:
         type: 2}
       m_onTierActivated:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 4187974706962532443}
+            m_TargetAssemblyTypeName: Muzzle, Assembly-CSharp
+            m_MethodName: set_SpreadAngleMultiplier
+            m_Mode: 4
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 3
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       m_onTierDeactivated:
         m_PersistentCalls:
           m_Calls: []
@@ -4354,6 +4366,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 8848914744086801711}
+          m_TargetAssemblyTypeName: NobunAtelier.Gameplay.HealthBehaviour, NobunAtelier.Core
+          m_MethodName: set_IsVulnerable
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     OnAnyTierDeactivated:
       m_PersistentCalls:
         m_Calls:
@@ -4368,6 +4392,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 8848914744086801711}
+          m_TargetAssemblyTypeName: NobunAtelier.Gameplay.HealthBehaviour, NobunAtelier.Core
+          m_MethodName: set_IsVulnerable
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
     TierLogic:
     - m_tierDefinition: {fileID: 5577249598986882823, guid: e53a1915753239a4f8199bbe0a10def7,
@@ -4384,9 +4420,9 @@ MonoBehaviour:
     OnAnyTierActivated:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6158160911519089662}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
+        - m_Target: {fileID: 7687180345046450330}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4399,9 +4435,9 @@ MonoBehaviour:
     OnAnyTierDeactivated:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6158160911519089662}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
+        - m_Target: {fileID: 7687180345046450330}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4526,7 +4562,7 @@ GameObject:
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6638936985057031564
 Transform:
   m_ObjectHideFlags: 0
@@ -4779,9 +4815,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7147232901445230716}
   m_Layer: 0
-  m_Name: Muzzle_03
+  m_Name: Muzzle_-1x1
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4794,7 +4830,7 @@ Transform:
   m_GameObject: {fileID: 6895455207975875514}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -0.5, z: 0.3}
+  m_LocalPosition: {x: -0.25, y: 0, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4841,9 +4877,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3652092442004910181}
   m_Layer: 0
-  m_Name: Muzzle_02
+  m_Name: Muzzle_1x1
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4856,7 +4892,7 @@ Transform:
   m_GameObject: {fileID: 7508867474667407932}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -0.5, z: 0.3}
+  m_LocalPosition: {x: 0.25, y: 0, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5402,9 +5438,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1869780373215506390}
   m_Layer: 0
-  m_Name: Muzzle
+  m_Name: Muzzle_0x2
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5417,7 +5453,7 @@ Transform:
   m_GameObject: {fileID: 8996989121994800289}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.3}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5692,6 +5728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: P_Eve
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334948000495848211, guid: 1f1c8f043017e1a408e901ad002ed5e5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4634052104111546997, guid: 1f1c8f043017e1a408e901ad002ed5e5,
         type: 3}

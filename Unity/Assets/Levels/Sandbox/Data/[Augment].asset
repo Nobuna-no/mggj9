@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
   m_Name: 'Spell: Shield'
   m_EditorClassIdentifier: 
-  m_displayName: Shield
+  m_displayName: Magic Field
   m_description: Protect against damage
   m_duration: 10
   m_availableTiers:
@@ -30,7 +30,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
   m_Name: 'Stats: Damage'
   m_EditorClassIdentifier: 
-  m_displayName: Atk+
+  m_displayName: Magic Power
   m_description: Increase Damage dealt
   m_duration: 30
   m_availableTiers:
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
   m_Name: 'Arsenal: Magic Bow'
   m_EditorClassIdentifier: 
-  m_displayName: Magic Arrows
+  m_displayName: Magic Crossbow
   m_description: Fast but small projectiles
   m_duration: 30
   m_availableTiers:
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
   m_Name: 'Stats: Fire Rate'
   m_EditorClassIdentifier: 
-  m_displayName: Fire Rate
+  m_displayName: Casting Speed
   m_description: Increase fire rate
   m_duration: 30
   m_availableTiers:
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
   m_Name: 'Arsenal: Magic Canon'
   m_EditorClassIdentifier: 
-  m_displayName: Magic Bolt
+  m_displayName: Magic Bubble Gun
   m_description: Big but slow projectiles
   m_duration: 30
   m_availableTiers:
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
   m_Name: 'Stats: Move Speed'
   m_EditorClassIdentifier: 
-  m_displayName: Velocity
+  m_displayName: Move Speed
   m_description: Increase movement speed.
   m_duration: 30
   m_availableTiers:
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
   m_Name: 'Spell: Health Regen'
   m_EditorClassIdentifier: 
-  m_displayName: Heal
+  m_displayName: Regeneration
   m_description: Replenish life over time
   m_duration: 10
   m_availableTiers:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf504b9e8ae98441960667f1a7f53c7, type: 3}
   m_Name: 'Stats: Shards Attraction'
   m_EditorClassIdentifier: 
-  m_displayName: Attraction
+  m_displayName: Attraction Field
   m_description: Shards attraction force
   m_duration: 30
   m_availableTiers:

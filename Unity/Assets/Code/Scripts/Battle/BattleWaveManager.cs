@@ -131,10 +131,23 @@ public class BattleWaveManager : MonoBehaviour
         }
 
         m_activeWavesDefinition = m_battlesCollection.Definitions[m_currentWaveIndex];
-        m_remainingSequence = m_activeWavesDefinition.WavesSequence.Count;
-        foreach (var sequence in m_activeWavesDefinition.WavesSequence)
+        m_remainingSequence = m_activeWavesDefinition.WavesSequence.Count * m_activeWavesDefinition.RepeatCount;
+        float repeatDelay = 0;
+        for (int i = 0, c = m_activeWavesDefinition.RepeatCount; i < c; ++i)
         {
-            StartCoroutine(SpawnSequenceRoutine(sequence));
+            foreach (var sequence in m_activeWavesDefinition.WavesSequence)
+            {
+                if (i == 0)
+                {
+                    StartCoroutine(SpawnSequenceRoutine(sequence, 0));
+                    // accumulate all delay once
+                    repeatDelay += sequence.Delay;
+                }
+                else
+                {
+                    StartCoroutine(SpawnSequenceRoutine(sequence, i * repeatDelay + (i * m_activeWavesDefinition.AdditionalDelayBetweenCycle)));
+                }
+            }
         }
     }
 
@@ -195,7 +208,7 @@ public class BattleWaveManager : MonoBehaviour
         var bbh = battler.GetComponent<BattlerBehaviour>();
         if (bbh)
         {
-            bbh.BattlerReadyToFight(sequence.DelayBeforeBattlerAttack);
+            bbh.SetBattlerSettings(sequence.BattlerSettings);
         }
         HealthBehaviour hp = battler.GetComponent<HealthBehaviour>();
         Rigidbody rb = battler.GetComponent<Rigidbody>();
@@ -323,9 +336,9 @@ public class BattleWaveManager : MonoBehaviour
         }
     }
 
-    private IEnumerator SpawnSequenceRoutine(BattleWaveDefinition.Sequence sequence)
+    private IEnumerator SpawnSequenceRoutine(BattleWaveDefinition.Sequence sequence, float repeatOffset)
     {
-        yield return new WaitForSecondsRealtime(sequence.Delay);
+        yield return new WaitForSecondsRealtime(sequence.Delay + repeatOffset);
 
         for (int i = 0, c = sequence.SpawnCount; i < c; ++i)
         {

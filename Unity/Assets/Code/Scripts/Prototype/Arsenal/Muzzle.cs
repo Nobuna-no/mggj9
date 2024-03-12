@@ -46,6 +46,7 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
     private AugmentController.Augment m_activeAugment;
 
     public float SpreadAngleMultiplier { get; set; } = 1;
+    public float IntermittentOffsetDurationMultiplier { get; set; } = 1;
 
     [System.Serializable]
     private class BulletTier
@@ -124,7 +125,7 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
     {
         while (m_intermittentShooting)
         {
-            yield return new WaitForSeconds(m_intermittenceOffset);
+            yield return new WaitForSeconds(m_intermittenceOffset * IntermittentOffsetDurationMultiplier);
             m_shootingEnable = false;
             yield return new WaitForSeconds(m_intermittenceDuration);
             m_shootingEnable = true;

@@ -220,7 +220,7 @@ MonoBehaviour:
   m_description: 
   m_origin:
     m_mode: 0
-    m_point: {x: 0, y: 0, z: 1.25}
+    m_point: {x: 0, y: 0, z: 2}
     m_spline: {fileID: 0}
     m_splineOrigin: {x: 0, y: 0, z: 0}
     m_splineScale: 1
@@ -613,6 +613,58 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_motionDuration: 2
+--- !u!114 &-3099027709239032744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-00XX-7R
+  m_EditorClassIdentifier: 
+  m_description: (reversed) Top line toward bottom line
+  m_origin:
+    m_mode: 1
+    m_point: {x: 0.75, y: 0, z: 2}
+    m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+    m_splineOrigin: {x: 0, y: -1, z: 2}
+    m_splineScale: -0.9
+  m_destination:
+    m_mode: 1
+    m_point: {x: 0.75, y: 0, z: 0.75}
+    m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+    m_splineOrigin: {x: 0, y: 0.5, z: -2}
+    m_splineScale: -0.9
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 3
 --- !u!114 &-2632769063821521968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,6 +768,58 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_motionDuration: 2
+--- !u!114 &-1272516931573199389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-00XX-7
+  m_EditorClassIdentifier: 
+  m_description: Top line toward bottom line
+  m_origin:
+    m_mode: 1
+    m_point: {x: 0.75, y: 0, z: 2}
+    m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+    m_splineOrigin: {x: 0, y: 1, z: 2}
+    m_splineScale: 0.9
+  m_destination:
+    m_mode: 1
+    m_point: {x: 0.75, y: 0, z: 0.75}
+    m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+    m_splineOrigin: {x: 0, y: -0.5, z: -2}
+    m_splineScale: 0.9
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 3
 --- !u!114 &-1046131543303814507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,6 +1019,8 @@ MonoBehaviour:
   - {fileID: -2105804654115696167}
   - {fileID: 580655068963673764}
   - {fileID: 6826490550414788567}
+  - {fileID: -1272516931573199389}
+  - {fileID: -3099027709239032744}
 --- !u!114 &476584432060603120
 MonoBehaviour:
   m_ObjectHideFlags: 0
