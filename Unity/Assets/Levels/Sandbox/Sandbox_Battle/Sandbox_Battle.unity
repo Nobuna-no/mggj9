@@ -453,6 +453,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6321e810957bb02438ddd21cec47e49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &520362602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2775994813564106497, guid: 3316105469be6344a9cd141bfd7927b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3968409027437829230}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb5c4c9a6bb57840903f6f73814d926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &528772104
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +802,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859296684}
   m_CullTransparentMesh: 1
+--- !u!1 &859643848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 859643849}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &859643849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859643848}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.099999905, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1728160124}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &878664887
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,7 +890,7 @@ Transform:
   m_GameObject: {fileID: 933166965}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.099999905, y: -5, z: -15}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -907,7 +951,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955672648}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
@@ -1808,6 +1852,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 8897301349025815135, guid: 9fc657b79bab6ba4eaa1a54f51a1ff3b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2583,7 +2632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1728160123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2598,14 +2647,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_dontDestroyOnLoad: 0
   m_onlyDestroyDuplicatedComponent: 1
+  zOffsetFromCameraToDespawn: 10
   mainCamera: {fileID: 134397830}
   startPoint: {fileID: 933166966}
   tilePrefab: {fileID: 7303759310352057886, guid: 197e37d5fc6351349976596c4d477145,
     type: 2}
-  movingSpeed: 12
+  movingSpeed: 5
   tilesToPreSpawn: 15
   tilesWithoutObstacles: 5
   gameOver: 0
+  OnGameStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 520362602}
+        m_TargetAssemblyTypeName: BattleWaveManager, Assembly-CSharp
+        m_MethodName: BattleWaveStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1728160124
 Transform:
   m_ObjectHideFlags: 0
@@ -2615,12 +2680,12 @@ Transform:
   m_GameObject: {fileID: 1728160122}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.099999905, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 933166966}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 859643849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1833422107
 GameObject:
@@ -3022,6 +3087,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 2775994813564106497, guid: 3316105469be6344a9cd141bfd7927b9,
         type: 3}
+      propertyPath: m_loopOnBattleWaveEnd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775994813564106497, guid: 3316105469be6344a9cd141bfd7927b9,
+        type: 3}
       propertyPath: m_battlerRotationSpeed
       value: 4
       objectReference: {fileID: 0}
@@ -3046,7 +3116,7 @@ PrefabInstance:
     - target: {fileID: 2775994813564106497, guid: 3316105469be6344a9cd141bfd7927b9,
         type: 3}
       propertyPath: m_startNextBattleAutomatically
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2775994813564106497, guid: 3316105469be6344a9cd141bfd7927b9,
         type: 3}
@@ -3086,7 +3156,7 @@ SceneRoots:
   - {fileID: 1897354470}
   - {fileID: 3968409027437829230}
   - {fileID: 1565992121}
-  - {fileID: 1728160124}
+  - {fileID: 859643849}
   - {fileID: 1629278741}
   - {fileID: 1114651076}
   - {fileID: 72808389}

@@ -89,7 +89,7 @@ public class BattleWaveManager : MonoBehaviour
         m_boundariesDefinition = worldPerspectiveDefinition;
     }
 
-    private void BattleInit()
+    public void BattleInit()
     {
         // Debug.Assert(m_gameModeStateMachine);
 
@@ -108,7 +108,7 @@ public class BattleWaveManager : MonoBehaviour
         BattleWaveInit(0);
     }
 
-    private void BattleWaveInit(int waveIndex)
+    public void BattleWaveInit(int waveIndex)
     {
         if (m_isInitialized)
         {
@@ -123,7 +123,7 @@ public class BattleWaveManager : MonoBehaviour
     }
 
     [Button(enabledMode: EButtonEnableMode.Playmode)]
-    private void BattleWaveStart()
+    public void BattleWaveStart()
     {
         if (!m_isInitialized)
         {

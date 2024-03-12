@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using NobunAtelier;
+using UnityEngine.Events;
 
 public class GroundGenerator : Singleton<GroundGenerator>
 {
+    public float zOffsetFromCameraToDespawn = 5;
     public Camera mainCamera;
     public Transform startPoint; //Point from where ground tiles will start
     public PoolObjectDefinition tilePrefab;
@@ -20,15 +22,18 @@ public class GroundGenerator : Singleton<GroundGenerator>
     static bool gameStarted = false;
     float score = 0;
 
+    public UnityEvent OnGameStart;
+
     // Start is called before the first frame update
     void Start()
     {
         Vector3 spawnPosition = startPoint.position;
         int tilesWithNoObstaclesTmp = tilesWithoutObstacles;
 
-        spawnedTiles = new List<RunnerTile>(PoolManager.Instance.SpawnObjects<RunnerTile>(tilePrefab, Vector3.zero, 0, tilesToPreSpawn));
-        spawnPosition -= spawnedTiles[0].StartPoint.localPosition;
+        spawnedTiles = new List<RunnerTile>(PoolManager.Instance.SpawnObjects<RunnerTile>(tilePrefab, spawnPosition, 0, tilesToPreSpawn));
+        // spawnPosition -= spawnedTiles[0].StartPoint.localPosition;
 
+        RunnerTile previousTile = null;
         foreach(var tile in spawnedTiles)
         {
             // SC_PlatformTile spawnedTile = Instantiate(tilePrefab, spawnPosition, Quaternion.identity) as SC_PlatformTile;
@@ -43,8 +48,14 @@ public class GroundGenerator : Singleton<GroundGenerator>
                 tile.ActivateRandomObstacle();
             }
 
-            spawnPosition = tile.EndPoint.position;
+            if (previousTile != null)
+            {
+                spawnPosition = previousTile.EndPoint.position - tile.StartPoint.position;
+                spawnPosition.y = previousTile.Position.y;
+            }
+            tile.transform.position = spawnPosition;
             tile.transform.SetParent(transform);
+            previousTile = tile;
         }
     }
 
@@ -59,13 +70,16 @@ public class GroundGenerator : Singleton<GroundGenerator>
             score += Time.deltaTime * movingSpeed;
         }
 
-        if (mainCamera.WorldToViewportPoint(spawnedTiles[0].EndPoint.position).z < 0)
+        //  if (mainCamera.WorldToViewportPoint(spawnedTiles[0].EndPoint.position).z < 0)
+        if (spawnedTiles[0].EndPoint.position.z < mainCamera.transform.position.z - zOffsetFromCameraToDespawn)
         {
             //Move the tile to the front if it's behind the Camera
             var tileTmp = spawnedTiles[0];
             tileTmp.DeactivateObstacles();
             spawnedTiles.RemoveAt(0);
-            tileTmp.transform.position = spawnedTiles[spawnedTiles.Count - 1].EndPoint.position - tileTmp.StartPoint.localPosition;
+            var spawnPosition = spawnedTiles[spawnedTiles.Count - 1].EndPoint.position - tileTmp.StartPoint.position;
+            spawnPosition.y = spawnedTiles[spawnedTiles.Count - 1].Position.y;
+            tileTmp.transform.position = spawnPosition;
             tileTmp.ActivateRandomObstacle();
             spawnedTiles.Add(tileTmp);
         }
@@ -84,6 +98,7 @@ public class GroundGenerator : Singleton<GroundGenerator>
                 {
                     //Start the game
                     gameStarted = true;
+                    OnGameStart?.Invoke();
                 }
             }
         }

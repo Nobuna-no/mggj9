@@ -17,7 +17,7 @@ MonoBehaviour:
   m_crystalPrefab: {fileID: 8777447631223457373, guid: df560a1e758373640ab105eb51eef137,
     type: 3}
   m_icon: {fileID: 21300000, guid: 8bd67d38be6d70c4e9758236da37c1c6, type: 3}
-  m_overridePriority: 4
+  m_overridePriority: 3
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

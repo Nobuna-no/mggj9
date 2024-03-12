@@ -13,6 +13,10 @@ public class RunnerTile : PoolableBehaviour
 
     public void ActivateRandomObstacle()
     {
+        if (m_obstacles.Length == 0)
+        {
+            return;
+        }
         int obstacleIndex = Random.Range(0, m_obstacles.Length);
         m_obstacles[obstacleIndex].SetActive(true);
     }

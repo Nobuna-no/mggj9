@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 765560cbb25d73543b64194333ecd362, type: 3}
   m_Name: tile-sandbox
   m_EditorClassIdentifier: 
-  m_poolablePrefab: {fileID: 3289194063629553612, guid: 9fc657b79bab6ba4eaa1a54f51a1ff3b,
+  m_poolablePrefab: {fileID: 3289194063629553612, guid: 15923ef8edc98444bbc35964589f9501,
     type: 3}
   m_reserveSize: 15
   m_reserveGrowCount: 10
