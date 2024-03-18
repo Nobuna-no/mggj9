@@ -125,9 +125,9 @@ public class Muzzle : UnityPoolBehaviour<Bullet>
     {
         while (m_intermittentShooting)
         {
-            yield return new WaitForSeconds(m_intermittenceOffset * IntermittentOffsetDurationMultiplier);
+            yield return new WaitForSeconds(m_intermittenceOffset);
             m_shootingEnable = false;
-            yield return new WaitForSeconds(m_intermittenceDuration);
+            yield return new WaitForSeconds(m_intermittenceDuration * IntermittentOffsetDurationMultiplier);
             m_shootingEnable = true;
         }
     }

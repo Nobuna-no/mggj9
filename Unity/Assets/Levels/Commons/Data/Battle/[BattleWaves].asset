@@ -17,7 +17,46 @@ MonoBehaviour:
   m_additionalDelayBetweenCycle: 1
   m_newSequences:
   - m_delay: 0
-    m_motion: {fileID: -304305527910125891, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.75}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: -0.25}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -304305527910125891, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -25,11 +64,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 0.5
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 6
     m_spawnOffset: 0.2
   - m_delay: 2
-    m_motion: {fileID: -4065545889950847045, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 1}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -4065545889950847045, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -37,11 +116,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 0.5
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 6
     m_spawnOffset: 0.2
   - m_delay: 4
-    m_motion: {fileID: -304305527910125891, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.75}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: -0.25}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -304305527910125891, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -49,11 +168,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 0.5
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 6
     m_spawnOffset: 0.2
   - m_delay: 6
-    m_motion: {fileID: -4065545889950847045, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 1}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -4065545889950847045, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -61,6 +220,7 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 0.5
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 6
     m_spawnOffset: 0.2
@@ -81,19 +241,46 @@ MonoBehaviour:
   m_additionalDelayBetweenCycle: 1
   m_newSequences:
   - m_delay: 0
-    m_motion: {fileID: -5450877834127179898, guid: d887127b62c3e504c9084dee3e61f501,
-      type: 2}
-    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
-      type: 2}
-    m_battlerSettings:
-      m_canShoot: 1
-      m_delayBeforeStartShooting: 1
-      m_intermittentShootOffset: 1
-      m_invulnerabilityAtSpawnDuration: 0.3
-    m_spawnCount: 4
-    m_spawnOffset: 0.2
-  - m_delay: 5
-    m_motion: {fileID: -3598608062531114926, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.25}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -5450877834127179898, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -101,11 +288,103 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 4
+    m_spawnOffset: 0.2
+  - m_delay: 5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.25}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -3598608062531114926, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 4
     m_spawnOffset: 0.2
   - m_delay: 10
-    m_motion: {fileID: -3440602250930853671, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: -3440602250930853671, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 2989572563763526434, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -113,6 +392,7 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
@@ -133,7 +413,46 @@ MonoBehaviour:
   m_additionalDelayBetweenCycle: 1
   m_newSequences:
   - m_delay: 0
-    m_motion: {fileID: -5925811058989119384, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -5925811058989119384, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -141,11 +460,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 4
     m_spawnOffset: 0.2
   - m_delay: 1
-    m_motion: {fileID: -3598608062531114926, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.25}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -3598608062531114926, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -153,11 +512,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
   - m_delay: 1.5
-    m_motion: {fileID: -5930579249670294818, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -0.25, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -0.25, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: -5930579249670294818, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -165,11 +564,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
   - m_delay: 1.5
-    m_motion: {fileID: 5992730738617382417, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 5992730738617382417, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -177,11 +616,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
   - m_delay: 1.5
-    m_motion: {fileID: 3227048370010680108, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0.25, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0.25, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 3227048370010680108, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -189,6 +668,7 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
@@ -209,19 +689,98 @@ MonoBehaviour:
   m_additionalDelayBetweenCycle: 1
   m_newSequences:
   - m_delay: 0
-    m_motion: {fileID: -6653910613463581156, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.9
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -6653910613463581156, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 2989572563763526434, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
     m_battlerSettings:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
-      m_intermittentShootOffset: 1
+      m_intermittentShootOffset: 3
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 6
     m_spawnOffset: 0.5
   - m_delay: 2
-    m_motion: {fileID: -6158648790605822735, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: From one point toward curved line
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 1.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.75
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -6158648790605822735, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -229,11 +788,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 5
     m_spawnOffset: 0.5
   - m_delay: 4
-    m_motion: {fileID: 8708881477620348780, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 1.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: -1.25, y: 0, z: 0}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: 8708881477620348780, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -241,6 +840,7 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 4
     m_spawnOffset: 0.5
@@ -261,7 +861,47 @@ MonoBehaviour:
   m_additionalDelayBetweenCycle: 1
   m_newSequences:
   - m_delay: 0
-    m_motion: {fileID: -2105804654115696167, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 'Top line toward circle center(x=0) top-middle(z=0.5) '
+      m_origin:
+        m_mode: 1
+        m_point: {x: 0.75, y: 0, z: 2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.75}
+        m_spline: {fileID: 4828253108794129712, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: -2105804654115696167, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -269,11 +909,52 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 6
     m_spawnOffset: 0.2
   - m_delay: 5
-    m_motion: {fileID: 580655068963673764, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 'Top line toward circle left(x=-0.5) top-middle(z=0.5) '
+      m_origin:
+        m_mode: 1
+        m_point: {x: -2, y: 0, z: 2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0.75, y: 0, z: 0.5}
+        m_spline: {fileID: 4828253108794129712, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: 580655068963673764, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -281,11 +962,52 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 6
     m_spawnOffset: 0.2
   - m_delay: 5
-    m_motion: {fileID: 6826490550414788567, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 'Top line toward circle right(x=0.5) top-middle(z=0.5) '
+      m_origin:
+        m_mode: 1
+        m_point: {x: 0.75, y: 0, z: 2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: -0.75, y: 0, z: 0.5}
+        m_spline: {fileID: 4828253108794129712, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: 6826490550414788567, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -293,6 +1015,7 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 6
     m_spawnOffset: 0.2
@@ -313,7 +1036,47 @@ MonoBehaviour:
   m_additionalDelayBetweenCycle: 1
   m_newSequences:
   - m_delay: 0
-    m_motion: {fileID: -6158648790605822735, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: From one point toward curved line
+      m_origin:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: -1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.2}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -6158648790605822735, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -321,9 +1084,10 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 20
-    m_spawnOffset: 0.1
+    m_spawnOffset: 0.2
 --- !u!114 &-2206422214725090151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +1105,46 @@ MonoBehaviour:
   m_additionalDelayBetweenCycle: 1
   m_newSequences:
   - m_delay: 0
-    m_motion: {fileID: -9194326751991977424, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: -0.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -9194326751991977424, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -349,11 +1152,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 3
     m_spawnOffset: 0.2
   - m_delay: 2
-    m_motion: {fileID: -8544501771381816064, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 1}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -8544501771381816064, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -361,11 +1204,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 3
     m_spawnOffset: 0.2
   - m_delay: 4
-    m_motion: {fileID: -9194326751991977424, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: -0.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -9194326751991977424, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -373,11 +1256,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 3
     m_spawnOffset: 0.2
   - m_delay: 6
-    m_motion: {fileID: -8544501771381816064, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 1}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -8544501771381816064, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -385,6 +1308,7 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 3
     m_spawnOffset: 0.2
@@ -405,7 +1329,46 @@ MonoBehaviour:
   m_additionalDelayBetweenCycle: 1
   m_newSequences:
   - m_delay: 0
-    m_motion: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -0.5, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -0.5, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -413,11 +1376,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
-  - m_delay: 3
-    m_motion: {fileID: 550655394682958734, guid: d887127b62c3e504c9084dee3e61f501,
+  - m_delay: 2
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0.5, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0.5, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 550655394682958734, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -425,11 +1428,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
-  - m_delay: 6
-    m_motion: {fileID: -8199145858556683055, guid: d887127b62c3e504c9084dee3e61f501,
+  - m_delay: 5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0.75, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0.75, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: -8199145858556683055, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -437,11 +1480,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
-  - m_delay: 9
-    m_motion: {fileID: 7033622931370394590, guid: d887127b62c3e504c9084dee3e61f501,
+  - m_delay: 5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -0.75, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -0.75, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: 1406630548326831594, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -449,11 +1532,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
-  - m_delay: 12
-    m_motion: {fileID: 1406630548326831594, guid: d887127b62c3e504c9084dee3e61f501,
+  - m_delay: 8
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0.25, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0.25, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: 7033622931370394590, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -461,11 +1584,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
-  - m_delay: 12
-    m_motion: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
+  - m_delay: 8
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -0.25, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -0.25, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -473,6 +1636,7 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
@@ -493,7 +1657,46 @@ MonoBehaviour:
   m_additionalDelayBetweenCycle: 1
   m_newSequences:
   - m_delay: 0
-    m_motion: {fileID: -1046131543303814507, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 1}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: -1046131543303814507, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -501,11 +1704,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 3
-    m_spawnOffset: 0.2
+    m_spawnOffset: 0.5
   - m_delay: 2
-    m_motion: {fileID: 4037441939232977103, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.5}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 1}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: 4037441939232977103, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -513,11 +1756,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 6
-    m_spawnOffset: 0.2
+    m_spawnOffset: 0.5
   - m_delay: 4
-    m_motion: {fileID: -5450877834127179898, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.25}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: -5450877834127179898, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -525,11 +1808,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
   - m_delay: 5
-    m_motion: {fileID: 2907005071601855842, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: 2907005071601855842, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -537,6 +1860,7 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
@@ -582,7 +1906,47 @@ MonoBehaviour:
   m_additionalDelayBetweenCycle: 1
   m_newSequences:
   - m_delay: 0
-    m_motion: {fileID: -1272516931573199389, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Top line toward bottom line
+      m_origin:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: -2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -1272516931573199389, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -590,11 +1954,52 @@ MonoBehaviour:
       m_canShoot: 0
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
-      m_invulnerabilityAtSpawnDuration: 0.3
+      m_overrideSpawnIFrame: 1
+      m_invulnerabilityAtSpawnDuration: 0
     m_spawnCount: 15
     m_spawnOffset: 0.05
   - m_delay: 1
-    m_motion: {fileID: -3099027709239032744, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: (reversed) Top line toward bottom line
+      m_origin:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: -1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: -2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: -1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -3099027709239032744, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -602,7 +2007,8 @@ MonoBehaviour:
       m_canShoot: 0
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
-      m_invulnerabilityAtSpawnDuration: 0.3
+      m_overrideSpawnIFrame: 1
+      m_invulnerabilityAtSpawnDuration: 0
     m_spawnCount: 15
     m_spawnOffset: 0.05
 --- !u!114 &2433878222667594370
@@ -622,7 +2028,46 @@ MonoBehaviour:
   m_additionalDelayBetweenCycle: 1
   m_newSequences:
   - m_delay: 0
-    m_motion: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -0.5, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -0.5, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -630,11 +2075,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0.5
   - m_delay: 0
-    m_motion: {fileID: 5992730738617382417, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 5992730738617382417, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -642,11 +2127,51 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
   - m_delay: 0
-    m_motion: {fileID: 550655394682958734, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0.5, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0.5, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 550655394682958734, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -654,6 +2179,7 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 1
     m_spawnOffset: 0
@@ -674,7 +2200,46 @@ MonoBehaviour:
   m_additionalDelayBetweenCycle: 1
   m_newSequences:
   - m_delay: 0
-    m_motion: {fileID: -6158648790605822735, guid: d887127b62c3e504c9084dee3e61f501,
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: From one point toward curved line
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 1.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.75
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: -6158648790605822735, guid: d887127b62c3e504c9084dee3e61f501,
       type: 2}
     m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
       type: 2}
@@ -682,6 +2247,7 @@ MonoBehaviour:
       m_canShoot: 1
       m_delayBeforeStartShooting: 1
       m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
       m_invulnerabilityAtSpawnDuration: 0.3
     m_spawnCount: 6
-    m_spawnOffset: 1
+    m_spawnOffset: 0.5

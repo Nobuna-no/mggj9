@@ -109,7 +109,7 @@ public class GameBlackboard : Singleton<GameBlackboard>
         switch (ActiveDebugMenu)
         {
             case DebugType.Augment:
-                GUILayout.Label("Debug - (2) Close, (1)Battle...");
+                GUILayout.Label("Debug:(1) Battle, (2) Close");
                 var ac = FindAnyObjectByType<AugmentController>();
                 if (ac)
                 {
@@ -117,7 +117,7 @@ public class GameBlackboard : Singleton<GameBlackboard>
                 }
                 break;
             case DebugType.Battle:
-                GUILayout.Label("Debug - (1) Close, (2)Augment...");
+                GUILayout.Label("Debug:(1) Close, (2)Augment");
                 var bwm = FindAnyObjectByType<BattleWaveManager>();
                 if (bwm)
                 {
@@ -125,7 +125,7 @@ public class GameBlackboard : Singleton<GameBlackboard>
                 }
                 break;
             default:
-                GUILayout.Label("Debug - (1) Battle, (2)Augment...");
+                GUILayout.Label("Debug:(1) Battle, (2)Augment");
                 break;
         }
     }

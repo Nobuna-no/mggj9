@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2658546806052308459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7d36851785c7748ba44cf8408fcd2e, type: 3}
+  m_Name: shard-idle
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_requiredPriorState: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5485f286a202d984fba4297a3f4d8f18, type: 3}
+  m_Name: '[SIMULACRA HUD States]'
+  m_EditorClassIdentifier: 
+  m_dataDefinitions:
+  - {fileID: -2658546806052308459}
+  - {fileID: 251043843331686772}
+  - {fileID: 3099489917841619483}
+--- !u!114 &251043843331686772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7d36851785c7748ba44cf8408fcd2e, type: 3}
+  m_Name: shard-limit
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_requiredPriorState: {fileID: 0}
+--- !u!114 &3099489917841619483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7d36851785c7748ba44cf8408fcd2e, type: 3}
+  m_Name: shard-drawing
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_requiredPriorState: {fileID: 0}

@@ -17,9 +17,8 @@ public class GroundGenerator : Singleton<GroundGenerator>
 
     List<RunnerTile> spawnedTiles = new List<RunnerTile>();
     int nextTileToActivate = -1;
-    [HideInInspector]
-    public bool gameOver = false;
-    static bool gameStarted = false;
+    private bool gameOver = false;
+    private bool gameStarted = false;
     float score = 0;
 
     public UnityEvent OnGameStart;
@@ -122,6 +121,6 @@ public class GroundGenerator : Singleton<GroundGenerator>
 
 
         GUI.color = Color.green;
-        GUI.Label(new Rect(5, 5, 200, 25), "Score: " + ((int)score));
+        //GUI.Label(new Rect(5, 5, 200, 25), "Score: " + ((int)score));
     }
 }

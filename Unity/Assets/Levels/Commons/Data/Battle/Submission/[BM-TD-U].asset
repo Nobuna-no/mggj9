@@ -1,0 +1,513 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8760980515787348899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-U004
+  m_EditorClassIdentifier: 
+  m_description: Diagonal entry from top-left.
+  m_origin:
+    m_mode: 0
+    m_point: {x: -2, y: 0, z: 1}
+    m_spline: {fileID: 0}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 0
+    m_point: {x: 2, y: 0, z: -0.5}
+    m_spline: {fileID: 731311724543370850, guid: 4b6b57b7512a0f049a0b088171e9069b,
+      type: 2}
+    m_splineScale: 1
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 6
+--- !u!114 &-8237538150272598575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-U009
+  m_EditorClassIdentifier: 
+  m_description: Descends from top-center to front.
+  m_origin:
+    m_mode: 0
+    m_point: {x: 0, y: 0, z: 2}
+    m_spline: {fileID: 0}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 1
+    m_point: {x: 0, y: 0, z: 1}
+    m_spline: {fileID: 8712019297593862876, guid: 4b6b57b7512a0f049a0b088171e9069b,
+      type: 2}
+    m_splineScale: 0.5
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 7
+--- !u!114 &-6767637634464816232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-U003
+  m_EditorClassIdentifier: 
+  m_description: Starts top-center, follows S-curve.
+  m_origin:
+    m_mode: 0
+    m_point: {x: 0, y: 0, z: 2}
+    m_spline: {fileID: 0}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 1
+    m_point: {x: 0, y: 0, z: 0.5}
+    m_spline: {fileID: 731311724543370850, guid: 4b6b57b7512a0f049a0b088171e9069b,
+      type: 2}
+    m_splineScale: 1
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 3
+--- !u!114 &-6556505852068435355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-U008
+  m_EditorClassIdentifier: 
+  m_description: Right to left horizontal sweep.
+  m_origin:
+    m_mode: 0
+    m_point: {x: 2, y: 0, z: 0.75}
+    m_spline: {fileID: 0}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 1
+    m_point: {x: 0, y: 0, z: 0.75}
+    m_spline: {fileID: -8411838456509724308, guid: 4b6b57b7512a0f049a0b088171e9069b,
+      type: 2}
+    m_splineScale: 0.5
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 6
+--- !u!114 &-3196638790470906083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-U006
+  m_EditorClassIdentifier: 
+  m_description: Begins top-left, descends in wave.
+  m_origin:
+    m_mode: 0
+    m_point: {x: -1, y: 0, z: 2}
+    m_spline: {fileID: 0}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 1
+    m_point: {x: 0, y: 0, z: 1}
+    m_spline: {fileID: 3960005888495251117, guid: 4b6b57b7512a0f049a0b088171e9069b,
+      type: 2}
+    m_splineScale: 1
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 4
+--- !u!114 &-2827017002667286099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-U000
+  m_EditorClassIdentifier: 
+  m_description: Spawns center-top, moves straight down.
+  m_origin:
+    m_mode: 1
+    m_point: {x: 0, y: 0, z: 2}
+    m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+      type: 2}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 0
+    m_point: {x: 0, y: 0, z: -2}
+    m_spline: {fileID: 0}
+    m_splineScale: 1
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 5
+--- !u!114 &-383944589249713600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-U002
+  m_EditorClassIdentifier: 
+  m_description: Enters right-mid, exits left-mid.
+  m_origin:
+    m_mode: 0
+    m_point: {x: 2, y: 0, z: 0.75}
+    m_spline: {fileID: 0}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 0
+    m_point: {x: -2, y: 0, z: 0.5}
+    m_spline: {fileID: 0}
+    m_splineScale: 1
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 5
+--- !u!114 &-132137863515723492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-U001
+  m_EditorClassIdentifier: 
+  m_description: Enters left-mid, exits right-mid.
+  m_origin:
+    m_mode: 0
+    m_point: {x: -2, y: 0, z: 0.75}
+    m_spline: {fileID: 0}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 0
+    m_point: {x: 2, y: 0, z: 0.5}
+    m_spline: {fileID: 0}
+    m_splineScale: 1
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 5
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5a2e3d5a759ac4f9f8173c8f616941, type: 3}
+  m_Name: '[BM-TD-U]'
+  m_EditorClassIdentifier: 
+  m_dataDefinitions:
+  - {fileID: -2827017002667286099}
+  - {fileID: -132137863515723492}
+  - {fileID: -383944589249713600}
+  - {fileID: -6767637634464816232}
+  - {fileID: -8760980515787348899}
+  - {fileID: 6017050317096188071}
+  - {fileID: -3196638790470906083}
+  - {fileID: 2033525202467682204}
+  - {fileID: -6556505852068435355}
+  - {fileID: -8237538150272598575}
+--- !u!114 &2033525202467682204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-U007
+  m_EditorClassIdentifier: 
+  m_description: Left to right horizontal sweep.
+  m_origin:
+    m_mode: 0
+    m_point: {x: -2, y: 0, z: 0.5}
+    m_spline: {fileID: 0}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 1
+    m_point: {x: 0, y: 0, z: 0.5}
+    m_spline: {fileID: -8411838456509724308, guid: 4b6b57b7512a0f049a0b088171e9069b,
+      type: 2}
+    m_splineScale: 5
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 6
+--- !u!114 &6017050317096188071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947667b37ef2b6d46bc2398d1a5abcfb, type: 3}
+  m_Name: BM-TD-U005
+  m_EditorClassIdentifier: 
+  m_description: Diagonal entry from top-right.
+  m_origin:
+    m_mode: 0
+    m_point: {x: 2, y: 0, z: 1}
+    m_spline: {fileID: 0}
+    m_splineScale: 1
+  m_destination:
+    m_mode: 0
+    m_point: {x: -2, y: 0, z: -0.5}
+    m_spline: {fileID: 731311724543370850, guid: 4b6b57b7512a0f049a0b088171e9069b,
+      type: 2}
+    m_splineScale: 1
+  m_motionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_motionDuration: 6

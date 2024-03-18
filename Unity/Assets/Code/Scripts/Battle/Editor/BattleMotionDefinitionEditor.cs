@@ -9,8 +9,8 @@ public class BattleMotionDefinitionEditor : NestedDataDefinitionEditor<BattleMot
     public override IReadOnlyList<DataDefinition> TargetDefinitions => m_dataDefinitions;
     private List<DataDefinition> m_dataDefinitions;
     private BattleMotionDefinition m_battleMotionDef;
-    private BattleMotionDefinition.MotionSpace.SpaceType m_activeOriginType;
-    private BattleMotionDefinition.MotionSpace.SpaceType m_activeDestinationType;
+    private MotionSpace.SpaceType m_activeOriginType;
+    private MotionSpace.SpaceType m_activeDestinationType;
 
     protected override void OnEnable()
     {
@@ -35,11 +35,11 @@ public class BattleMotionDefinitionEditor : NestedDataDefinitionEditor<BattleMot
 
         m_dataDefinitions = new List<DataDefinition>();
 
-        if (m_battleMotionDef.Origin.Type == BattleMotionDefinition.MotionSpace.SpaceType.Spline)
+        if (m_battleMotionDef.Origin.Type == MotionSpace.SpaceType.Spline)
         {
             m_dataDefinitions.Add(m_battleMotionDef.Origin.SplineDefinition);
         }
-        if (m_battleMotionDef.Destination.Type == BattleMotionDefinition.MotionSpace.SpaceType.Spline
+        if (m_battleMotionDef.Destination.Type == MotionSpace.SpaceType.Spline
             && !m_dataDefinitions.Contains(m_battleMotionDef.Destination.SplineDefinition))
         {
             m_dataDefinitions.Add(m_battleMotionDef.Destination.SplineDefinition);

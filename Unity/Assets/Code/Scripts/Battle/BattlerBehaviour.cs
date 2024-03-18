@@ -17,10 +17,10 @@ public class BattlerBehaviour : PoolableWithEvent
     [SerializeField] private Material m_skinMaterial;
     [SerializeField] private Material m_hitMaterial;
     private HealthBehaviour m_healthBehaviour;
-
+    [SerializeField] private float m_defaultSpawnInvulnerabilityDuration = 1f;
     public void SetBattlerSettings(BattleWaveDefinition.BattlerSettings settings)
     {
-        StartCoroutine(InvulnerabilityDelayRoutine(settings.InvulnerabilityAtSpawnDuration));
+        StartCoroutine(InvulnerabilityDelayRoutine(settings.OverrideSpawnIFrame ? settings.InvulnerabilityAtSpawnDuration : m_defaultSpawnInvulnerabilityDuration));
 
         if (settings.CanShoot)
         {

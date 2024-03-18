@@ -13,6 +13,11 @@ public class BattleWaveDefinitionEditor : NestedDataDefinitionEditor<BattleWaveD
 
     protected override void OnEnable()
     {
+        if (target == null)
+        {
+            return;
+        }
+
         m_battleWaveDef = (BattleWaveDefinition)target;
         m_dataDefinitions = new List<DataDefinition>();
         base.OnEnable();
@@ -25,17 +30,21 @@ public class BattleWaveDefinitionEditor : NestedDataDefinitionEditor<BattleWaveD
 
     protected override void RefreshDataset()
     {
-        if (m_battleWaveDef == null) return;
+        if (m_battleWaveDef == null || m_battleWaveDef.WavesSequence == null) return;
 
         m_dataDefinitions.Clear();
         foreach (var sequence in m_battleWaveDef.WavesSequence)
         {
-            if (m_dataDefinitions.Contains(sequence.Motion))
+            var spline = sequence.Motion.Origin.SplineDefinition;
+            if (!m_dataDefinitions.Contains(spline))
             {
-                continue;
+                m_dataDefinitions.Add(spline);
             }
-
-            m_dataDefinitions.Add(sequence.Motion);
+            spline = sequence.Motion.Destination.SplineDefinition;
+            if (!m_dataDefinitions.Contains(spline))
+            {
+                m_dataDefinitions.Add(spline);
+            }
         }
 
         base.RefreshDataset();

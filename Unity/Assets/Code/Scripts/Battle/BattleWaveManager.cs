@@ -199,7 +199,7 @@ public class BattleWaveManager : MonoBehaviour
 
     private void SpawnBattler(BattleWaveDefinition.Sequence sequence, int index)
     {
-        BattleMotionDefinition motion = sequence.Motion;
+        var motion = sequence.Motion;
         Vector3 remappedOrigin = ComputeRemappedMotionPosition(motion.Origin, index, sequence.SpawnCount);
         Vector3 remappedDestination = ComputeRemappedMotionPosition(motion.Destination, index, sequence.SpawnCount);
 
@@ -227,10 +227,10 @@ public class BattleWaveManager : MonoBehaviour
             !m_boundariesDefinition.IsPositionInBoundary(remappedDestination)));
     }
 
-    private Vector3 ComputeRemappedMotionPosition(BattleMotionDefinition.MotionSpace motion, float index, float totalIndexes)
+    private Vector3 ComputeRemappedMotionPosition(MotionSpace motion, float index, float totalIndexes)
     {
         Vector3 remappedPos;
-        if (motion.Type == BattleMotionDefinition.MotionSpace.SpaceType.Point)
+        if (motion.Type == MotionSpace.SpaceType.Point)
         {
             remappedPos = m_boundariesDefinition.RemapPositionToBoundariesUnclamped(motion.Point);
         }

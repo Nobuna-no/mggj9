@@ -37,6 +37,10 @@ public class AugmentController : Singleton<AugmentController>
 
     [Header("Gacha Juiciness")]
     [SerializeField] private AugmentTierDefinition m_pityAugmentTier;
+    [SerializeField] private UnityEvent m_onShardLimitReached;
+    [SerializeField] private UnityEvent m_onDrawingBegin;
+    [SerializeField] private UnityEvent m_onDrawingEnd;
+
     [SerializeField] private UnityEvent m_onPityCrystalObtained;
     [SerializeField] private SplineContainer m_crystalSpline;
     [SerializeField] private SplineContainer m_crystalSplineOpeningPath;
@@ -76,56 +80,15 @@ public class AugmentController : Singleton<AugmentController>
             m_lazyBoolmap = new Dictionary<string, bool>();
         }
 
-        using (new GUILayout.VerticalScope(GUI.skin.box))
+        GUILayout.HorizontalSlider(-1, 0, 0);
+        string keyShowCheats = "Gacha";
+        if (!m_lazyBoolmap.ContainsKey(keyShowCheats))
         {
-            GUILayout.Label("Augments");
-
-            GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
-            string keyShowTierOnly = "Tiers";
-            if (!m_lazyBoolmap.ContainsKey(keyShowTierOnly))
-            {
-                m_lazyBoolmap[keyShowTierOnly] = false;
-            }
-            if ((m_lazyBoolmap[keyShowTierOnly] = GUILayout.Toggle(m_lazyBoolmap[keyShowTierOnly], keyShowTierOnly, GUI.skin.button)))
-            {
-                using (new GUILayout.VerticalScope(GUI.skin.box))
-                {
-                    m_tierLevelDownToDeactivate = GUILayout.Toggle(m_tierLevelDownToDeactivate, "Level Down On Augment End");
-
-                    GUILayout.Label("Activate All Augments of tier:");
-                    foreach (var tier in m_augmentTiersMap)
-                    {
-                        if (GUILayout.Button(tier.Key.name))
-                        {
-                            foreach (var item in tier.Value)
-                            {
-                                if (!m_augmentsMap.TryGetValue(item, out var augment))
-                                {
-                                    continue;
-                                }
-
-                                foreach (var tierLogic in augment.TierLogic)
-                                {
-                                    if (tierLogic.TierDefinition == tier.Key)
-                                    {
-                                        // My brain hurt...
-                                        ActivateAugment(item, tier.Key);
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
-            string keyShowCheats = "Cheats";
-            if (!m_lazyBoolmap.ContainsKey(keyShowCheats))
-            {
-                m_lazyBoolmap[keyShowCheats] = false;
-            }
-            if (m_lazyBoolmap[keyShowCheats] = GUILayout.Toggle(m_lazyBoolmap[keyShowCheats], keyShowCheats, GUI.skin.button))
+            m_lazyBoolmap[keyShowCheats] = false;
+        }
+        if (m_lazyBoolmap[keyShowCheats] = GUILayout.Toggle(m_lazyBoolmap[keyShowCheats], keyShowCheats, GUI.skin.button))
+        {
+            using (new GUILayout.VerticalScope(GUI.skin.box))
             {
                 if (GUILayout.Button("Spawn Random Crystal"))
                 {
@@ -136,18 +99,60 @@ public class AugmentController : Singleton<AugmentController>
                     SpawnPityAugment();
                 }
             }
+        }
 
-            string keyShowAll = "All Augments";
-            if (!m_lazyBoolmap.ContainsKey(keyShowAll))
+        GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
+        string keyShowTierOnly = "Cheat By Tier";
+        if (!m_lazyBoolmap.ContainsKey(keyShowTierOnly))
+        {
+            m_lazyBoolmap[keyShowTierOnly] = false;
+        }
+        if ((m_lazyBoolmap[keyShowTierOnly] = GUILayout.Toggle(m_lazyBoolmap[keyShowTierOnly], keyShowTierOnly, GUI.skin.button)))
+        {
+            using (new GUILayout.VerticalScope(GUI.skin.box))
             {
-                m_lazyBoolmap[keyShowAll] = false;
-            }
+                m_tierLevelDownToDeactivate = GUILayout.Toggle(m_tierLevelDownToDeactivate, "Level Down On Augment End");
 
-            GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
-            if (!(m_lazyBoolmap[keyShowAll] = GUILayout.Toggle(m_lazyBoolmap[keyShowAll], keyShowAll, GUI.skin.button)))
-            {
-                return;
+                GUILayout.Label("Activate All Augments of tier:");
+                foreach (var tier in m_augmentTiersMap)
+                {
+                    if (GUILayout.Button(tier.Key.name))
+                    {
+                        foreach (var item in tier.Value)
+                        {
+                            if (!m_augmentsMap.TryGetValue(item, out var augment))
+                            {
+                                continue;
+                            }
+
+                            foreach (var tierLogic in augment.TierLogic)
+                            {
+                                if (tierLogic.TierDefinition == tier.Key)
+                                {
+                                    // My brain hurt...
+                                    ActivateAugment(item, tier.Key);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
             }
+        }
+
+        GUILayout.HorizontalSlider(-1, 0, 0, GUILayout.Height(0.1f));
+        string keyShowAll = "Cheat By Augment";
+        if (!m_lazyBoolmap.ContainsKey(keyShowAll))
+        {
+            m_lazyBoolmap[keyShowAll] = false;
+        }
+        if (!(m_lazyBoolmap[keyShowAll] = GUILayout.Toggle(m_lazyBoolmap[keyShowAll], keyShowAll, GUI.skin.button)))
+        {
+            return;
+        }
+
+        using (new GUILayout.VerticalScope(GUI.skin.box))
+        {
             m_debugScrollview = GUILayout.BeginScrollView(m_debugScrollview);
             foreach (var augment in m_augmentsMap.Values)
             {
@@ -175,7 +180,10 @@ public class AugmentController : Singleton<AugmentController>
                         {
                             if (GUILayout.Button(tier.TierDefinition.name))
                             {
-                                ActivateAugment(augment.Definition, tier.TierDefinition);
+                                if (m_augmentsMap.TryGetValue(augment.Definition, out var logic))
+                                {
+                                    logic.Activate(tier.TierDefinition, true);
+                                }
                                 break;
                             }
                         }
@@ -204,6 +212,8 @@ public class AugmentController : Singleton<AugmentController>
         {
             return;
         }
+
+        m_onDrawingBegin?.Invoke();
 
         m_canOpenCrystal = false;
         m_remaingCrystalToOpen = m_crystalList.Count;
@@ -333,6 +343,7 @@ public class AugmentController : Singleton<AugmentController>
         if (!m_canCreateNewCrystal)
         {
             m_attractor.DisableAbsorption();
+            m_onShardLimitReached?.Invoke();
         }
     }
 
@@ -351,6 +362,7 @@ public class AugmentController : Singleton<AugmentController>
             m_canCreateNewCrystal = true;
             m_canOpenCrystal = true;
             m_attractor.EnableAttraction();
+            m_onDrawingEnd?.Invoke();
         }
     }
 
@@ -424,7 +436,6 @@ public class AugmentController : Singleton<AugmentController>
             {
                 SimulacraUIManager.Instance.SpawnAugmentTextUI(Definition, tier);
             }
-
 
             if (m_remainingProgress <= 0)
             {

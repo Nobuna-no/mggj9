@@ -1,0 +1,3509 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8913725104384722402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-0005
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -5925811058989119384, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 4
+    m_spawnOffset: 0.2
+  - m_delay: 1
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.25}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -3598608062531114926, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 1.5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -0.25, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -0.25, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: -5930579249670294818, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 1.5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 5992730738617382417, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 1.5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0.25, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0.25, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 3227048370010680108, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+--- !u!114 &-8908094350768735771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-0006
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: -0.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -9194326751991977424, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 3
+    m_spawnOffset: 0.2
+  - m_delay: 2
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 1}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -8544501771381816064, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 3
+    m_spawnOffset: 0.2
+  - m_delay: 4
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: -0.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -9194326751991977424, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 3
+    m_spawnOffset: 0.2
+  - m_delay: 6
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 1}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -8544501771381816064, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 3
+    m_spawnOffset: 0.2
+--- !u!114 &-8873293912588512774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-U005
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 1
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Left to right horizontal sweep.
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.5}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: -8411838456509724308, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: 2033525202467682204, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 0.5
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Right to left horizontal sweep.
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.75}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.75}
+        m_spline: {fileID: -8411838456509724308, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: -6556505852068435355, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 3
+      m_intermittentShootOffset: 0.5
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 1
+    m_spawnCount: 3
+    m_spawnOffset: 0.8
+--- !u!114 &-8872395583145781241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-0002
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.25}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -5450877834127179898, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 4
+    m_spawnOffset: 0.2
+  - m_delay: 5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.25}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -3598608062531114926, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 4
+    m_spawnOffset: 0.2
+  - m_delay: 10
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: -3440602250930853671, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 2989572563763526434, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+--- !u!114 &-8348895503132908730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-U007
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Descends from top-center to front.
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 1}
+        m_spline: {fileID: 8712019297593862876, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 7
+    m_motionDefinition: {fileID: -8237538150272598575, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 2989572563763526434, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 7
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Enters left-mid, exits right-mid.
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.75}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.5}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -132137863515723492, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 6
+    m_spawnOffset: 0.3
+--- !u!114 &-6853093828710577182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-U006
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Diagonal entry from top-left.
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 1}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: -0.5}
+        m_spline: {fileID: 731311724543370850, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: -8760980515787348899, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 4
+    m_spawnOffset: 0.6
+  - m_delay: 4
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Diagonal entry from top-right.
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 1}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: -0.5}
+        m_spline: {fileID: 731311724543370850, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: 6017050317096188071, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 3
+    m_spawnOffset: 0.6
+--- !u!114 &-3824270595657062595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-001
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -0.5, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -0.5, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 2
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0.5, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0.5, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 550655394682958734, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0.75, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0.75, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: -8199145858556683055, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -0.75, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -0.75, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: 1406630548326831594, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 8
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0.25, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0.25, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: 7033622931370394590, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 8
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -0.25, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -0.25, y: 0, z: 0.75}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+--- !u!114 &-2968781451248653530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-00XX-1
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: From one point toward curved line
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 1.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.75
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: -6158648790605822735, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 6
+    m_spawnOffset: 0.5
+--- !u!114 &-2485588444275413707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-0003
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -0.5, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -0.5, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 5097055464855380450, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0.5
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 5992730738617382417, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0.5, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0.5, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 1
+    m_motionDefinition: {fileID: 550655394682958734, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+--- !u!114 &-2446200458135458560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-0007
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.75}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: -0.25}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -304305527910125891, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 0.5
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 6
+    m_spawnOffset: 0.2
+  - m_delay: 2
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 1}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -4065545889950847045, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 0.5
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 6
+    m_spawnOffset: 0.2
+  - m_delay: 4
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.75}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: -0.25}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -304305527910125891, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 0.5
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 6
+    m_spawnOffset: 0.2
+  - m_delay: 6
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 1}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -4065545889950847045, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 0.5
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 6
+    m_spawnOffset: 0.2
+--- !u!114 &-1920519222509538683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-U001
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 1
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Enters left-mid, exits right-mid.
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.75}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.5}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -132137863515723492, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 5
+    m_spawnOffset: 0.7
+  - m_delay: 3
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Enters right-mid, exits left-mid.
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.75}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.5}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -383944589249713600, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 1
+    m_spawnCount: 5
+    m_spawnOffset: 0.7
+--- !u!114 &-1624244322831653498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-U009
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Left to right horizontal sweep.
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.5}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: -8411838456509724308, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: 2033525202467682204, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 2989572563763526434, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 2
+    m_spawnOffset: 1
+  - m_delay: 6
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Right to left horizontal sweep.
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.75}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.75}
+        m_spline: {fileID: -8411838456509724308, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: -6556505852068435355, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 2989572563763526434, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 2
+    m_spawnOffset: 1
+  - m_delay: 12
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Starts top-center, follows S-curve.
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: 731311724543370850, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -6767637634464816232, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 8
+    m_spawnOffset: 0.2
+--- !u!114 &-1521287126533606446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-U003
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Diagonal entry from top-left.
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 1}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: -0.5}
+        m_spline: {fileID: 731311724543370850, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: -8760980515787348899, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 3
+    m_spawnOffset: 1
+  - m_delay: 5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Diagonal entry from top-right.
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 1}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: -0.5}
+        m_spline: {fileID: 731311724543370850, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: 6017050317096188071, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 3
+    m_spawnOffset: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e59c426b7411a848896c0b5eb01b0bd, type: 3}
+  m_Name: '[BW-TD-U]'
+  m_EditorClassIdentifier: 
+  m_dataDefinitions:
+  - {fileID: 774786323228730509}
+  - {fileID: -3824270595657062595}
+  - {fileID: -1920519222509538683}
+  - {fileID: -2968781451248653530}
+  - {fileID: 7454302197139440256}
+  - {fileID: 6276560617077579654}
+  - {fileID: -8872395583145781241}
+  - {fileID: -1521287126533606446}
+  - {fileID: -8913725104384722402}
+  - {fileID: 2598648763556875027}
+  - {fileID: -8873293912588512774}
+  - {fileID: 4695623294722137886}
+  - {fileID: -6853093828710577182}
+  - {fileID: -2485588444275413707}
+  - {fileID: 835020999209520159}
+  - {fileID: -8348895503132908730}
+  - {fileID: 3630167509566051348}
+  - {fileID: -1624244322831653498}
+  - {fileID: 5232153077036933689}
+  - {fileID: -8908094350768735771}
+  - {fileID: -2446200458135458560}
+  - {fileID: 2660315054436041056}
+--- !u!114 &774786323228730509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-U000
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Spawns center-top, moves straight down.
+      m_origin:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: -2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -2827017002667286099, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 0
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 1
+    m_spawnCount: 3
+    m_spawnOffset: 1
+  - m_delay: 3
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Enters left-mid, exits right-mid.
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.75}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.5}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -132137863515723492, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 3
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 1
+    m_spawnCount: 2
+    m_spawnOffset: 3
+--- !u!114 &835020999209520159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-0004
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 1}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: -1046131543303814507, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 3
+    m_spawnOffset: 0.5
+  - m_delay: 2
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.5}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 1}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: 4037441939232977103, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 6
+    m_spawnOffset: 0.5
+  - m_delay: 4
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.25}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: -5450877834127179898, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+  - m_delay: 5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 6
+    m_motionDefinition: {fileID: 2907005071601855842, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 1
+    m_spawnOffset: 0
+--- !u!114 &2598648763556875027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-U004
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 2
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.9
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -6653910613463581156, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 0
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 2
+    m_spawnOffset: 1
+  - m_delay: 3
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Begins top-left, descends in wave.
+      m_origin:
+        m_mode: 0
+        m_point: {x: -1, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 1}
+        m_spline: {fileID: 3960005888495251117, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 4
+    m_motionDefinition: {fileID: -3196638790470906083, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 4
+    m_spawnOffset: 0.5
+--- !u!114 &2660315054436041056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-00XX-End
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.9
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -6653910613463581156, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 2989572563763526434, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 3
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 6
+    m_spawnOffset: 0.5
+  - m_delay: 2
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: From one point toward curved line
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 1.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.75
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -6158648790605822735, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 5
+    m_spawnOffset: 0.5
+  - m_delay: 4
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 1.25}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: -1.25, y: 0, z: 0}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: 8708881477620348780, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: -338608473468897678, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 4
+    m_spawnOffset: 0.5
+--- !u!114 &3630167509566051348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-U008
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 2
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Begins top-left, descends in wave.
+      m_origin:
+        m_mode: 0
+        m_point: {x: -1, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 1}
+        m_spline: {fileID: 3960005888495251117, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 4
+    m_motionDefinition: {fileID: -3196638790470906083, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 5521850301316386976, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 2
+    m_spawnOffset: 0.5
+  - m_delay: 8
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Enters right-mid, exits left-mid.
+      m_origin:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.75}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.5}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -383944589249713600, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.5
+    m_spawnCount: 4
+    m_spawnOffset: 0.4
+--- !u!114 &4695623294722137886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-00XX-2
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 'Top line toward circle center(x=0) top-middle(z=0.5) '
+      m_origin:
+        m_mode: 1
+        m_point: {x: 0.75, y: 0, z: 2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.75}
+        m_spline: {fileID: 4828253108794129712, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: -2105804654115696167, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 6
+    m_spawnOffset: 0.2
+  - m_delay: 5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 'Top line toward circle left(x=-0.5) top-middle(z=0.5) '
+      m_origin:
+        m_mode: 1
+        m_point: {x: -2, y: 0, z: 2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0.75, y: 0, z: 0.5}
+        m_spline: {fileID: 4828253108794129712, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: 580655068963673764, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 6
+    m_spawnOffset: 0.2
+  - m_delay: 5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: 'Top line toward circle right(x=0.5) top-middle(z=0.5) '
+      m_origin:
+        m_mode: 1
+        m_point: {x: 0.75, y: 0, z: 2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: -0.75, y: 0, z: 0.5}
+        m_spline: {fileID: 4828253108794129712, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 0.5
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 2
+    m_motionDefinition: {fileID: 6826490550414788567, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 6
+    m_spawnOffset: 0.2
+--- !u!114 &5232153077036933689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-Zigzag
+  m_EditorClassIdentifier: 
+  m_description: 3 arrays of t1 rushing from top to bottom - no shooting
+  m_repeatCycle: 5
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Top line toward bottom line
+      m_origin:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: -2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -1272516931573199389, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 0
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 1
+      m_invulnerabilityAtSpawnDuration: 0
+    m_spawnCount: 15
+    m_spawnOffset: 0.05
+  - m_delay: 1
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: (reversed) Top line toward bottom line
+      m_origin:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: -1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: -2}
+        m_spline: {fileID: 5740446241785664697, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: -1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -3099027709239032744, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 0
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 1
+      m_invulnerabilityAtSpawnDuration: 0
+    m_spawnCount: 15
+    m_spawnOffset: 0.05
+--- !u!114 &6276560617077579654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-U002
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Starts top-center, follows S-curve.
+      m_origin:
+        m_mode: 0
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.5}
+        m_spline: {fileID: 731311724543370850, guid: 4b6b57b7512a0f049a0b088171e9069b,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -6767637634464816232, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 1
+    m_spawnCount: 7
+    m_spawnOffset: 0
+  - m_delay: 5
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: Enters left-mid, exits right-mid.
+      m_origin:
+        m_mode: 0
+        m_point: {x: -2, y: 0, z: 0.75}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_destination:
+        m_mode: 0
+        m_point: {x: 2, y: 0, z: 0.5}
+        m_spline: {fileID: 0}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 5
+    m_motionDefinition: {fileID: -132137863515723492, guid: 9e1060785d88c3a42a4104a1b6154a5d,
+      type: 2}
+    m_battler: {fileID: 4360068597987085784, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 1
+    m_spawnCount: 3
+    m_spawnOffset: 1
+--- !u!114 &7454302197139440256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98daefd692ff7342944d91aabdb18c7, type: 3}
+  m_Name: BW-TD-00XX-3
+  m_EditorClassIdentifier: 
+  m_description: 
+  m_repeatCycle: 1
+  m_additionalDelayBetweenCycle: 1
+  m_newSequences:
+  - m_delay: 0
+    m_useMotionDefinition: 0
+    m_motion:
+      m_description: From one point toward curved line
+      m_origin:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 2}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: -1
+      m_destination:
+        m_mode: 1
+        m_point: {x: 0, y: 0, z: 0.2}
+        m_spline: {fileID: -2494296931840896695, guid: 58f6776356c23bd408f788bca6cb7c65,
+          type: 2}
+        m_splineScale: 1
+      m_motionCurve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_motionDuration: 3
+    m_motionDefinition: {fileID: -6158648790605822735, guid: d887127b62c3e504c9084dee3e61f501,
+      type: 2}
+    m_battler: {fileID: 3412232219656200828, guid: 9b28b5baf1f34b64bba33ccdefc8b05c,
+      type: 2}
+    m_battlerSettings:
+      m_canShoot: 1
+      m_delayBeforeStartShooting: 1
+      m_intermittentShootOffset: 1
+      m_overrideSpawnIFrame: 0
+      m_invulnerabilityAtSpawnDuration: 0.3
+    m_spawnCount: 20
+    m_spawnOffset: 0.2
