@@ -2,7 +2,6 @@ using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.AppUI.UI;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Splines;
@@ -10,7 +9,7 @@ using Random = UnityEngine.Random;
 
 // Which programming pattern best fit my need? (while keeping velocity & flexibility in mind)
 //  I feel like DataDefinition is working well when designing a data driven system.
-//  Otherwise, if we need a sytem that interact with a lots of other systems,
+//  Otherwise, if we need a system that interact with a lots of other systems,
 //  the observer pattern (Unity Event) should be the way to go.
 //
 //  For SIMULACRA, the 'Crystal Augment' system is a bonus system that can affect
@@ -21,7 +20,7 @@ using Random = UnityEngine.Random;
 //
 // I also think I should avoid one component per bonus, as we might have to pay the cost of several update...
 
-/* The goal of the implementation is to leverage the data-driven nature of Scriptable Objects for
+/* The goal of the implementation is to leverage the data-driven nature of ScriptableObjects for
  * defining bonuses and their common properties, while also allowing to define tier-specific
  * functionalities using MonoBehaviour. A kind of Hybrid Data-Driven System...
  */
