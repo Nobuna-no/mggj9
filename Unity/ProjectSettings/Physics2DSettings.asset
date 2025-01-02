@@ -1,28 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!19 &1
+---
+!u!19 &1
 Physics2DSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
-  m_Gravity: {x: 0, y: -9.81}
-  m_DefaultMaterial: {fileID: 0}
-  m_VelocityIterations: 8
-  m_PositionIterations: 3
-  m_VelocityThreshold: 1
-  m_MaxLinearCorrection: 0.2
-  m_MaxAngularCorrection: 8
-  m_MaxTranslationSpeed: 100
-  m_MaxRotationSpeed: 360
-  m_BaumgarteScale: 0.2
-  m_BaumgarteTimeOfImpactScale: 0.75
-  m_TimeToSleep: 0.5
-  m_LinearSleepTolerance: 0.01
-  m_AngularSleepTolerance: 2
-  m_DefaultContactOffset: 0.01
+  m_Gravity: {x: 0, y: -9.81}            # The gravity vector for 2D physics.
+  m_DefaultMaterial: {fileID: 0}         # The default 2D physics material (none, in this case).
+  m_VelocityIterations: 8               # How many velocity iterations the physics solver performs.
+  m_PositionIterations: 3               # How many position iterations the physics solver performs.
+  m_VelocityThreshold: 1                # Minimum velocity at which objects will be treated as moving.
+  m_MaxLinearCorrection: 0.2            # Maximum linear position correction (in meters) allowed during collisions.
+  m_MaxAngularCorrection: 8             # Max angular correction (in degrees) for rotation in one simulation step.
+  m_MaxTranslationSpeed: 100            # Maximum translation speed for rigidbodies in 2D.
+  m_MaxRotationSpeed: 360               # Maximum rotation speed (degrees/second) for rigidbodies in 2D.
+  m_BaumgarteScale: 0.2                 # Factor for position correction in collisions (higher = stiffer collisions).
+  m_BaumgarteTimeOfImpactScale: 0.75    # Factor controlling correction during continuous collision detection.
+  m_TimeToSleep: 0.5                    # Time (seconds) after which a stationary body can go to sleep.
+  m_LinearSleepTolerance: 0.01          # Linear speed below which a body is considered for sleep.
+  m_AngularSleepTolerance: 2            # Angular speed below which a body is considered for sleep.
+  m_DefaultContactOffset: 0.01          # Default “skin width” for 2D collisions.
   m_JobOptions:
     serializedVersion: 2
-    useMultithreading: 0
-    useConsistencySorting: 0
+    useMultithreading: 0                # Whether multithreading is used for 2D physics.
+    useConsistencySorting: 0            # Whether collision pairs are resorted to maintain consistent ordering.
     m_InterpolationPosesPerJob: 100
     m_NewContactsPerJob: 30
     m_CollideContactsPerJob: 100
@@ -38,17 +39,17 @@ Physics2DSettings:
     m_IslandSolverJointCostScale: 10
     m_IslandSolverBodiesPerJob: 50
     m_IslandSolverContactsPerJob: 50
-  m_AutoSimulation: 1
-  m_QueriesHitTriggers: 1
-  m_QueriesStartInColliders: 1
-  m_CallbacksOnDisable: 1
-  m_ReuseCollisionCallbacks: 0
-  m_AutoSyncTransforms: 0
-  m_AlwaysShowColliders: 0
-  m_ShowColliderSleep: 1
-  m_ShowColliderContacts: 0
-  m_ShowColliderAABB: 0
-  m_ContactArrowScale: 0.2
+  m_AutoSimulation: 1                   # Auto-simulate physics each frame.
+  m_QueriesHitTriggers: 1               # Whether raycasts or other queries detect triggers.
+  m_QueriesStartInColliders: 1          # Whether queries can start inside colliders.
+  m_CallbacksOnDisable: 1               # Send collision/trigger callbacks if a GameObject/Collider2D is disabled.
+  m_ReuseCollisionCallbacks: 0          # Reuse contact manifolds for collision callbacks.
+  m_AutoSyncTransforms: 0               # Auto-sync transforms after physics updates. 
+  m_AlwaysShowColliders: 0              # Editor setting—whether to always show colliders.
+  m_ShowColliderSleep: 1                # Display sleeping colliders in the Scene view.
+  m_ShowColliderContacts: 0             # Display collider contact points in the Scene view.
+  m_ShowColliderAABB: 0                 # Display collider AABBs in the Scene view.
+  m_ContactArrowScale: 0.2              # Visual scale for contact arrows in Scene view.
   m_ColliderAwakeColor: {r: 0.5686275, g: 0.95686275, b: 0.54509807, a: 0.7529412}
   m_ColliderAsleepColor: {r: 0.5686275, g: 0.95686275, b: 0.54509807, a: 0.36078432}
   m_ColliderContactColor: {r: 1, g: 0, b: 1, a: 0.6862745}
