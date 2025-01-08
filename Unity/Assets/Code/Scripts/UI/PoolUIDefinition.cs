@@ -1,7 +1,7 @@
 using UnityEngine;
 using NobunAtelier;
 
-public class PoolUIDefinition : PoolObjectDefinition
+public class PoolUIDefinition : FactoryProductDefinition
 {
 
 }

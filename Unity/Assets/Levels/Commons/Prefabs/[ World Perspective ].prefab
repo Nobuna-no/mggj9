@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4457979865708691260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7354709870368086829}
+  - component: {fileID: 6034413874947493670}
+  m_Layer: 0
+  m_Name: '[ World Perspective ]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7354709870368086829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4457979865708691260}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.1845293, y: 0.6188705, z: 0.40914977}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6034413874947493670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4457979865708691260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18cb11df5438f5f4cb514b68847bfc4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_dontDestroyOnLoad: 0
+  m_onlyDestroyDuplicatedComponent: 1
+  m_settings:
+  - m_definition: {fileID: 8827910540652386665, guid: 6545cee42335daa46844311f8bd40782,
+      type: 2}
+    m_onPerspectiveEntered:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onPerspectiveExited:
+      m_PersistentCalls:
+        m_Calls: []
+  - m_definition: {fileID: 2842425346656373391, guid: 6545cee42335daa46844311f8bd40782,
+      type: 2}
+    m_onPerspectiveEntered:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onPerspectiveExited:
+      m_PersistentCalls:
+        m_Calls: []
+  m_initialPerspective: {fileID: 8827910540652386665, guid: 6545cee42335daa46844311f8bd40782,
+    type: 2}
+  m_debugPerspective: {fileID: 2842425346656373391, guid: 6545cee42335daa46844311f8bd40782,
+    type: 2}

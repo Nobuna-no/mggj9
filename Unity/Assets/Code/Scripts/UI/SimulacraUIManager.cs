@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Canvas))]
-public class SimulacraUIManager : Singleton<SimulacraUIManager>
+public class SimulacraUIManager : SingletonMonoBehaviour<SimulacraUIManager>
 {
     [SerializeField] private Camera m_gameplayCamera;
 
@@ -51,14 +51,16 @@ public class SimulacraUIManager : Singleton<SimulacraUIManager>
 
     public void SpawnAugmentUI(AugmentDefinition augment, AugmentTierDefinition tier)
     {
-        var icon = PoolManager.Instance.SpawnObject(m_augmentUI, Vector3.zero) as AugmentUI;
+        var icon = DataDrivenFactoryManager.Get<AugmentUI>(m_augmentUI);
+        icon.Position = Vector3.zero;
         icon.GetComponent<RectTransform>().SetParent(m_augmentsParent, false);
         icon.SetTargetAugment(augment, tier);
     }
 
     public void SpawnAugmentTextUI(AugmentDefinition augment, AugmentTierDefinition tier)
     {
-        var text = PoolManager.Instance.SpawnObject(m_augmentTextUI, Vector3.zero) as AugmentTextUI;
+        var text = DataDrivenFactoryManager.Get<AugmentTextUI>(m_augmentTextUI);
+        text.Position = Vector3.zero;
         var screenPos = m_gameplayCamera.WorldToScreenPoint(m_playerHealth.ModuleOwner.Position);
         text.RectTransform.position = screenPos;
 

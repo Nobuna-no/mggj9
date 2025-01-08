@@ -1,7 +1,8 @@
+using NobunAtelier;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AugmentUI : PoolableBehaviour
+public class AugmentUI : FactoryProduct
 {
     [SerializeField] private Image m_backgroundImage;
     [SerializeField] private Color m_backgroundColor = Color.gray;
@@ -31,13 +32,13 @@ public class AugmentUI : PoolableBehaviour
         }
     }
 
-    protected override void OnActivation()
+    protected override void OnProductActivation()
     {
         m_iconImage.color = m_iconColor;
         m_backgroundImage.color = m_backgroundColor;
     }
 
-    protected override void OnDeactivation()
+    protected override void OnProductDeactivation()
     {
         m_targetAugment.OnAugmentUpdate -= OnProgressUpdate;
         m_targetAugment.OnAugmentDeactivated -= OnAugmentEnd;
@@ -57,7 +58,7 @@ public class AugmentUI : PoolableBehaviour
 
     private void OnAugmentEnd()
     {
-        IsActive = false;
+        Release();
     }
 
     // AugmentUIManager is spawning AugmentIcon

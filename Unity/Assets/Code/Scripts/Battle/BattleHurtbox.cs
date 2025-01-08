@@ -1,7 +1,7 @@
 using NobunAtelier.Gameplay;
 using UnityEngine;
 
-public class BattleHurtbox : HitboxBehaviour
+public class BattleHurtbox : Hitbox
 {
     [SerializeField] private bool m_isAffectedByAugment = false;
 

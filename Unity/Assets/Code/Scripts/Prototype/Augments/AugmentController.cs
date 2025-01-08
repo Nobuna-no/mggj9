@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using NobunAtelier;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ using Random = UnityEngine.Random;
  * functionalities using MonoBehaviour. A kind of Hybrid Data-Driven System...
  */
 
-public class AugmentController : Singleton<AugmentController>
+public class AugmentController : SingletonMonoBehaviour<AugmentController>
 {
     [Header("System")]
     [SerializeField] private ShardsAttractor m_attractor;

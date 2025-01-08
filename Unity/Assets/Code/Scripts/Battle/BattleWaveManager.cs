@@ -36,6 +36,9 @@ public class BattleWaveManager : MonoBehaviour
     [SerializeField]
     private Character m_playerCharacter;
 
+    [Header("Debug")]
+    private bool m_LogDebug = false;
+
     private PlayerController m_playerController;
     private HealthBehaviour m_playerHealth;
 
@@ -44,7 +47,7 @@ public class BattleWaveManager : MonoBehaviour
 
     private class BattlerData
     {
-        public PoolableBehaviour PoolableBehaviour;
+        public FactoryProduct PoolableBehaviour;
         public HealthBehaviour HealthBehaviour;
         public Rigidbody Rigidbody;
     }
@@ -204,7 +207,8 @@ public class BattleWaveManager : MonoBehaviour
         Vector3 remappedDestination = ComputeRemappedMotionPosition(motion.Destination, index, sequence.SpawnCount);
 
         m_remainingBattlers++;
-        PoolableBehaviour battler = PoolManager.Instance.SpawnObject(sequence.BattlerDefintion, remappedOrigin);
+        FactoryProduct battler = DataDrivenFactoryManager.Get(sequence.BattlerDefintion);
+
         var bbh = battler.GetComponent<BattlerBehaviour>();
         if (bbh)
         {
@@ -212,7 +216,10 @@ public class BattleWaveManager : MonoBehaviour
         }
         HealthBehaviour hp = battler.GetComponent<HealthBehaviour>();
         Rigidbody rb = battler.GetComponent<Rigidbody>();
-        Debug.Assert(hp && rb, "hp && rb", this);
+        Debug.Assert(hp && rb, $"'{battler.name}' is missing an Health or Rigidbody component!", this);
+
+        rb.position = remappedOrigin;
+
         m_activeBattlers.Add(hp, new BattlerData()
         {
             PoolableBehaviour = battler,
@@ -258,12 +265,19 @@ public class BattleWaveManager : MonoBehaviour
         --m_remainingBattlers;
         if (m_remainingBattlers == 0 && m_remainingSequence == 0)
         {
-            Debug.Log($"{this.name}: 0 remaining opponent, Spawner done");
+            if (m_LogDebug)
+            {
+                Debug.Log($"{this.name}: 0 remaining opponent, Spawner done", this);
+            }
+
             BattleWaveStop();
         }
         else
         {
-            Debug.Log($"{this.name}: {m_remainingBattlers} remaining opponent(s) out of remaining {m_remainingSequence} sequence(s).");
+            if (m_LogDebug)
+            {
+                Debug.Log($"{this.name}: {m_remainingBattlers} remaining opponent(s) out of remaining {m_remainingSequence} sequence(s).", this);
+            }
         }
     }
 
@@ -275,7 +289,7 @@ public class BattleWaveManager : MonoBehaviour
             return;
         }
 
-        m_activeBattlers[behaviour].PoolableBehaviour.IsActive = false;
+        m_activeBattlers[behaviour].PoolableBehaviour.Release();
         BattlerDeath(behaviour);
     }
 
@@ -290,7 +304,7 @@ public class BattleWaveManager : MonoBehaviour
         foreach (var battler in m_activeBattlers.Values)
         {
             UnsubscribeBattler(battler.HealthBehaviour);
-            battler.PoolableBehaviour.IsActive = false;
+            battler.PoolableBehaviour.Release();
         }
         m_activeBattlers.Clear();
         m_remainingBattlers = 0;
@@ -343,6 +357,13 @@ public class BattleWaveManager : MonoBehaviour
         for (int i = 0, c = sequence.SpawnCount; i < c; ++i)
         {
             SpawnBattler(sequence, i);
+            if (i + 1 == c)
+            {
+                break;
+                // no wait if last to spawn.
+                // Otherwise the battler could die before the remaining sequence is accounted for and lead to soft lock.
+            }
+
             yield return new WaitForSeconds(sequence.SpawnOffset);
         }
 
@@ -373,7 +394,6 @@ public class BattleWaveManager : MonoBehaviour
                         GUILayout.Label($"Remaining Battlers: {m_remainingBattlers}");
                         m_startNextBattleAutomatically = GUILayout.Toggle(m_startNextBattleAutomatically, "Start wave auto");
                         m_loopOnBattleWaveEnd = GUILayout.Toggle(m_loopOnBattleWaveEnd, "Loop");
-
                     }
                 }
 

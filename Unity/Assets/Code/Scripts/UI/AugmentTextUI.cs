@@ -1,11 +1,11 @@
-using NaughtyAttributes;
+using NobunAtelier;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(RectTransform))]
-public class AugmentTextUI : PoolableBehaviour
+public class AugmentTextUI : FactoryProduct
 {
     [Header("Refs")]
     [SerializeField] private RectTransform m_rectTransform;
@@ -50,14 +50,14 @@ public class AugmentTextUI : PoolableBehaviour
         StartCoroutine(DespawnRoutine());
     }
 
-    protected override void OnActivation()
+    protected override void OnProductActivation()
     {
         m_iconImage.color = Color.white;
         m_text.color = Color.white;
         m_cancelled = false;
     }
 
-    protected override void OnDeactivation()
+    protected override void OnProductDeactivation()
     {
         m_targetAugment.OnAugmentDeactivated -= OnAugmentEnd;
         m_targetAugment.OnAugmentTierChanged -= OnTierChange;
@@ -114,6 +114,6 @@ public class AugmentTextUI : PoolableBehaviour
             m_tierImage.color = Color.Lerp(tierOriginColor, tierDestColor, m_fadeOutAnimation.Evaluate(t));
         }
 
-        IsActive = false;
+        Release();
     }
 }

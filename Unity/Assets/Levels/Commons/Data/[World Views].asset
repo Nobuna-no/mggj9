@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0abcd3d530db54948a492cb0862025bc, type: 3}
   m_Name: TopDown_Player
   m_EditorClassIdentifier: 
-  m_constrainedAxes: 7
+  m_constrainedAxes: -1
   m_axisRangeX: {x: -7, y: 7}
   m_axisRangeY: {x: 5, y: 5}
   m_axisRangeZ: {x: -4.5, y: 4.5}
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0abcd3d530db54948a492cb0862025bc, type: 3}
   m_Name: TopDown
   m_EditorClassIdentifier: 
-  m_constrainedAxes: 7
+  m_constrainedAxes: -1
   m_axisRangeX: {x: -6, y: 6}
   m_axisRangeY: {x: 5, y: 5}
   m_axisRangeZ: {x: -4, y: 4}

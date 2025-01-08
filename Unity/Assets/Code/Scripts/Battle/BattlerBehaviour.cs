@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(HealthBehaviour))]
-public class BattlerBehaviour : PoolableWithEvent
+public class BattlerBehaviour : FactoryProductWithEvent
 {
     //[Tooltip("1 means it will start fighting after the end of the travelling." +
     //    "\n0 means it will start to shoot as soon as it spawn." +
@@ -41,18 +41,17 @@ public class BattlerBehaviour : PoolableWithEvent
         m_battlerWeapon.enabled = true;
     }
 
-    // Start is called before the first frame update
-    protected override void OnCreation()
+    protected override void OnProductReset()
     {
-        base.OnCreation();
+        base.OnProductReset();
         m_healthBehaviour = GetComponent<HealthBehaviour>();
         OnInvulnerabilityEnd();
         Debug.Assert(m_battlerWeapon, this);
     }
 
-    protected override void OnActivation()
+    protected override void OnProductActivation()
     {
-        base.OnActivation();
+        base.OnProductActivation();
         m_healthBehaviour.OnBehaviourDeath += M_healthBehaviour_OnBehaviourDeath;
         m_healthBehaviour.OnReset.AddListener(OnInvulnerabilityEnd);
         m_healthBehaviour.OnInvulnerabilityBegin.AddListener(OnInvulnerabilityStart);
@@ -67,7 +66,7 @@ public class BattlerBehaviour : PoolableWithEvent
         StopAllCoroutines();
     }
 
-    protected override void OnDeactivation()
+    protected override void OnProductDeactivation()
     {
         m_battlerWeapon.IntermittentOffsetDurationMultiplier = 1;
         m_battlerWeapon.enabled = false;
@@ -77,7 +76,7 @@ public class BattlerBehaviour : PoolableWithEvent
         m_healthBehaviour.OnInvulnerabilityBegin.RemoveListener(OnInvulnerabilityStart);
         m_healthBehaviour.OnInvulnerabilityEnd.RemoveListener(OnInvulnerabilityEnd);
         m_healthBehaviour.IsVulnerable = false;
-        base.OnDeactivation();
+        base.OnProductDeactivation();
     }
 
     private void OnInvulnerabilityStart()

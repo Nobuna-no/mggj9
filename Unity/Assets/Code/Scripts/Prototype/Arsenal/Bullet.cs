@@ -40,7 +40,7 @@ public class Bullet : UnityPoolableBehaviour<Bullet>
     protected override void OnDespawn()
     {
         // reset the moving Rigidbody
-        TargetRigidbody.velocity = new Vector3(0f, 0f, 0f);
+        TargetRigidbody.linearVelocity = new Vector3(0f, 0f, 0f);
         TargetRigidbody.angularVelocity = new Vector3(0f, 0f, 0f);
         transform.localScale = m_originalScale;
         m_mesh.material = m_defaultMaterial;

@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 using NobunAtelier;
 using UnityEngine.Events;
 
-public class GroundGenerator : Singleton<GroundGenerator>
+public class GroundGenerator : SingletonMonoBehaviour<GroundGenerator>
 {
     public float zOffsetFromCameraToDespawn = 5;
     public Camera mainCamera;
     public Transform startPoint; //Point from where ground tiles will start
-    public PoolObjectDefinition tilePrefab;
+    public FactoryProductDefinition tilePrefab;
     public float movingSpeed = 12;
     public int tilesToPreSpawn = 15; //How many tiles should be pre-spawned
     public int tilesWithoutObstacles = 3; //How many tiles at the beginning should not have obstacles, good for warm-up
@@ -29,7 +29,7 @@ public class GroundGenerator : Singleton<GroundGenerator>
         Vector3 spawnPosition = startPoint.position;
         int tilesWithNoObstaclesTmp = tilesWithoutObstacles;
 
-        spawnedTiles = new List<RunnerTile>(PoolManager.Instance.SpawnObjects<RunnerTile>(tilePrefab, spawnPosition, 0, tilesToPreSpawn));
+        spawnedTiles = new List<RunnerTile>(DataDrivenFactoryManager.Get<RunnerTile>(tilePrefab, tilesToPreSpawn));
         // spawnPosition -= spawnedTiles[0].StartPoint.localPosition;
 
         RunnerTile previousTile = null;

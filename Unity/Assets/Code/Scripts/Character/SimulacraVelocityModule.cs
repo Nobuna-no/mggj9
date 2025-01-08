@@ -24,6 +24,9 @@ public class SimulacraVelocityModule : CharacterVelocityModuleBase
         DesiredVelocityFromAcceleration,
     }
 
+    [SerializeField, Range(2, 32)]
+    private int m_numDirections = 8;
+
     [SerializeField]
     private MovementAxes m_movementAxes = MovementAxes.XZ;
 
@@ -114,7 +117,12 @@ public class SimulacraVelocityModule : CharacterVelocityModuleBase
             case VelocityProcessing.FromRawInput:
                 m_velocity = m_movementVector * m_speed * m_moveSpeedMultiplier;
                 m_movementVector = Vector3.zero;
-                return m_velocity + currentVel;
+                if (m_velocity == Vector3.zero)
+                {
+                    return Vector3.zero;
+                }
+
+                return ComputeDiscreteSteps(m_velocity, m_numDirections) * m_speed * m_moveSpeedMultiplier;
 
             case VelocityProcessing.FromAcceleration:
                 // nah dont have time
@@ -125,6 +133,25 @@ public class SimulacraVelocityModule : CharacterVelocityModuleBase
         }
 
         return currentVel;
+    }
+
+    private static Vector3 ComputeDiscreteSteps(Vector3 velocity, int steps)
+    {
+        // Calculate the angle step based on the number of directions
+        float angleStep = 360f / steps;
+
+        // Determine the angle of the velocity in the horizontal plane (XZ)
+        float angle = Mathf.Atan2(velocity.z, velocity.x) * Mathf.Rad2Deg;
+
+        // Round the angle to the nearest step
+        float roundedAngle = Mathf.Round(angle / angleStep) * angleStep;
+
+        // Convert the rounded angle back to a direction vector
+        float radians = roundedAngle * Mathf.Deg2Rad;
+        Vector3 discreteDirection = new Vector3(Mathf.Cos(radians), 0, Mathf.Sin(radians)).normalized;
+
+        // Set the velocity to the discrete direction with the desired magnitude
+        return discreteDirection;
     }
 
     private Vector3 ComputeDesiredVelocityFromAccel(Vector3 currentVel, float deltaTime)

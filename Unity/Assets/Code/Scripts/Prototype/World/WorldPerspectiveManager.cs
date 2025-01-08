@@ -1,10 +1,11 @@
+using NobunAtelier;
 using NaughtyAttributes;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class WorldPerspectiveManager : Singleton<WorldPerspectiveManager>
+public class WorldPerspectiveManager : SingletonMonoBehaviour<WorldPerspectiveManager>
 {
     [SerializeField] private PerspectiveSettings[] m_settings;
     [SerializeField] private WorldBoundariesDefinition m_initialPerspective;

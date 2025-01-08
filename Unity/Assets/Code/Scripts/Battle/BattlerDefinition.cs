@@ -1,7 +1,7 @@
 using UnityEngine;
 using NobunAtelier;
 
-public class BattlerDefinition : PoolObjectDefinition
+public class BattlerDefinition : FactoryProductDefinition
 {
 
 }

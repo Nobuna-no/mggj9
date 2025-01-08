@@ -1,8 +1,8 @@
-using NobunAtelier.Gameplay;
+using NobunAtelier;
 using System;
 using UnityEngine;
 
-public class GameBlackboard : Singleton<GameBlackboard>
+public class GameBlackboard : SingletonMonoBehaviour<GameBlackboard>
 {
     public enum DebugType
     {

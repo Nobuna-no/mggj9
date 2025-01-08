@@ -28,7 +28,7 @@ public class PoolableShard : UnityPoolableBehaviour<PoolableShard>
 
     protected override void OnDespawn()
     {
-        TargetRigidbody.velocity = new Vector3(0f, 0f, 0f);
+        TargetRigidbody.linearVelocity = new Vector3(0f, 0f, 0f);
         TargetRigidbody.angularVelocity = new Vector3(0f, 0f, 0f);
     }
 }

@@ -1,9 +1,10 @@
 using NaughtyAttributes;
+using NobunAtelier;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RunnerTile : PoolableBehaviour
+public class RunnerTile : FactoryProduct
 {
     [SerializeField] private Transform m_startPoint;
     [SerializeField] private Transform m_endPoint;
@@ -29,11 +30,11 @@ public class RunnerTile : PoolableBehaviour
         {
             int obstacleIndex = Random.Range(0, m_availableObstacles.Count);
             var obstacle = m_availableObstacles[obstacleIndex];
-            var poolable = obstacle.GetComponent<PoolableBehaviour>();
+            var poolable = obstacle.GetComponent<FactoryProduct>();
             if (poolable != null)
             {
-                poolable.IsActive = true;
-                Debug.Log($"{this}: Activating obstacle{poolable}.");
+                poolable.IsProductActive = true;
+                // Debug.Log($"{this}: Activating obstacle{poolable}.");
             }
             else
             {
@@ -55,11 +56,11 @@ public class RunnerTile : PoolableBehaviour
 
         for (int i = 0; i < m_obstacles.Length; i++)
         {
-            var poolable = m_obstacles[i].GetComponent<PoolableBehaviour>();
-            if (poolable != null)
+            var product = m_obstacles[i].GetComponent<FactoryProduct>();
+            if (product != null)
             {
-                poolable.IsActive = false;
-                Debug.Log($"{this}: Deactivating obstacle{poolable}.");
+                product.Release();
+                // Debug.Log($"{this}: Deactivating obstacle{product}.");
             }
             else
             {
@@ -68,17 +69,17 @@ public class RunnerTile : PoolableBehaviour
         }
     }
 
-    protected override void OnActivation()
+    protected override void OnProductActivation()
     {
-        base.OnActivation();
+        base.OnProductActivation();
         DeactivateObstacles();
         m_availableObstacles = new List<GameObject>(m_obstacles);
         m_inUseObstacles = new List<GameObject>();
     }
 
-    protected override void OnDeactivation()
+    protected override void OnProductDeactivation()
     {
-        base.OnDeactivation();
+        base.OnProductDeactivation();
 
         DeactivateObstacles();
 
